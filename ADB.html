@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>ADB</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\liush\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.5\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="adb">ADB</h1>
+
+<p>Android 调试桥 (<code>adb</code>) 是多种用途的工具，该工具可以帮助你你管理设备或模拟器的状态。</p>
+<p>可以通过下列几种方法进入 <code>adb</code>:</p>
+<ul>
+<li>
+<p>在设备上运行 shell 命令</p>
+</li>
+<li>
+<p>通过端口转发来管理模拟器或设备</p>
+</li>
+<li>
+<p>从模拟器或设备上拷贝来或拷贝走文件</p>
+</li>
+</ul>
+<p>下面对 <code>adb</code> 进行了介绍并描述了常见的使用。</p>
+<h2 class="mume-header" id="%E6%A6%82%E8%A6%81">概要</h2>
+
+<p>Android 调试系统是一个面对客户服务系统，包括三个组成部分：</p>
+<ol>
+<li>
+<p>一个在你用于开发程序的电脑上运行的客户端。你可以通过 shell 端使用 adb 命令启动客户端。</p>
+</li>
+<li>
+<p>在你用于发的机器上作为后台进程运行的服务器。该服务器负责管理客户端与运行于模拟器或设备上的 <code>adb 守护程序</code> (daemon) 之间的通信。</p>
+</li>
+<li>
+<p>一个以后台进程的形式运行于模拟器或设备上的守护程序 (daemon)。</p>
+</li>
+</ol>
+<p>当你启动一个 adb 客户端，客户端首先确认是否已有一个 adb 服务进程在运行。如果没有，则启动服务进程。当服务器运行， adb 服务器就会绑定本地的 TCP 端口 5037 并监听 adb 客户端发来的命令，所有的 adb 客户端都是用端口 5037 与 adb 服务器对话的。</p>
+<p>接着服务器将所有运行中的模拟器或设备实例建立连接。它通过扫描所有 5555 到 5585 范围内的奇数端口来定位所有的模拟器或设备。一旦服务器找到了 adb 守护程序，它将建立一个到该端口的连接。请注意任何模拟器或设备实例会取得两个连续的端口——一个偶数端口用来响应控制台的连接，和一个奇数端口用来响应 adb 连接。比如说：</p>
+<pre class="language-text">模拟器 1，控制台：端口 5554
+模拟器 1，Adb 端口 5555
+控制台：端口 5556
+Adb 端口 5557...
+</pre>
+<p>如上所示，模拟器实例通过 5555 端口连接 adb，就如同使用 5554 端口连接控制台一样。</p>
+<p>一旦服务器与所有模拟器实例建立连接，就可以使用 adb 命令控制和访问该实例。因为服务器管理模拟器 / 设备实例的连接，和控制处理从来自多个 adb 客户端来的命令，你可以通过任何客户端（或脚本）来控制任何模拟器或设备实例。</p>
+<p>以下的部分描述通过命令使用 adb 和管理模拟器 / 设备的状态。</p>
+<h2 class="mume-header" id="%E5%8F%91%E5%87%BA-adb-%E5%91%BD%E4%BB%A4">发出 adb 命令</h2>
+
+<p>发出 Android 命令： 你可以在你的开发机上的命令行或脚本上发布 Android 命令，使用方法：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token operator">&lt;</span>serialNumber<span class="token operator">></span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>command<span class="token operator">></span>
+</pre><p>当你发出一个命令，系统启用 Android 客户端。客户端并不与模拟器实例相关，所以如果双服务器 / 设备是运行中的，你需要用 -d 选项去为应被控制的命令确定目标实例。</p>
+<h2 class="mume-header" id="%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%8B%9F%E5%99%A8-%E8%AE%BE%E5%A4%87%E5%AE%9E%E4%BE%8B">查询模拟器 / 设备实例</h2>
+
+<p>在发布 adb 命令之前，有必要知道什么样的模拟器 / 设备实例与 adb 服务器是相连的。可以通过使用<code>devices</code>命令来得到一系列相关联的模拟器 / 设备：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb devices
+</pre><p>作为回应，adb 为每个实例都制定了相应的状态信息：<br>
+下面是一个展示 devices 命令和输出的例子 :</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">$ adb devices
+List of devices attached
+emulator-5554  device
+emulator-5556  device
+emulator-5558  device
+</pre><ul>
+<li>
+<p>序列号——由 adb 创建的一个字符串，这个字符串通过自己的控制端口<type>-<consolePort>唯一地识别一个模拟器 / 设备实例。</consolePort></type></p>
+</li>
+<li>
+<p>实例的连接状态有三种状态：</p>
+<ul>
+<li>
+<p>offline — 此实例没有与 adb 相连接或者无法响应</p>
+</li>
+<li>
+<p>device — 此实例正与 adb 服务器连接。注意这个状态并不能百分之百地表示在运行和操作 Android 系统，因此这个实例是当系统正在运行的时候与 adb 连接的。然而，在系统启动之后，就是一个模拟器 / 设备状态的正常运行状态了</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果当前没有模拟器 / 设备运行，adb 则返回 <code>no device</code>。</p>
+<h2 class="mume-header" id="%E7%BB%99%E7%89%B9%E5%AE%9A%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%99%A8-%E8%AE%BE%E5%A4%87%E5%AE%9E%E4%BE%8B%E5%8F%91%E9%80%81%E5%91%BD%E4%BB%A4">给特定的模拟器 / 设备实例发送命令</h2>
+
+<p>如果有多个模拟器 / 设备实例在运行，在发布 adb 命令时需要指定一个目标实例。 这样做，请使用 -s 选项的命令。在使用的 -s 选项是：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb -s <span class="token operator">&lt;</span>serialNumber<span class="token operator">></span> <span class="token operator">&lt;</span>command<span class="token operator">></span>
+</pre><p>如上所示，给一个命令指定了目标实例，这个目标实例使用由 adb 分配的序列号。你可以使用 <code>devices</code> 命令来获得运行着的模拟器 / 设备实例的序列号。</p>
+<p>示例如下：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb -s emulator-5556 <span class="token function">install</span> helloWorld.apk
+</pre><p>注意这点，如果没有指定一个目标模拟器 / 设备实例就执行 <code>-s</code> 这个命令的话，adb 会产生一个错误。</p>
+<h2 class="mume-header" id="%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF">远程终端</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb tcpip 5555
+adb connect <span class="token operator">&lt;</span>device-ip-address<span class="token operator">></span>
+</pre><p>连接到指定的 ip, 这个通常配合 wifidebug，比如 adb connect 127.0.0.1:5037,5037 是默认端口号，海马模拟器是 adb connect 127.0.0.1:26944</p>
+<p>断开</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb disconnect <span class="token operator">&lt;</span>device-ip-address<span class="token operator">></span>
+adb disconnect 127.0.0.1:26944﻿
+</pre><h2 class="mume-header" id="%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6">安装软件</h2>
+
+<p>你可以使用 adb 从你的开发电脑上复制一个应用程序，并且将其安装在一个模拟器 / 设备实例。像这样做，使用 <code>install</code> 命令。这个 <code>install</code> 命令要求你必须指定你所要安装的 <code>.apk</code> 文件的路径：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token function">install</span> <span class="token operator">&lt;</span>path_to_apk<span class="token operator">></span>
+</pre><h2 class="mume-header" id="%E4%BB%8E%E6%A8%A1%E6%8B%9F%E5%99%A8-%E8%AE%BE%E5%A4%87%E4%B8%AD%E6%8B%B7%E5%85%A5%E6%88%96%E6%8B%B7%E5%87%BA%E6%96%87%E4%BB%B6">从模拟器 / 设备中拷入或拷出文件</h2>
+
+<p>可以使用<code>adbpull</code>,<code>push</code>命令将文件复制到一个模拟器 / 设备实例的数据文件或是从数据文件中复制。<code>install</code> 命令只将一个 <code>.apk</code> 文件复制到一个特定的位置，与其不同的是，<code>pull</code> 和 <code>push</code> 命令可令你复制任意的目录和文件到一个模拟器 / 设备实例的任何位置。</p>
+<p>从模拟器或者设备中复制文件或目录，使用（如下命）:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb pull <span class="token operator">&lt;</span>remote<span class="token operator">></span> <span class="token operator">&lt;</span>local<span class="token operator">></span>
+</pre><p>将文件或目录复制到模拟器或者设备，使用（如下命令）：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb push <span class="token operator">&lt;</span>local<span class="token operator">></span> <span class="token operator">&lt;</span>remote<span class="token operator">></span>
+</pre><p>在这些命令中， <code>&lt;local&gt;</code> 和 <code>&lt;remote&gt;</code> 分别指通向自己的发展机（本地）和模拟器 / 设备实例（远程）上的目标文件 / 目录的路径。</p>
+<p>下面是一个例子：:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb push foo.txt /sdcard/foo.txt
+</pre><h2 class="mume-header" id="adb-%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8">Adb 命令列表</h2>
+
+<p>下列表格列出了 adb 支持的所有命令，并对它们的意义和使用方法做了说明。</p>
+<TABLE>
+    <TBODY>
+      <TR>
+        <TH>类别</TH>
+        <TH>命令</TH>
+        <TH>描述</TH>
+        <TH>解释</TH>
+      </TR>
+      <TR>
+        <TD rowSpan="3">Options<br>选择项</TD>
+        <TD><CODE>-d</CODE></TD>
+        <TD>仅仅通过 USB 接口来管理 abd.</TD>
+        <TD>如果不只是用 USB 接口来管理则返回错误。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-e</CODE></TD>
+        <TD>仅仅通过模拟器实例来管理 adb.</TD>
+        <TD>如果不是仅仅通过模拟器实例管理则返回错误。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-s&nbsp;&lt;serialNumber&gt;</CODE></TD>
+        <TD>通过模拟器 / 设备的允许的命令号码来发送命令来管理 adb （比如："emulator-5556").</TD>
+        <TD>如果没有指定号码，则会报错。</TD>
+      </TR>
+      <TR>
+        <TD rowSpan="3">General<br>常规的</TD>
+        <TD><CODE>devices</CODE></TD>
+        <TD>查看所有连接模拟器 / 设备的设施的清单。</TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD><CODE>help</CODE></TD>
+        <TD>查看 adb 所支持的所有命令。.</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><CODE>version</CODE></TD>
+        <TD>查看 adb 的版本序列号。</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD rowSpan="3">Debug<br>调试</TD>
+        <TD><CODE>logcat&nbsp;[&lt;option&gt;] [&lt;filter-specs&gt;]</CODE></TD>
+        <TD>将日志数据输出到屏幕上。</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><CODE>bugreport</CODE></TD>
+        <TD>查看 bug 的报告，如<CODE>dumpsys</CODE>, <CODE>dumpstate</CODE>, 和<CODE>logcat</CODE>信息。 </TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><CODE>jdwp</CODE></TD>
+        <TD>查看指定的设施的可用的 JDWP（调试进程）信息。</TD>
+        <TD>可以用 <CODE>forward jdwp:&lt;pid&gt;</CODE>端口映射信息来连接指定的 JDWP 进程。例如： <BR>
+          <CODE>adb forward tcp:8000 jdwp:472</CODE><BR>
+          <CODE>jdb -attach
+          localhost:8000</CODE>
+          <P></P></BR></BR></TD>
+      </TR>
+      <TR>
+        <TD rowSpan="3">Data<br>数据</TD>
+        <TD><CODE>install&nbsp;&lt;path-to-apk&gt;</CODE></TD>
+        <TD>安装 Android 为（可以模拟器 / 设施的数据文件。apk 指定完整的路径）. </TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><CODE>pull&nbsp;&lt;remote&gt;&nbsp;&lt;local&gt;</CODE></TD>
+        <TD>将指定的文件从模拟器 / 设施的拷贝到电脑上。</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><CODE>push&nbsp;&lt;local&gt;&nbsp;&lt;remote&gt;</CODE></TD>
+        <TD>将指定的文件从电脑上拷贝到模拟器 / 设备中。</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD rowSpan="2">Ports and Networking<br>调试端口和网络</TD>
+        <TD><CODE>forward&nbsp;&lt;local&gt;&nbsp;&lt;remote&gt;</CODE></TD>
+        <TD>用本地指定的端口通过 socket 方法远程连接模拟器 / 设施 </TD>
+        <TD>端口需要描述下列信息：
+          <UL>
+            <LI><CODE>tcp:&lt;portnum&gt;</CODE>
+            <LI><CODE>local:&lt;UNIX domain socket name&gt;</CODE>
+            <LI><CODE>dev:&lt;character device name&gt;</CODE>
+            <LI><CODE>jdwp:&lt;pid&gt;</CODE></LI>
+          </LI></LI></LI></UL></TD>
+      </TR>
+      <TR>
+        <TD><CODE>ppp&nbsp;&lt;tty&gt;&nbsp;[parm]...</CODE></TD>
+        <TD>通过 USB 运行 ppp：
+          <UL>
+            <LI><CODE>&lt;tty&gt;</CODE> — the tty for PPP stream. For example <CODE>dev:/dev/omap_csmi_ttyl</CODE>.
+            <LI><CODE>[parm]... </CODE>&amp;mdash zero or more PPP/PPPD options,
+              such as <CODE>defaultroute</CODE>, <CODE>local</CODE>, <CODE>notty</CODE>, etc.</LI>
+          </LI></UL>
+          <P>需要提醒你的不能自动启动 PDP 连接。</P></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD rowSpan="3">Scripting<br>脚本</TD>
+        <TD><CODE>get-serialno</CODE></TD>
+        <TD>查看 adb 实例的序列号。</TD>
+        <TD rowSpan="2"></TD>
+      </TR>
+      <TR>
+        <TD><CODE>get-state</CODE></TD>
+        <TD>查看模拟器 / 设施的当前状态。</TD>
+          
+      </TR>
+      <TR>
+        <TD><CODE>wait-for-device</CODE></TD>
+        <TD>如果设备不联机就不让执行，-- 也就是实例状态是 <CODE>device</CODE>时。</TD>
+        <TD>你可以提前把命令转载在 adb 的命令器中，在命令器中的命令在模拟器 / 设备连接之前是不会执行其它命令的。示例如下：
+          <PRE>adb wait-for-device shell getprop</PRE>
+          需要提醒的是这些命令在所有的系统启动启动起来之前是不会启动 adb 的
+          所以在所有的系统启动起来之前你也不能执行其它的命令。比如：运用<CODE>install</CODE> 的时候就需要 Android 包，这些包只有系统完全启动。例如：
+          <PRE>adb wait-for-device install &lt;app&gt;.apk</PRE>
+          上面的命令只有连接上了模拟器 / 设备连接上了 adb 服务才会被执行，而在 Android 系统完全启动前执行就会有错误发生。</TD>
+      </TR>
+      <TR>
+        <TD rowSpan="2">Server<br>服务</TD>
+        <TD><CODE>start-server</CODE></TD>
+        <TD>选择服务是否启动 adb 服务进程。</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD><CODE>kill-server</CODE></TD>
+        <TD>终止 adb 服务进程。</TD>
+        <TD>&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD rowSpan="2">Shell<br>壳</TD>
+        <TD><CODE>shell</CODE></TD>
+        <TD>通过远程 shell 命令来控制模拟器 / 设备实例。</TD>
+        <TD rowSpan="2"></TD>
+      </TR>
+      <TR>
+        <TD><CODE>shell&nbsp;[&lt;shellCommand&gt;]</CODE></TD>
+        <TD>连接模拟器 / 设施执行 shell 命令，执行完毕后退出远程 shell 端 l.</TD>
+      </TR>
+    </TBODY>
+</TABLE>
+<h2 class="mume-header" id="%E5%90%AF%E5%8A%A8-shell-%E5%91%BD%E4%BB%A4">启动 shell 命令</h2>
+
+<p>Adb 提供了 shell 端，通过 shell 端你可以在模拟器或设备上运行各种命令。这些命令以 2 进制的形式保存在本地的模拟器或设备的文件系统中：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">/system/bin/<span class="token punctuation">..</span>.
+</pre><p>不管你是否完全进入到模拟器 / 设备的 adb 远程 shell 端，你都能 shell 命令来执行命令。</p>
+<p>当没有完全进入到远程 shell 的时候，这样使用 shell 命令来执行一条命令：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token punctuation">{</span><span class="token operator">&lt;</span>serialNumber<span class="token operator">></span><span class="token punctuation">}</span><span class="token punctuation">]</span> shell <span class="token operator">&lt;</span>shellCommand<span class="token operator">></span>
+</pre><p>在模拟器 / 设备中不用远程 shell 端时，这样使用 shell 命 :</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token punctuation">{</span><span class="token operator">&lt;</span>serialNumber<span class="token operator">></span><span class="token punctuation">}</span><span class="token punctuation">]</span> shell
+</pre><p>通过操作 <code>CTRL+D</code> 或 <code>exit</code> 就可以退出 shell 远程连接。</p>
+<p>下面一些就将告诉你更多的关于 shell 命令的知识。</p>
+<h2 class="mume-header" id="%E9%80%9A%E8%BF%87%E8%BF%9C%E7%A8%8B-shell-%E7%AB%AF%E8%BF%90%E8%A1%8C-sqllite3-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93">通过远程 shell 端运行 sqllite3 连接数据库</h2>
+
+<p>通过 adb 远程 shell 端，你可以通过 Android 软 sqlite3 命令程序来管理数据库。sqlite3 工具包含了许多使用命令，比如：<code>.dump</code> 显示表的内容，<code>.schema</code> 可以显示出已经存在的表空间的 SQL CREATE 结果集。Sqlite3 还允许你远程执行 sql 命令。</p>
+<p>通过 sqlite3, 按照前几节的方法登陆模拟器的远程 shell 端，然后启动工具就可以使用 sqlite3 命令。当 sqlite3 启动以后，你还可以指定你想查看的数据库的完整路径。模拟器 / 设备实例会在文件夹中保存 SQLite3 数据库。/data/data/&lt;package_name&gt;/databases/.</p>
+<p>示例如下：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">$ adb -s emulator-5554 shell
+<span class="token comment"># sqlite3 /data/data/com.android.email/databases/EmailProvider.db</span>
+SQLite version 3.3.12
+Enter <span class="token string">".help"</span> <span class="token keyword">for</span> instructions
+<span class="token punctuation">..</span><span class="token punctuation">..</span> enter commands, <span class="token keyword">then</span> quit<span class="token punctuation">..</span>.
+sqlite<span class="token operator">></span> .exit
+</pre><p>当你启动 sqlite3 的时候，你就可以通过 shell 端发送 <code>sqlite3</code> 命令了。用 <code>exit</code> 或 <code>CTRL+D</code> 退出 adb 远程 shell 端。</p>
+<h2 class="mume-header" id="%E5%85%B6%E5%AE%83%E7%9A%84-shell-%E5%91%BD%E4%BB%A4">其它的 shell 命令</h2>
+
+<p>下面的表格列出了一些 adbshell 命令，如果需要全部的命令和程序，可以启动模拟器实例并且用 adb -help 命令 .</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb shell <span class="token function">ls</span> /system/bin
+</pre><p>对大部分命令来说，help 都是可用的。</p>
+<TABLE>
+<TBODY>
+  <TR>
+    <TH>Shell Command</TH>
+    <TH>Description</TH>
+    <TH>Comments</TH>
+  </TR>
+  <TR>
+    <TD><CODE>dumpsys</CODE></TD>
+    <TD>清除屏幕中的系统数据 n.</TD>
+    <TD rowSpan="4"> (DDMS) 工具提供了完整的调试</TD>
+  </TR>
+  <TR>
+    <TD><CODE>dumpstate</CODE></TD>
+    <TD>清除一个文件的状态。</TD>
+  </TR>
+  <TR>
+    <TD><CODE>logcat&nbsp;[&lt;option&gt;]...&nbsp;[&lt;filter-spec&gt;]...</CODE></TD>
+    <TD>启动信息日志并且但因输出到屏幕上。</TD>
+  </TR>
+  <TR>
+    <TD><CODE>dmesg</CODE></TD>
+    <TD>输出主要的调试信息到屏幕上。</TD>
+  </TR>
+  <TR>
+    <TD><CODE>pm list packages</CODE></TD>
+    <TD>获取已安装的应用的包名。</TD>
+  </TR>
+  <TR>
+    <TD><CODE>pm path phone.android</CODE></TD>
+    <TD>获取包名对应的 APK 路径。</TD>
+  </TR>
+  <TR>
+    <TD><CODE>start</CODE></TD>
+    <TD>启动或重启一个模拟器 / 设备实例。</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><CODE>stop</CODE></TD>
+    <TD>关闭一个模拟器 / 设备实例。</TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</TBODY>
+</TABLE>
+<h2 class="mume-header" id="%E5%90%AF%E7%94%A8-logcat-%E6%97%A5%E5%BF%97">启用 logcat 日志</h2>
+
+<p>Android 日志系统提供了记录和查看系统调试信息的功能。日志都是从各种软件和一些系统的缓冲区中记录下来的，缓冲区可以通过 logcat 命令来查看和使用。</p>
+<h3 class="mume-header" id="%E4%BD%BF%E7%94%A8-logcat-%E5%91%BD%E4%BB%A4">使用 logcat 命令</h3>
+
+<p>你可以用 logcat 命令来查看系统日志缓冲区的内容：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span><span class="token operator">&lt;</span>option<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">..</span>. <span class="token punctuation">[</span><span class="token operator">&lt;</span>filter-spec<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">..</span>.
+</pre><p>你也可以在你的电脑或运行在模拟器 / 设备上的远程 adb shell 端来使用 <code>logcat</code> 命令，也可以在你的电脑上查看日志输出。</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">$ adb logcat
+</pre><p>你也这样使用：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># logcat</span>
+</pre><h3 class="mume-header" id="%E8%BF%87%E6%BB%A4%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA">过滤日志输出</h3>
+
+<p>每一个输出的 Android 日志信息都有一个标签和它的优先级。</p>
+<p>日志的标签是系统部件原始信息的一个简要的标志。（比如：&quot;View&quot;就是查看系统的标签）.<br>
+优先级有下列几种，是按照从低到高顺利排列的：</p>
+<ul>
+<li>V — Verbose （最低优先级）</li>
+<li>D — Debug</li>
+<li>I — Info</li>
+<li>W — Warning</li>
+<li>E — Error</li>
+<li>F — Fatal</li>
+<li>S — Silent （最高优先级，没有任何东西被打印出来）</li>
+</ul>
+<p>在运行 logcat 的时候在前两列的信息中你就可以看到 logcat 的标签列表和优先级别，它是这样标出的：<code>&lt;priority&gt;/&lt;tag&gt;</code>.</p>
+<p>下面是一个 logcat 输出的例子，它的优先级就似乎 I, 标签就是 ActivityManage:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">I/ActivityManager<span class="token punctuation">(</span>  585<span class="token punctuation">)</span>: Starting activity: Intent <span class="token punctuation">{</span> action<span class="token operator">=</span>android.intent.action<span class="token punctuation">..</span>.<span class="token punctuation">}</span>
+</pre><p>为了让日志输出能体现管理的级别，你还可以用过滤器来控制日志输出，过滤器可以帮助你描述系统的标签等级。</p>
+<p>过滤器语句按照下面的格式描 <code>tag:priority ...</code> , tag 表示是标签，priority 是表示标签的报告的最低等级。 从上面的 tag 的中可以得到日志的优先级。 你可以在过滤器中多次写 tag:priority 。</p>
+<p>这些说明都只到空白结束。下面有一个列子，例子表示支持所有的日志信息，除了那些标签为&quot;ActivityManager&quot;和优先级为&quot;Info&quot;以上的和标签为&quot; MyApp&quot;和优先级为&quot; Debug&quot;以上的。 小等级，优先权报告为 tag.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat ActivityManager:I MyApp:D *:S
+</pre><p>上面表达式的最后的元素 <code>*:S</code>，是设置所有的标签为&quot;silent&quot;，所有日志只显示有&quot;View&quot; 与 &quot;MyApp&quot;的，用 <code>*:S</code> 的另一个用处是 能够确保日志输出的时候是按照过滤器的说明限制的，也让过滤器也作为一项输出到日志中。</p>
+<p>下面的过滤语句指显示优先级为 warning 或更高的日志信息：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat *:W
+</pre><p>如果你电脑上运行 logcat ，相比在远程 adbshell 端，你还可以为环境变量 <code>ANDROID_LOG_TAGS:</code> 输入一个参数来设置默认的过滤</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">export</span> ANDROID_LOG_TAGS<span class="token operator">=</span><span class="token string">"ActivityManager:I MyApp:D *:S"</span>
+</pre><p>需要注意的是 <code>ANDROID_LOG_TAGS</code> 过滤器如果通过远程 shell 运行 <code>logcat</code> 或用 <code>adb shell logcat</code> 来运行模拟器 / 设备不能输出日志。</p>
+<h3 class="mume-header" id="%E6%8E%A7%E5%88%B6%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F">控制日志输出格式</h3>
+
+<p>日志信息包括了许多元数据域包括标签和优先级。可以修改日志的输出格式，所以可以显示出特定的元数据域。可以通过 -v 选项得到格式化输出日志的相关信息。</p>
+<ul>
+<li>brief — 显示原始进程的 priority/tag 和 PID（默认格式）.</li>
+<li>process — 只显示 PID.</li>
+<li>tag — 只显示 priority/tag.</li>
+<li>thread — 显示进程：只显示 thread 、 priority/tag.</li>
+<li>raw — 显示原始的日志消息，没有其他的元数据字段。</li>
+<li>time — 显示原始进程的日期、调用时间、优先级 / 标记和 PID.</li>
+<li>long — 使用空白行显示所有元数据字段和单独的消息。</li>
+</ul>
+<p>当启动了 logcat，你可以通过 -v 选项来指定输出格式：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span>-v <span class="token operator">&lt;</span>format<span class="token operator">></span><span class="token punctuation">]</span>
+</pre><p>下面是用 thread 来产生的日志格式：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat -v thread
+</pre><p>需要注意的是你只能 -v 选项来规定输出格式 option.</p>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%8F%AF%E7%94%A8%E6%97%A5%E5%BF%97%E7%BC%93%E5%86%B2%E5%8C%BA">查看可用日志缓冲区</h3>
+
+<p>Android 日志系统有循环缓冲区，并不是所有的日志系统都有默认循环缓冲区。为了得到日志信息，你需要通过 -b 选项来启动 logcat。如果要使用循环缓冲区，你需要查看剩余的循环缓冲期：</p>
+<ul>
+<li>radio — 查看缓冲区的相关的信息。</li>
+<li>events — 查看和事件相关的的缓冲区。</li>
+<li>main — 查看主要的日志缓冲区</li>
+</ul>
+<p>-b 选项使用方法：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span>-b <span class="token operator">&lt;</span>buffer<span class="token operator">></span><span class="token punctuation">]</span>
+</pre><p>下面的例子表示怎么查看日志缓冲区包含 radio 和 telephony 信息：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat -b radio
+</pre><h3 class="mume-header" id="logcat-%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8">Logcat 命令列表</h3>
+
+<TABLE>
+    <TBODY>
+      <TR>
+        <TH>Option</TH>
+        <TH>Description</TH>
+      </TR>
+      <TR>
+        <TD><CODE>-b&nbsp;&lt;buffer&gt;</CODE></TD>
+        <TD> 加载一个可使用的日志缓冲区供查看，比如<CODE>event</CODE>和<CODE>radio</CODE>.
+          默认值是<CODE>main</CODE>。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-c</CODE></TD>
+        <TD>清除屏幕上的日志。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-d</CODE></TD>
+        <TD>输出日志到屏幕上。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-f&nbsp;&lt;filename&gt;</CODE></TD>
+        <TD>指定输出日志信息的<CODE>&lt;filename&gt;</CODE>，默认是<CODE>stdout</CODE>.</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-g</CODE></TD>
+        <TD>输出指定的日志缓冲区，输出后退出。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-n&nbsp;&lt;count&gt;</CODE></TD>
+        <TD>设置日志的最大数目<CODE>&lt;count&gt;</CODE>.，默认值是 4，需要和 <CODE>-r</CODE>选项一起使用。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-r&nbsp;&lt;kbytes&gt;</CODE></TD>
+        <TD> 每<CODE>&lt;kbytes&gt;</CODE> 时输出日志，默认值为 16，需要和<CODE>-f</CODE> 选项一起使用。</TD>
+      </TR>
+      <TR>
+        <TD><CODE>-s</CODE></TD>
+        <TD>设置默认的过滤级别为 silent. </TD>
+      </TR>
+      <TR>
+        <TD><CODE>-v&nbsp;&lt;format&gt;</CODE></TD>
+        <TD>设置日志输入格式，默认的是<CODE>brief</CODE>格式。</TD>
+      </TR>
+    </TBODY>
+</TABLE>
+<h2 class="mume-header" id="%E5%81%9C%E6%AD%A2-adb-%E6%9C%8D%E5%8A%A1">停止 adb 服务</h2>
+
+<p>在某些情况下，你可能需要终止 Android 调试系统的运行，然后再重新启动它。 例如，如果 Android 调试系统不响应命令，你可以先终止服务器然后再重启，这样就可能解决这个问题。</p>
+<p>用 <code>kill-server</code> 可以终止 adb server。你可以用 adb 发出的任何命令来重新启动服务器。</p>
+<h2 class="mume-header" id="%E9%87%8D%E5%90%AF%E8%AE%BE%E5%A4%87">重启设备</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token function">reboot</span>
+</pre>
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+    
+    
+  </html>
