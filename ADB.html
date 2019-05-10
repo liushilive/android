@@ -1,81 +1,78 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <title>ADB</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:///C:\Users\liush\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.5\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+<!DOCTYPE html><html><head>
+  <title>ADB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <style> 
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+
+
+
+
+
+
+
+
+
+
+  <style>
+  /**
+* prism.js Github theme based on GitHub's theme.
+* @author Sam Clarke
+*/
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
+color: #333;
+background: none;
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+text-align: left;
+white-space: pre;
+word-spacing: normal;
+word-break: normal;
+word-wrap: normal;
+line-height: 1.4;
 
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
+-moz-tab-size: 8;
+-o-tab-size: 8;
+tab-size: 8;
 
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+-webkit-hyphens: none;
+-moz-hyphens: none;
+-ms-hyphens: none;
+hyphens: none;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
+padding: .8em;
+overflow: auto;
+/* border: 1px solid #ddd; */
+border-radius: 3px;
+/* background: #fff; */
+background: #f5f5f5;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
+padding: .1em;
+border-radius: .3em;
+white-space: normal;
+background: #f5f5f5;
 }
 
 .token.comment,
 .token.blockquote {
-  color: #969896;
+color: #969896;
 }
 
 .token.cdata {
-  color: #183691;
+color: #183691;
 }
 
 .token.doctype,
 .token.punctuation,
 .token.variable,
 .token.macro.property {
-  color: #333;
+color: #333;
 }
 
 .token.operator,
@@ -83,14 +80,14 @@ pre[class*="language-"] {
 .token.keyword,
 .token.rule,
 .token.builtin {
-  color: #a71d5d;
+color: #a71d5d;
 }
 
 .token.string,
 .token.url,
 .token.regex,
 .token.attr-value {
-  color: #183691;
+color: #183691;
 }
 
 .token.property,
@@ -102,13 +99,13 @@ pre[class*="language-"] {
 .token.symbol,
 .token.command,
 .token.code {
-  color: #0086b3;
+color: #0086b3;
 }
 
 .token.tag,
 .token.selector,
 .token.prolog {
-  color: #63a35c;
+color: #63a35c;
 }
 
 .token.function,
@@ -120,552 +117,2395 @@ pre[class*="language-"] {
 .token.id,
 .token.url-reference .token.variable,
 .token.attr-name {
-  color: #795da3;
+color: #795da3;
 }
 
 .token.entity {
-  cursor: help;
+cursor: help;
 }
 
 .token.title,
 .token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
+font-weight: bold;
+color: #1d3e81;
 }
 
 .token.list {
-  color: #ed6a43;
+color: #ed6a43;
 }
 
 .token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
+background-color: #eaffea;
+color: #55a532;
 }
 
 .token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
+background-color: #ffecec;
+color: #bd2c00;
 }
 
 .token.bold {
-  font-weight: bold;
+font-weight: bold;
 }
 
 .token.italic {
-  font-style: italic;
+font-style: italic;
 }
 
 
 /* JSON */
 .language-json .token.property {
-  color: #183691;
+color: #183691;
 }
 
 .language-markup .token.tag .token.punctuation {
-  color: #333;
+color: #333;
 }
 
 /* CSS */
 code.language-css,
 .language-css .token.function {
-  color: #0086b3;
+color: #0086b3;
 }
 
 /* YAML */
 .language-yaml .token.atrule {
-  color: #63a35c;
+color: #63a35c;
 }
 
 code.language-yaml {
-  color: #183691;
+color: #183691;
 }
 
 /* Ruby */
 .language-ruby .token.function {
-  color: #333;
+color: #333;
 }
 
 /* Markdown */
 .language-markdown .token.url {
-  color: #795da3;
+color: #795da3;
 }
 
 /* Makefile */
 .language-makefile .token.symbol {
-  color: #795da3;
+color: #795da3;
 }
 
 .language-makefile .token.variable {
-  color: #183691;
+color: #183691;
 }
 
 .language-makefile .token.builtin {
-  color: #0086b3;
+color: #0086b3;
 }
 
 /* Bash */
 .language-bash .token.keyword {
-  color: #0086b3;
+color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+position: relative;
+padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+position: absolute;
+top: 0;
+left: 0;
+background-color: transparent;
+display: block;
+width: 100%;
+}
+
+pre[data-line] .line-highlight {
+position: absolute;
+left: 0;
+right: 0;
+padding: inherit 0;
+margin-top: 1em;
+background: hsla(24, 20%, 50%,.08);
+background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+pointer-events: none;
+line-height: inherit;
+white-space: pre;
+}
+
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+content: attr(data-start);
+position: absolute;
+top: .4em;
+left: .6em;
+min-width: 1em;
+padding: 0 .5em;
+background-color: hsla(24, 20%, 50%,.4);
+color: hsl(24, 20%, 95%);
+font: bold 65%/1.5 sans-serif;
+text-align: center;
+vertical-align: .3em;
+border-radius: 999px;
+text-shadow: none;
+box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+content: attr(data-end);
+top: auto;
+bottom: .4em;
 }html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
- 
-      </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview   ">
-      <h1 class="mume-header" id="adb">ADB</h1>
 
-<p>Android 调试桥 (<code>adb</code>) 是多种用途的工具，该工具可以帮助你你管理设备或模拟器的状态。</p>
-<p>可以通过下列几种方法进入 <code>adb</code>:</p>
+  </style>
+</head>
+<body for="html-export">
+  <div class="mume markdown-preview   ">
+  <h1 class="mume-header" id="adb">ADB</h1>
+
+<p><a href="https://developer.android.com/studio/command-line/adb?hl=zh-cn">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<p>Android &#x8C03;&#x8BD5;&#x6865; (<code>adb</code>) &#x662F;&#x591A;&#x79CD;&#x7528;&#x9014;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x8BE5;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x4F60;&#x7BA1;&#x7406;&#x8BBE;&#x5907;&#x6216;&#x6A21;&#x62DF;&#x5668;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x8BE5;&#x5DE5;&#x5177;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF; - &#x670D;&#x52A1;&#x5668;&#x7A0B;&#x5E8F;&#xFF0C;&#x5305;&#x62EC;&#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x53D1;&#x9001;&#x547D;&#x4EE4;&#x3002;<br>
+&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x5F00;&#x53D1;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D1;&#x51FA; <code>adb</code> &#x547D;&#x4EE4;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#x8C03;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</li>
+<li>&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x5728;&#x8BBE;&#x5907;&#x4E0A;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x3002;<br>
+&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#x662F;&#x6BCF;&#x4E2A;&#x6A21;&#x62DF;&#x5668;&#x6216;&#x8BBE;&#x5907;&#x5B9E;&#x4F8B;&#x4E0A;&#x4F5C;&#x4E3A;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x7684;&#x5B88;&#x62A4;&#x7A0B;&#x5E8F; (daemon)&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x7BA1;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x3002;<br>
+&#x670D;&#x52A1;&#x5668;&#x5728;&#x5F00;&#x53D1;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x4F5C;&#x4E3A;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x3002;&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x8FD0;&#x884C;&#x4E8E;&#x6A21;&#x62DF;&#x5668;&#x6216;&#x8BBE;&#x5907;&#x4E0A;&#x7684; <code>adb &#x5B88;&#x62A4;&#x7A0B;&#x5E8F;</code> (daemon) &#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x5728; <code>android_sdk/platform-tools/</code> &#x4E2D;&#x627E;&#x5230; <code>adb</code> &#x5DE5;&#x5177;&#x3002;</p>
+<blockquote>
+<p>&#x5EFA;&#x8BAE;&#x5C06;&#x8BE5;&#x8DEF;&#x5F84;&#x52A0;&#x5165; <code>PATH</code> &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;</p>
+</blockquote>
+<h2 class="mume-header" id="adb-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F">adb &#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;</h2>
+
+<p>&#x5F53;&#x4F60;&#x542F;&#x52A8;&#x4E00;&#x4E2A; <code>adb</code> &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9996;&#x5148;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x5DF2;&#x6709;&#x4E00;&#x4E2A; <code>adb</code> &#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x5728;&#x8FD0;&#x884C;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x5219;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x3002;&#x5F53;&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;&#xFF0C; <code>adb</code> &#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x7ED1;&#x5B9A;&#x672C;&#x5730;&#x7684; <code>TCP</code> &#x7AEF;&#x53E3; <code>5037</code> &#x5E76;&#x76D1;&#x542C; <code>adb</code> &#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x6765;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x6240;&#x6709;&#x7684; <code>adb</code> &#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x662F;&#x7528;&#x7AEF;&#x53E3; <code>5037</code> &#x4E0E; <code>adb</code> &#x670D;&#x52A1;&#x5668;&#x5BF9;&#x8BDD;&#x7684;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5C06;&#x6240;&#x6709;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x6216;&#x8BBE;&#x5907;&#x5B9E;&#x4F8B;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x3002;&#x5B83;&#x901A;&#x8FC7;&#x626B;&#x63CF;&#x6240;&#x6709; <code>5555</code> &#x5230; <code>5585</code> &#x8303;&#x56F4;&#x5185;&#x7684; <code>&#x5947;&#x6570;&#x7AEF;&#x53E3;</code> &#x6765;&#x5B9A;&#x4F4D;&#x6240;&#x6709;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x6216;&#x8BBE;&#x5907;&#xFF08;<code>&#x6A21;&#x62DF;&#x5668; / &#x8BBE;&#x5907;</code> &#x4F7F;&#x7528;&#x7684;&#x8303;&#x56F4;&#xFF09;&#x3002;&#x4E00;&#x65E6;&#x670D;&#x52A1;&#x5668;&#x627E;&#x5230;&#x4E86; <code>adb</code> &#x5B88;&#x62A4;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x5C06;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x5230;&#x8BE5;&#x7AEF;&#x53E3;&#x7684;&#x8FDE;&#x63A5;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#x4EFB;&#x4F55;&#x6A21;&#x62DF;&#x5668;&#x6216;&#x8BBE;&#x5907;&#x5B9E;&#x4F8B;&#x4F1A;&#x53D6;&#x5F97;&#x4E24;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x7AEF;&#x53E3;&#x2014;&#x2014;&#x4E00;&#x4E2A;<code>&#x5076;&#x6570;&#x7AEF;&#x53E3;</code>&#x7528;&#x6765;&#x54CD;&#x5E94;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x548C;&#x4E00;&#x4E2A; <code>&#x5947;&#x6570;&#x7AEF;&#x53E3;</code> &#x7528;&#x6765;&#x54CD;&#x5E94; <code>adb</code> &#x8FDE;&#x63A5;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">&#x6A21;&#x62DF;&#x5668;1&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#xFF1A;5554
+&#x6A21;&#x62DF;&#x5668;1&#xFF0C;adb&#xFF1A;5555
+&#x6A21;&#x62DF;&#x5668;2&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#xFF1A;5556
+&#x6A21;&#x62DF;&#x5668;2&#xFF0C;adb&#xFF1A;5557
+&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;<span class="token punctuation">..</span>.
+</pre><p>&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x6A21;&#x62DF;&#x5668;&#x5B9E;&#x4F8B;&#x901A;&#x8FC7; <code>5555</code> &#x7AEF;&#x53E3;&#x8FDE;&#x63A5; <code>adb</code>&#xFF0C;&#x5C31;&#x5982;&#x540C;&#x4F7F;&#x7528; <code>5554</code> &#x7AEF;&#x53E3;&#x8FDE;&#x63A5;&#x63A7;&#x5236;&#x53F0;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x670D;&#x52A1;&#x5668;&#x4E0E;&#x6240;&#x6709;&#x6A21;&#x62DF;&#x5668;&#x5B9E;&#x4F8B;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>adb</code> &#x547D;&#x4EE4;&#x63A7;&#x5236;&#x548C;&#x8BBF;&#x95EE;&#x8BE5;&#x5B9E;&#x4F8B;&#x3002;&#x56E0;&#x4E3A;&#x670D;&#x52A1;&#x5668;&#x7BA1;&#x7406; <code>&#x6A21;&#x62DF;&#x5668; / &#x8BBE;&#x5907;&#x5B9E;&#x4F8B;</code>&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x548C;&#x63A7;&#x5236;&#x5904;&#x7406;&#x4ECE;&#x6765;&#x81EA;&#x591A;&#x4E2A; <code>adb</code> &#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EFB;&#x4F55;&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x6216;&#x811A;&#x672C;&#xFF09;&#x6765;&#x63A7;&#x5236;&#x4EFB;&#x4F55;&#x6A21;&#x62DF;&#x5668;&#x6216;&#x8BBE;&#x5907;&#x5B9E;&#x4F8B;&#x3002;</p>
+<h2 class="mume-header" id="%E5%9C%A8%E6%82%A8%E7%9A%84%E8%AE%BE%E5%A4%87%E4%B8%8A%E5%90%AF%E7%94%A8-adb-%E8%B0%83%E8%AF%95">&#x5728;&#x60A8;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#x542F;&#x7528; adb &#x8C03;&#x8BD5;</h2>
+
+<p>&#x8981;&#x5728;&#x901A;&#x8FC7; USB &#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#x4F7F;&#x7528; <code>adb</code>&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x8BBE;&#x5907;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x542F;&#x7528; <code>USB &#x8C03;&#x8BD5;</code>&#xFF08;&#x4F4D;&#x4E8E; <code>&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;</code> &#x4E0B;&#xFF09;&#x3002;</p>
+<ol>
+<li>&#x5728;&#x8FD0;&#x884C; Android 4.2 &#x53CA;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#xFF0C;<code>&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;</code> &#x5C4F;&#x5E55;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5904;&#x4E8E;&#x9690;&#x85CF;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x5982;&#x9700;&#x5C06;&#x5176;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF0C;&#x8BF7;&#x8F6C;&#x5230; <code>&#x8BBE;&#x7F6E;</code> &gt; <code>&#x5173;&#x4E8E;&#x624B;&#x673A;</code> &#x5E76;&#x70B9;&#x6309; <code>&#x8F6F;&#x4EF6;&#x7248;&#x672C;&#x53F7;</code> &#x4E03;&#x6B21;&#x3002;</li>
+<li>&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x5C4F;&#x5E55;&#xFF0C;&#x5728;&#x5E95;&#x90E8;&#x53EF;&#x4EE5;&#x627E;&#x5230; <code>&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;</code>&#x3002;</li>
+<li>&#x5728;&#x67D0;&#x4E9B;&#x8BBE;&#x5907;&#x4E0A;&#xFF0C;<code>&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;</code> &#x5C4F;&#x5E55;&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x6216;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#x53EF;&#x80FD;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;</li>
+</ol>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8BBE;&#x5907;&#x4E0E; USB &#x8FDE;&#x63A5;&#x3002;&#x53EF;&#x4EE5;&#x4ECE; <code>android_sdk/platform-tools/</code> &#x76EE;&#x5F55;&#x6267;&#x884C; <code>adb devices</code> &#x6765;&#x9A8C;&#x8BC1;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x8FDE;&#x63A5;&#x3002;&#x5982;&#x679C;&#x5DF2;&#x8FDE;&#x63A5;&#xFF0C;&#x5C06;&#x770B;&#x5230;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#x4EE5; <code>&#x8BBE;&#x5907;</code> &#x5F62;&#x5F0F;&#x5217;&#x793A;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x5F53;&#x8FDE;&#x63A5;&#x8FD0;&#x884C; Android 4.2.2 &#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;&#x8BBE;&#x5907;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x5BF9;&#x8BDD;&#x6846;&#xFF0C;&#x8BE2;&#x95EE; <code>&#x60A8;&#x662F;&#x5426;&#x63A5;&#x53D7;&#x5141;&#x8BB8;&#x5728;&#x8FD9;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x8C03;&#x8BD5;</code> &#x7684; RSA &#x5BC6;&#x94A5;&#x3002;&#x8FD9;&#x79CD;&#x5B89;&#x5168;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x4FDD;&#x62A4;&#x7528;&#x6237;&#x8BBE;&#x5907;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x786E;&#x4FDD;&#x53EA;&#x6709;&#x5728;&#x4F60;&#x80FD;&#x591F;&#x89E3;&#x9501;&#x8BBE;&#x5907;&#x5E76;&#x786E;&#x8BA4;&#x5BF9;&#x8BDD;&#x6846;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x80FD;&#x6267;&#x884C; USB &#x8C03;&#x8BD5;&#x548C;&#x5176;&#x4ED6; <code>ADB</code> &#x547D;&#x4EE4;&#x3002;</p>
+</blockquote>
+<h2 class="mume-header" id="%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2>
+
+<h3 class="mume-header" id="%E5%91%BD%E4%BB%A4%E8%AF%AD%E6%B3%95">&#x547D;&#x4EE4;&#x8BED;&#x6CD5;</h3>
+
+<p>adb &#x547D;&#x4EE4;&#x7684;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token operator">&lt;</span>serialNumber<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>command<span class="token operator">&gt;</span>
+</pre><p>&#x5982;&#x679C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x6389; <code>[-d|-e|-s &lt;serialNumber&gt;]</code> &#x8FD9;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>adb &lt;command&gt;</code>&#x3002;</p>
+<h3 class="mume-header" id="%E4%B8%BA%E5%91%BD%E4%BB%A4%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E8%AE%BE%E5%A4%87">&#x4E3A;&#x547D;&#x4EE4;&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x8BBE;&#x5907;</h3>
+
+<p>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x8FDE;&#x63A5;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4E3A;&#x547D;&#x4EE4;&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x8BBE;&#x5907;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d</td>
+<td>&#x6307;&#x5B9A;&#x5F53;&#x524D;&#x552F;&#x4E00;&#x901A;&#x8FC7; USB &#x8FDE;&#x63A5;&#x7684; Android &#x8BBE;&#x5907;&#x4E3A;&#x547D;&#x4EE4;&#x76EE;&#x6807;</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>&#x6307;&#x5B9A;&#x5F53;&#x524D;&#x552F;&#x4E00;&#x8FD0;&#x884C;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x4E3A;&#x547D;&#x4EE4;&#x76EE;&#x6807;</td>
+</tr>
+<tr>
+<td><code>-s &lt;serialNumber&gt;</code></td>
+<td>&#x6307;&#x5B9A;&#x76F8;&#x5E94; serialNumber &#x53F7;&#x7684;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x4E3A;&#x547D;&#x4EE4;&#x76EE;&#x6807;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5728;&#x591A;&#x4E2A;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x8FDE;&#x63A5;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x662F; <code>-s &lt;serialNumber&gt;</code> &#x53C2;&#x6570;&#xFF0C;serialNumber &#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>adb devices</code> &#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x3002;&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&gt;</span> adb devices
+
+List of devices attached
+cf264b8f  device
+emulator-5554  device
+10.129.164.6:5555  device
+</pre><p>&#x8F93;&#x51FA;&#x91CC;&#x7684; <code>cf264b8f</code>&#x3001;<code>emulator-5554</code> &#x548C; <code>10.129.164.6:5555</code> &#x5373;&#x4E3A; serialNumber&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8FD9;&#x65F6;&#x60F3;&#x6307;&#x5B9A; <code>cf264b8f</code> &#x8FD9;&#x4E2A;&#x8BBE;&#x5907;&#x6765;&#x8FD0;&#x884C; adb &#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb -s cf264b8f shell wm size
+</pre><p>&#x53C8;&#x5982;&#x60F3;&#x7ED9; <code>10.129.164.6:5555</code> &#x8FD9;&#x4E2A;&#x8BBE;&#x5907;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#xFF08;<em>&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x7684; serialNumber &#x683C;&#x5F0F;&#x4E3A; <code>&lt;IP&gt;:&lt;Port&gt;</code>&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#x6216; Genymotion &#x7B49;&#x7B2C;&#x4E09;&#x65B9; Android &#x6A21;&#x62DF;&#x5668;</em>&#xFF09;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb -s 10.129.164.6:5555 <span class="token function">install</span> test.apk
+</pre><blockquote>
+<p>&#x9047;&#x5230;&#x591A;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x7684;&#x60C5;&#x51B5;&#x5747;&#x4F7F;&#x7528;&#x8FD9;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x547D;&#x4EE4;&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x8BBE;&#x5907;&#xFF0C;&#x4E0B;&#x6587;&#x4E2D;&#x4E3A;&#x7B80;&#x5316;&#x63CF;&#x8FF0;&#xFF0C;&#x4E0D;&#x518D;&#x91CD;&#x590D;&#x3002;</p>
+</blockquote>
+<h3 class="mume-header" id="%E5%90%AF%E5%8A%A8-%E5%81%9C%E6%AD%A2">&#x542F;&#x52A8; / &#x505C;&#x6B62;</h3>
+
+<p>&#x542F;&#x52A8; adb server &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb start-server
+</pre><p>&#xFF08;&#x4E00;&#x822C;&#x65E0;&#x9700;&#x624B;&#x52A8;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF0C;&#x5728;&#x8FD0;&#x884C; adb &#x547D;&#x4EE4;&#x65F6;&#x82E5;&#x53D1;&#x73B0; adb server &#x6CA1;&#x6709;&#x542F;&#x52A8;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x8D77;&#x3002;&#xFF09;</p>
+<p>&#x505C;&#x6B62; adb server &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb kill-server
+</pre><h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B-adb-%E7%89%88%E6%9C%AC">&#x67E5;&#x770B; adb &#x7248;&#x672C;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb version
+</pre><p>&#x793A;&#x4F8B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Android Debug Bridge version 1.0.36
+Revision 8f855a3d9b35-android
+</pre><h3 class="mume-header" id="%E4%BB%A5-root-%E6%9D%83%E9%99%90%E8%BF%90%E8%A1%8C-adbd">&#x4EE5; root &#x6743;&#x9650;&#x8FD0;&#x884C; adbd</h3>
+
+<p>adb &#x7684;&#x8FD0;&#x884C;&#x539F;&#x7406;&#x662F; PC &#x7AEF;&#x7684; adb server &#x4E0E;&#x624B;&#x673A;&#x7AEF;&#x7684;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B; adbd &#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x7136;&#x540E; PC &#x7AEF;&#x7684; adb client &#x901A;&#x8FC7; adb server &#x8F6C;&#x53D1;&#x547D;&#x4EE4;&#xFF0C;adbd &#x63A5;&#x6536;&#x547D;&#x4EE4;&#x540E;&#x89E3;&#x6790;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5982;&#x679C; adbd &#x4EE5;&#x666E;&#x901A;&#x6743;&#x9650;&#x6267;&#x884C;&#xFF0C;&#x6709;&#x4E9B;&#x9700;&#x8981; root &#x6743;&#x9650;&#x624D;&#x80FD;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x7528; <code>adb xxx</code> &#x6267;&#x884C;&#x3002;&#x8FD9;&#x65F6;&#x53EF;&#x4EE5; <code>adb shell</code> &#x7136;&#x540E; <code>su</code> &#x540E;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA9; adbd &#x4EE5; root &#x6743;&#x9650;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x80FD;&#x968F;&#x610F;&#x6267;&#x884C;&#x9AD8;&#x6743;&#x9650;&#x547D;&#x4EE4;&#x4E86;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+</pre><p>&#x6B63;&#x5E38;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">restarting adbd as root
+</pre><p>&#x73B0;&#x5728;&#x518D;&#x8FD0;&#x884C; <code>adb shell</code>&#xFF0C;&#x770B;&#x770B;&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;&#x662F;&#x4E0D;&#x662F;&#x53D8;&#x6210; <code>#</code> &#x4E86;&#xFF1F;</p>
+<p>&#x6709;&#x4E9B;&#x624B;&#x673A; root &#x540E;&#x4E5F;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; <code>adb root</code> &#x547D;&#x4EE4;&#x8BA9; adbd &#x4EE5; root &#x6743;&#x9650;&#x6267;&#x884C;&#xFF0C;&#x6BD4;&#x5982;&#x4E09;&#x661F;&#x7684;&#x90E8;&#x5206;&#x673A;&#x578B;&#xFF0C;&#x4F1A;&#x63D0;&#x793A; <code>adbd cannot run as root in production builds</code>&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x5148;&#x5B89;&#x88C5; adbd Insecure&#xFF0C;&#x7136;&#x540E; <code>adb root</code> &#x8BD5;&#x8BD5;&#x3002;</p>
+<p>&#x76F8;&#x5E94;&#x5730;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x6062;&#x590D; adbd &#x4E3A;&#x975E; root &#x6743;&#x9650;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>adb unroot</code> &#x547D;&#x4EE4;&#x3002;</p>
+<h3 class="mume-header" id="%E6%8C%87%E5%AE%9A-adb-server-%E7%9A%84%E7%BD%91%E7%BB%9C%E7%AB%AF%E5%8F%A3">&#x6307;&#x5B9A; adb server &#x7684;&#x7F51;&#x7EDC;&#x7AEF;&#x53E3;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb -P <span class="token operator">&lt;</span>port<span class="token operator">&gt;</span> start-server
+</pre><p>&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A; 5037&#x3002;</p>
+<h2 class="mume-header" id="%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86">&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x7BA1;&#x7406;</h2>
+
+<h3 class="mume-header" id="%E6%9F%A5%E8%AF%A2%E5%B7%B2%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87-%E6%A8%A1%E6%8B%9F%E5%99%A8">&#x67E5;&#x8BE2;&#x5DF2;&#x8FDE;&#x63A5;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb devices
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">List of devices attached
+cf264b8f  device
+emulator-5554  device
+10.129.164.6:5555  device
+</pre><p>&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x4E3A; <code>[serialNumber] [state]</code>&#xFF0C;serialNumber &#x5373;&#x6211;&#x4EEC;&#x5E38;&#x8BF4;&#x7684; SN&#xFF0C;state &#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
 <ul>
 <li>
-<p>在设备上运行 shell 命令</p>
+<p><code>offline</code> &#x2014;&#x2014; &#x8868;&#x793A;&#x8BBE;&#x5907;&#x672A;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x6216;&#x65E0;&#x54CD;&#x5E94;&#x3002;</p>
 </li>
 <li>
-<p>通过端口转发来管理模拟器或设备</p>
+<p><code>device</code> &#x2014;&#x2014; &#x8BBE;&#x5907;&#x5DF2;&#x8FDE;&#x63A5;&#x3002;&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x5E76;&#x4E0D;&#x80FD;&#x6807;&#x8BC6; Android &#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5B8C;&#x5168;&#x542F;&#x52A8;&#x548C;&#x53EF;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x8BBE;&#x5907;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BBE;&#x5907;&#x5B9E;&#x4F8B;&#x5C31;&#x53EF;&#x8FDE;&#x63A5;&#x5230; adb&#xFF0C;&#x4F46;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;&#x540E;&#x7CFB;&#x7EDF;&#x624D;&#x5904;&#x4E8E;&#x53EF;&#x64CD;&#x4F5C;&#x72B6;&#x6001;&#x3002;</p>
 </li>
 <li>
-<p>从模拟器或设备上拷贝来或拷贝走文件</p>
+<p><code>no device</code> &#x2014;&#x2014; &#x6CA1;&#x6709;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x8FDE;&#x63A5;&#x3002;</p>
 </li>
 </ul>
-<p>下面对 <code>adb</code> 进行了介绍并描述了常见的使用。</p>
-<h2 class="mume-header" id="%E6%A6%82%E8%A6%81">概要</h2>
-
-<p>Android 调试系统是一个面对客户服务系统，包括三个组成部分：</p>
+<p>&#x4EE5;&#x4E0A;&#x8F93;&#x51FA;&#x663E;&#x793A;&#x5F53;&#x524D;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x4E86;&#x4E09;&#x53F0;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#xFF0C;<code>cf264b8f</code>&#x3001;<code>emulator-5554</code> &#x548C; <code>10.129.164.6:5555</code> &#x5206;&#x522B;&#x662F;&#x5B83;&#x4EEC;&#x7684; SN&#x3002;&#x4ECE; <code>emulator-5554</code> &#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x5B83;&#x662F;&#x4E00;&#x4E2A; Android &#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x800C; <code>10.129.164.6:5555</code> &#x8FD9;&#x79CD;&#x5F62;&#x4E3A; <code>&lt;IP&gt;:&lt;Port&gt;</code> &#x7684; serialNumber &#x4E00;&#x822C;&#x662F;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#x6216; Genymotion &#x7B49;&#x7B2C;&#x4E09;&#x65B9; Android &#x6A21;&#x62DF;&#x5668;&#x3002;</p>
+<p>&#x5E38;&#x89C1;&#x5F02;&#x5E38;&#x8F93;&#x51FA;&#xFF1A;</p>
 <ol>
 <li>
-<p>一个在你用于开发程序的电脑上运行的客户端。你可以通过 shell 端使用 adb 命令启动客户端。</p>
+<p>&#x6CA1;&#x6709;&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">List of devices attached
+</pre></li>
+<li>
+<p>&#x8BBE;&#x5907; / &#x6A21;&#x62DF;&#x5668;&#x672A;&#x8FDE;&#x63A5;&#x5230; adb &#x6216;&#x65E0;&#x54CD;&#x5E94;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">List of devices attached
+cf264b8f  offline
+</pre></li>
+</ol>
+<h3 class="mume-header" id="usb-%E8%BF%9E%E6%8E%A5">USB &#x8FDE;&#x63A5;</h3>
+
+<p>&#x901A;&#x8FC7; USB &#x8FDE;&#x63A5;&#x6765;&#x6B63;&#x5E38;&#x4F7F;&#x7528; adb &#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>
+<p>&#x786C;&#x4EF6;&#x72B6;&#x6001;&#x6B63;&#x5E38;&#x3002;</p>
+<p>&#x5305;&#x62EC; Android &#x8BBE;&#x5907;&#x5904;&#x4E8E;&#x6B63;&#x5E38;&#x5F00;&#x673A;&#x72B6;&#x6001;&#xFF0C;USB &#x8FDE;&#x63A5;&#x7EBF;&#x548C;&#x5404;&#x79CD;&#x63A5;&#x53E3;&#x5B8C;&#x597D;&#x3002;</p>
 </li>
 <li>
-<p>在你用于发的机器上作为后台进程运行的服务器。该服务器负责管理客户端与运行于模拟器或设备上的 <code>adb 守护程序</code> (daemon) 之间的通信。</p>
+<p>Android &#x8BBE;&#x5907;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#x548C; USB &#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x5DF2;&#x5F00;&#x542F;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x5230;&#x300C;&#x8BBE;&#x7F6E;&#x300D;-&#x300C;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#x300D;-&#x300C;Android &#x8C03;&#x8BD5;&#x300D;&#x67E5;&#x770B;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x8BBE;&#x7F6E;&#x91CC;&#x627E;&#x4E0D;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#xFF0C;&#x90A3;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5F69;&#x86CB;&#x6765;&#x8BA9;&#x5B83;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF1A;&#x5728;&#x300C;&#x8BBE;&#x7F6E;&#x300D;-&#x300C;&#x5173;&#x4E8E;&#x624B;&#x673A;&#x300D;&#x8FDE;&#x7EED;&#x70B9;&#x51FB;&#x300C;&#x7248;&#x672C;&#x53F7;&#x300D;7 &#x6B21;&#x3002;</p>
 </li>
 <li>
-<p>一个以后台进程的形式运行于模拟器或设备上的守护程序 (daemon)。</p>
+<p>&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#x72B6;&#x6001;&#x6B63;&#x5E38;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x70B9;&#x8C8C;&#x4F3C;&#x5728; Linux &#x548C; Mac OS X &#x4E0B;&#x4E0D;&#x7528;&#x64CD;&#x5FC3;&#xFF0C;&#x5728; Windows &#x4E0B;&#x6709;&#x53EF;&#x80FD;&#x9047;&#x5230;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x9A71;&#x52A8;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x786E;&#x8BA4;&#x8FD9;&#x4E00;&#x70B9;&#x53EF;&#x4EE5;&#x53F3;&#x952E;&#x300C;&#x8BA1;&#x7B97;&#x673A;&#x300D;-&#x300C;&#x5C5E;&#x6027;&#x300D;&#xFF0C;&#x5230;&#x300C;&#x8BBE;&#x5907;&#x7BA1;&#x7406;&#x5668;&#x300D;&#x91CC;&#x67E5;&#x770B;&#x76F8;&#x5173;&#x8BBE;&#x5907;&#x4E0A;&#x662F;&#x5426;&#x6709;&#x9EC4;&#x8272;&#x611F;&#x53F9;&#x53F7;&#x6216;&#x95EE;&#x53F7;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5C31;&#x8BF4;&#x660E;&#x9A71;&#x52A8;&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x597D;&#x4E86;&#x3002;&#x5426;&#x5219;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;&#x624B;&#x673A;&#x52A9;&#x624B;&#x7C7B;&#x7A0B;&#x5E8F;&#x6765;&#x5B89;&#x88C5;&#x9A71;&#x52A8;&#x5148;&#x3002;</p>
+</li>
+<li>
+<p>&#x901A;&#x8FC7; USB &#x7EBF;&#x8FDE;&#x63A5;&#x597D;&#x7535;&#x8111;&#x548C;&#x8BBE;&#x5907;&#x540E;&#x786E;&#x8BA4;&#x72B6;&#x6001;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb devices
+</pre><p>&#x5982;&#x679C;&#x80FD;&#x770B;&#x5230;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">xxxxxx device
+</pre><p>&#x8BF4;&#x660E;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x3002;</p>
 </li>
 </ol>
-<p>当你启动一个 adb 客户端，客户端首先确认是否已有一个 adb 服务进程在运行。如果没有，则启动服务进程。当服务器运行， adb 服务器就会绑定本地的 TCP 端口 5037 并监听 adb 客户端发来的命令，所有的 adb 客户端都是用端口 5037 与 adb 服务器对话的。</p>
-<p>接着服务器将所有运行中的模拟器或设备实例建立连接。它通过扫描所有 5555 到 5585 范围内的奇数端口来定位所有的模拟器或设备。一旦服务器找到了 adb 守护程序，它将建立一个到该端口的连接。请注意任何模拟器或设备实例会取得两个连续的端口——一个偶数端口用来响应控制台的连接，和一个奇数端口用来响应 adb 连接。比如说：</p>
-<pre class="language-text">模拟器 1，控制台：端口 5554
-模拟器 1，Adb 端口 5555
-控制台：端口 5556
-Adb 端口 5557...
-</pre>
-<p>如上所示，模拟器实例通过 5555 端口连接 adb，就如同使用 5554 端口连接控制台一样。</p>
-<p>一旦服务器与所有模拟器实例建立连接，就可以使用 adb 命令控制和访问该实例。因为服务器管理模拟器 / 设备实例的连接，和控制处理从来自多个 adb 客户端来的命令，你可以通过任何客户端（或脚本）来控制任何模拟器或设备实例。</p>
-<p>以下的部分描述通过命令使用 adb 和管理模拟器 / 设备的状态。</p>
-<h2 class="mume-header" id="%E5%8F%91%E5%87%BA-adb-%E5%91%BD%E4%BB%A4">发出 adb 命令</h2>
+<h3 class="mume-header" id="%E6%97%A0%E7%BA%BF%E8%BF%9E%E6%8E%A5%E9%9C%80%E8%A6%81%E5%80%9F%E5%8A%A9-usb-%E7%BA%BF">&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;&#xFF08;&#x9700;&#x8981;&#x501F;&#x52A9; USB &#x7EBF;&#xFF09;</h3>
 
-<p>发出 Android 命令： 你可以在你的开发机上的命令行或脚本上发布 Android 命令，使用方法：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token operator">&lt;</span>serialNumber<span class="token operator">></span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>command<span class="token operator">></span>
-</pre><p>当你发出一个命令，系统启用 Android 客户端。客户端并不与模拟器实例相关，所以如果双服务器 / 设备是运行中的，你需要用 -d 选项去为应被控制的命令确定目标实例。</p>
-<h2 class="mume-header" id="%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%8B%9F%E5%99%A8-%E8%AE%BE%E5%A4%87%E5%AE%9E%E4%BE%8B">查询模拟器 / 设备实例</h2>
-
-<p>在发布 adb 命令之前，有必要知道什么样的模拟器 / 设备实例与 adb 服务器是相连的。可以通过使用<code>devices</code>命令来得到一系列相关联的模拟器 / 设备：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb devices
-</pre><p>作为回应，adb 为每个实例都制定了相应的状态信息：<br>
-下面是一个展示 devices 命令和输出的例子 :</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">$ adb devices
-List of devices attached
-emulator-5554  device
-emulator-5556  device
-emulator-5558  device
-</pre><ul>
+<p>&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; USB &#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x4E0E;&#x7535;&#x8111;&#x6765;&#x4F7F;&#x7528; adb&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;&#x2014;&#x2014;&#x867D;&#x7136;&#x8FDE;&#x63A5;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x6709;&#x9700;&#x8981;&#x4F7F;&#x7528; USB &#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x4F46;&#x662F;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x4F60;&#x7684;&#x8BBE;&#x5907;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x6446;&#x8131; USB &#x8FDE;&#x63A5;&#x7EBF;&#x7684;&#x9650;&#x5236;&#x5566;&#xFF01;</p>
+<p>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
 <li>
-<p>序列号——由 adb 创建的一个字符串，这个字符串通过自己的控制端口<type>-<consolePort>唯一地识别一个模拟器 / 设备实例。</consolePort></type></p>
+<p>&#x5C06; Android &#x8BBE;&#x5907;&#x4E0E;&#x8981;&#x8FD0;&#x884C; adb &#x7684;&#x7535;&#x8111;&#x8FDE;&#x63A5;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;&#x6BD4;&#x5982;&#x8FDE;&#x5230;&#x540C;&#x4E00;&#x4E2A; WiFi&#x3002;</p>
 </li>
 <li>
-<p>实例的连接状态有三种状态：</p>
-<ul>
-<li>
-<p>offline — 此实例没有与 adb 相连接或者无法响应</p>
+<p>&#x5C06;&#x8BBE;&#x5907;&#x4E0E;&#x7535;&#x8111;&#x901A;&#x8FC7; USB &#x7EBF;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x5E94;&#x786E;&#x4FDD;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#xFF08;&#x53EF;&#x8FD0;&#x884C; <code>adb devices</code> &#x770B;&#x662F;&#x5426;&#x80FD;&#x5217;&#x51FA;&#x8BE5;&#x8BBE;&#x5907;&#xFF09;&#x3002;</p>
 </li>
 <li>
-<p>device — 此实例正与 adb 服务器连接。注意这个状态并不能百分之百地表示在运行和操作 Android 系统，因此这个实例是当系统正在运行的时候与 adb 连接的。然而，在系统启动之后，就是一个模拟器 / 设备状态的正常运行状态了</p>
+<p>&#x8BA9;&#x8BBE;&#x5907;&#x5728; 5555 &#x7AEF;&#x53E3;&#x76D1;&#x542C; TCP/IP &#x8FDE;&#x63A5;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb tcpip 5555
+</pre></li>
+<li>
+<p>&#x65AD;&#x5F00; USB &#x8FDE;&#x63A5;&#x3002;</p>
 </li>
-</ul>
+<li>
+<p>&#x627E;&#x5230;&#x8BBE;&#x5907;&#x7684; IP &#x5730;&#x5740;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x80FD;&#x5728;&#x300C;&#x8BBE;&#x7F6E;&#x300D;-&#x300C;&#x5173;&#x4E8E;&#x624B;&#x673A;&#x300D;-&#x300C;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x300D;-&#x300C;IP&#x5730;&#x5740;&#x300D;&#x627E;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x6587;&#x91CC; &#x67E5;&#x770B;&#x8BBE;&#x5907;&#x4FE1;&#x606F; - IP &#x5730;&#x5740; &#x4E00;&#x8282;&#x91CC;&#x7684;&#x65B9;&#x6CD5;&#x7528; adb &#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x3002;</p>
 </li>
-</ul>
-<p>如果当前没有模拟器 / 设备运行，adb 则返回 <code>no device</code>。</p>
-<h2 class="mume-header" id="%E7%BB%99%E7%89%B9%E5%AE%9A%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%99%A8-%E8%AE%BE%E5%A4%87%E5%AE%9E%E4%BE%8B%E5%8F%91%E9%80%81%E5%91%BD%E4%BB%A4">给特定的模拟器 / 设备实例发送命令</h2>
+<li>
+<p>&#x901A;&#x8FC7; IP &#x5730;&#x5740;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb connect <span class="token operator">&lt;</span>device-ip-address<span class="token operator">&gt;</span>
+</pre><p>&#x8FD9;&#x91CC;&#x7684; <code>&lt;device-ip-address&gt;</code> &#x5C31;&#x662F;&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x627E;&#x5230;&#x7684;&#x8BBE;&#x5907; IP &#x5730;&#x5740;&#x3002;</p>
+</li>
+<li>
+<p>&#x786E;&#x8BA4;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb devices
+</pre><p>&#x5982;&#x679C;&#x80FD;&#x770B;&#x5230;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>device-ip-address<span class="token operator">&gt;</span>:5555 device
+</pre><p>&#x8BF4;&#x660E;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x3002;</p>
+</li>
+</ol>
+<p>&#x5982;&#x679C;&#x8FDE;&#x63A5;&#x4E0D;&#x4E86;&#xFF0C;&#x8BF7;&#x786E;&#x8BA4; Android &#x8BBE;&#x5907;&#x4E0E;&#x7535;&#x8111;&#x662F;&#x8FDE;&#x63A5;&#x5230;&#x4E86;&#x540C;&#x4E00;&#x4E2A; WiFi&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6B21;&#x6267;&#x884C; <code>adb connect &lt;device-ip-address&gt;</code> &#x90A3;&#x4E00;&#x6B65;&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x8FD8;&#x662F;&#x4E0D;&#x884C;&#x7684;&#x8BDD;&#xFF0C;&#x901A;&#x8FC7; <code>adb kill-server</code> &#x91CD;&#x65B0;&#x542F;&#x52A8; adb &#x7136;&#x540E;&#x4ECE;&#x5934;&#x518D;&#x6765;&#x4E00;&#x6B21;&#x8BD5;&#x8BD5;&#x3002;</p>
+<blockquote>
+<p>&#x65AD;&#x5F00;&#x65E0;&#x7EBF;&#x8FDE;&#x63A5;</p>
+</blockquote>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb disconnect <span class="token operator">&lt;</span>device-ip-address<span class="token operator">&gt;</span>
+</pre><h2 class="mume-header" id="%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86">&#x5E94;&#x7528;&#x7BA1;&#x7406;</h2>
 
-<p>如果有多个模拟器 / 设备实例在运行，在发布 adb 命令时需要指定一个目标实例。 这样做，请使用 -s 选项的命令。在使用的 -s 选项是：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb -s <span class="token operator">&lt;</span>serialNumber<span class="token operator">></span> <span class="token operator">&lt;</span>command<span class="token operator">></span>
-</pre><p>如上所示，给一个命令指定了目标实例，这个目标实例使用由 adb 分配的序列号。你可以使用 <code>devices</code> 命令来获得运行着的模拟器 / 设备实例的序列号。</p>
-<p>示例如下：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb -s emulator-5556 <span class="token function">install</span> helloWorld.apk
-</pre><p>注意这点，如果没有指定一个目标模拟器 / 设备实例就执行 <code>-s</code> 这个命令的话，adb 会产生一个错误。</p>
-<h2 class="mume-header" id="%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF">远程终端</h2>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E5%88%97%E8%A1%A8">&#x67E5;&#x770B;&#x5E94;&#x7528;&#x5217;&#x8868;</h3>
 
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb tcpip 5555
-adb connect <span class="token operator">&lt;</span>device-ip-address<span class="token operator">></span>
-</pre><p>连接到指定的 ip, 这个通常配合 wifidebug，比如 adb connect 127.0.0.1:5037,5037 是默认端口号，海马模拟器是 adb connect 127.0.0.1:26944</p>
-<p>断开</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb disconnect <span class="token operator">&lt;</span>device-ip-address<span class="token operator">></span>
-adb disconnect 127.0.0.1:26944﻿
-</pre><h2 class="mume-header" id="%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6">安装软件</h2>
+<p>&#x67E5;&#x770B;&#x5E94;&#x7528;&#x5217;&#x8868;&#x7684;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x662F;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm list packages <span class="token punctuation">[</span>-f<span class="token punctuation">]</span> <span class="token punctuation">[</span>-d<span class="token punctuation">]</span> <span class="token punctuation">[</span>-e<span class="token punctuation">]</span> <span class="token punctuation">[</span>-s<span class="token punctuation">]</span> <span class="token punctuation">[</span>-3<span class="token punctuation">]</span> <span class="token punctuation">[</span>-i<span class="token punctuation">]</span> <span class="token punctuation">[</span>-u<span class="token punctuation">]</span> <span class="token punctuation">[</span>--user USER_ID<span class="token punctuation">]</span> <span class="token punctuation">[</span>FILTER<span class="token punctuation">]</span>
+</pre><p>&#x5373;&#x5728; <code>adb shell pm list packages</code> &#x7684;&#x57FA;&#x7840;&#x4E0A;&#x53EF;&#x4EE5;&#x52A0;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x67E5;&#x770B;&#x4E0D;&#x540C;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x652F;&#x6301;&#x7684;&#x8FC7;&#x6EE4;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x663E;&#x793A;&#x5217;&#x8868;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x65E0;</td>
+<td>&#x6240;&#x6709;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>&#x663E;&#x793A;&#x5E94;&#x7528;&#x5173;&#x8054;&#x7684; apk &#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td>&#x53EA;&#x663E;&#x793A; disabled &#x7684;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>&#x53EA;&#x663E;&#x793A; enabled &#x7684;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>&#x53EA;&#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-3</code></td>
+<td>&#x53EA;&#x663E;&#x793A;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>&#x663E;&#x793A;&#x5E94;&#x7528;&#x7684; installer</td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>&#x5305;&#x542B;&#x5DF2;&#x5378;&#x8F7D;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>&lt;FILTER&gt;</code></td>
+<td>&#x5305;&#x540D;&#x5305;&#x542B; <code>&lt;FILTER&gt;</code> &#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="%E6%89%80%E6%9C%89%E5%BA%94%E7%94%A8">&#x6240;&#x6709;&#x5E94;&#x7528;</h4>
 
-<p>你可以使用 adb 从你的开发电脑上复制一个应用程序，并且将其安装在一个模拟器 / 设备实例。像这样做，使用 <code>install</code> 命令。这个 <code>install</code> 命令要求你必须指定你所要安装的 <code>.apk</code> 文件的路径：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token function">install</span> <span class="token operator">&lt;</span>path_to_apk<span class="token operator">></span>
-</pre><h2 class="mume-header" id="%E4%BB%8E%E6%A8%A1%E6%8B%9F%E5%99%A8-%E8%AE%BE%E5%A4%87%E4%B8%AD%E6%8B%B7%E5%85%A5%E6%88%96%E6%8B%B7%E5%87%BA%E6%96%87%E4%BB%B6">从模拟器 / 设备中拷入或拷出文件</h2>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm list packages
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">package:com.android.smoketest
+package:com.example.android.livecubes
+package:com.android.providers.telephony
+package:com.google.android.googlequicksearchbox
+package:com.android.providers.calendar
+package:com.android.providers.media
+package:com.android.protips
+package:com.android.documentsui
+package:com.android.gallery
+package:com.android.externalstorage
+<span class="token punctuation">..</span>.
+// other packages here
+<span class="token punctuation">..</span>.
+</pre><h4 class="mume-header" id="%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8">&#x7CFB;&#x7EDF;&#x5E94;&#x7528;</h4>
 
-<p>可以使用<code>adbpull</code>,<code>push</code>命令将文件复制到一个模拟器 / 设备实例的数据文件或是从数据文件中复制。<code>install</code> 命令只将一个 <code>.apk</code> 文件复制到一个特定的位置，与其不同的是，<code>pull</code> 和 <code>push</code> 命令可令你复制任意的目录和文件到一个模拟器 / 设备实例的任何位置。</p>
-<p>从模拟器或者设备中复制文件或目录，使用（如下命）:</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb pull <span class="token operator">&lt;</span>remote<span class="token operator">></span> <span class="token operator">&lt;</span>local<span class="token operator">></span>
-</pre><p>将文件或目录复制到模拟器或者设备，使用（如下命令）：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb push <span class="token operator">&lt;</span>local<span class="token operator">></span> <span class="token operator">&lt;</span>remote<span class="token operator">></span>
-</pre><p>在这些命令中， <code>&lt;local&gt;</code> 和 <code>&lt;remote&gt;</code> 分别指通向自己的发展机（本地）和模拟器 / 设备实例（远程）上的目标文件 / 目录的路径。</p>
-<p>下面是一个例子：:</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb push foo.txt /sdcard/foo.txt
-</pre><h2 class="mume-header" id="adb-%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8">Adb 命令列表</h2>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm list packages -s
+</pre><h4 class="mume-header" id="%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8">&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;</h4>
 
-<p>下列表格列出了 adb 支持的所有命令，并对它们的意义和使用方法做了说明。</p>
-<TABLE>
-    <TBODY>
-      <TR>
-        <TH>类别</TH>
-        <TH>命令</TH>
-        <TH>描述</TH>
-        <TH>解释</TH>
-      </TR>
-      <TR>
-        <TD rowSpan="3">Options<br>选择项</TD>
-        <TD><CODE>-d</CODE></TD>
-        <TD>仅仅通过 USB 接口来管理 abd.</TD>
-        <TD>如果不只是用 USB 接口来管理则返回错误。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-e</CODE></TD>
-        <TD>仅仅通过模拟器实例来管理 adb.</TD>
-        <TD>如果不是仅仅通过模拟器实例管理则返回错误。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-s&nbsp;&lt;serialNumber&gt;</CODE></TD>
-        <TD>通过模拟器 / 设备的允许的命令号码来发送命令来管理 adb （比如："emulator-5556").</TD>
-        <TD>如果没有指定号码，则会报错。</TD>
-      </TR>
-      <TR>
-        <TD rowSpan="3">General<br>常规的</TD>
-        <TD><CODE>devices</CODE></TD>
-        <TD>查看所有连接模拟器 / 设备的设施的清单。</TD>
-        <TD></TD>
-      </TR>
-      <TR>
-        <TD><CODE>help</CODE></TD>
-        <TD>查看 adb 所支持的所有命令。.</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD><CODE>version</CODE></TD>
-        <TD>查看 adb 的版本序列号。</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD rowSpan="3">Debug<br>调试</TD>
-        <TD><CODE>logcat&nbsp;[&lt;option&gt;] [&lt;filter-specs&gt;]</CODE></TD>
-        <TD>将日志数据输出到屏幕上。</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD><CODE>bugreport</CODE></TD>
-        <TD>查看 bug 的报告，如<CODE>dumpsys</CODE>, <CODE>dumpstate</CODE>, 和<CODE>logcat</CODE>信息。 </TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD><CODE>jdwp</CODE></TD>
-        <TD>查看指定的设施的可用的 JDWP（调试进程）信息。</TD>
-        <TD>可以用 <CODE>forward jdwp:&lt;pid&gt;</CODE>端口映射信息来连接指定的 JDWP 进程。例如： <BR>
-          <CODE>adb forward tcp:8000 jdwp:472</CODE><BR>
-          <CODE>jdb -attach
-          localhost:8000</CODE>
-          <P></P></BR></BR></TD>
-      </TR>
-      <TR>
-        <TD rowSpan="3">Data<br>数据</TD>
-        <TD><CODE>install&nbsp;&lt;path-to-apk&gt;</CODE></TD>
-        <TD>安装 Android 为（可以模拟器 / 设施的数据文件。apk 指定完整的路径）. </TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD><CODE>pull&nbsp;&lt;remote&gt;&nbsp;&lt;local&gt;</CODE></TD>
-        <TD>将指定的文件从模拟器 / 设施的拷贝到电脑上。</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD><CODE>push&nbsp;&lt;local&gt;&nbsp;&lt;remote&gt;</CODE></TD>
-        <TD>将指定的文件从电脑上拷贝到模拟器 / 设备中。</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD rowSpan="2">Ports and Networking<br>调试端口和网络</TD>
-        <TD><CODE>forward&nbsp;&lt;local&gt;&nbsp;&lt;remote&gt;</CODE></TD>
-        <TD>用本地指定的端口通过 socket 方法远程连接模拟器 / 设施 </TD>
-        <TD>端口需要描述下列信息：
-          <UL>
-            <LI><CODE>tcp:&lt;portnum&gt;</CODE>
-            <LI><CODE>local:&lt;UNIX domain socket name&gt;</CODE>
-            <LI><CODE>dev:&lt;character device name&gt;</CODE>
-            <LI><CODE>jdwp:&lt;pid&gt;</CODE></LI>
-          </LI></LI></LI></UL></TD>
-      </TR>
-      <TR>
-        <TD><CODE>ppp&nbsp;&lt;tty&gt;&nbsp;[parm]...</CODE></TD>
-        <TD>通过 USB 运行 ppp：
-          <UL>
-            <LI><CODE>&lt;tty&gt;</CODE> — the tty for PPP stream. For example <CODE>dev:/dev/omap_csmi_ttyl</CODE>.
-            <LI><CODE>[parm]... </CODE>&amp;mdash zero or more PPP/PPPD options,
-              such as <CODE>defaultroute</CODE>, <CODE>local</CODE>, <CODE>notty</CODE>, etc.</LI>
-          </LI></UL>
-          <P>需要提醒你的不能自动启动 PDP 连接。</P></TD>
-        <TD></TD>
-      </TR>
-      <TR>
-        <TD rowSpan="3">Scripting<br>脚本</TD>
-        <TD><CODE>get-serialno</CODE></TD>
-        <TD>查看 adb 实例的序列号。</TD>
-        <TD rowSpan="2"></TD>
-      </TR>
-      <TR>
-        <TD><CODE>get-state</CODE></TD>
-        <TD>查看模拟器 / 设施的当前状态。</TD>
-          
-      </TR>
-      <TR>
-        <TD><CODE>wait-for-device</CODE></TD>
-        <TD>如果设备不联机就不让执行，-- 也就是实例状态是 <CODE>device</CODE>时。</TD>
-        <TD>你可以提前把命令转载在 adb 的命令器中，在命令器中的命令在模拟器 / 设备连接之前是不会执行其它命令的。示例如下：
-          <PRE>adb wait-for-device shell getprop</PRE>
-          需要提醒的是这些命令在所有的系统启动启动起来之前是不会启动 adb 的
-          所以在所有的系统启动起来之前你也不能执行其它的命令。比如：运用<CODE>install</CODE> 的时候就需要 Android 包，这些包只有系统完全启动。例如：
-          <PRE>adb wait-for-device install &lt;app&gt;.apk</PRE>
-          上面的命令只有连接上了模拟器 / 设备连接上了 adb 服务才会被执行，而在 Android 系统完全启动前执行就会有错误发生。</TD>
-      </TR>
-      <TR>
-        <TD rowSpan="2">Server<br>服务</TD>
-        <TD><CODE>start-server</CODE></TD>
-        <TD>选择服务是否启动 adb 服务进程。</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD><CODE>kill-server</CODE></TD>
-        <TD>终止 adb 服务进程。</TD>
-        <TD>&nbsp;</TD>
-      </TR>
-      <TR>
-        <TD rowSpan="2">Shell<br>壳</TD>
-        <TD><CODE>shell</CODE></TD>
-        <TD>通过远程 shell 命令来控制模拟器 / 设备实例。</TD>
-        <TD rowSpan="2"></TD>
-      </TR>
-      <TR>
-        <TD><CODE>shell&nbsp;[&lt;shellCommand&gt;]</CODE></TD>
-        <TD>连接模拟器 / 设施执行 shell 命令，执行完毕后退出远程 shell 端 l.</TD>
-      </TR>
-    </TBODY>
-</TABLE>
-<h2 class="mume-header" id="%E5%90%AF%E5%8A%A8-shell-%E5%91%BD%E4%BB%A4">启动 shell 命令</h2>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm list packages -3
+</pre><h4 class="mume-header" id="%E5%8C%85%E5%90%8D%E5%8C%85%E5%90%AB%E6%9F%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%BA%94%E7%94%A8">&#x5305;&#x540D;&#x5305;&#x542B;&#x67D0;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5E94;&#x7528;</h4>
 
-<p>Adb 提供了 shell 端，通过 shell 端你可以在模拟器或设备上运行各种命令。这些命令以 2 进制的形式保存在本地的模拟器或设备的文件系统中：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">/system/bin/<span class="token punctuation">..</span>.
-</pre><p>不管你是否完全进入到模拟器 / 设备的 adb 远程 shell 端，你都能 shell 命令来执行命令。</p>
-<p>当没有完全进入到远程 shell 的时候，这样使用 shell 命令来执行一条命令：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token punctuation">{</span><span class="token operator">&lt;</span>serialNumber<span class="token operator">></span><span class="token punctuation">}</span><span class="token punctuation">]</span> shell <span class="token operator">&lt;</span>shellCommand<span class="token operator">></span>
-</pre><p>在模拟器 / 设备中不用远程 shell 端时，这样使用 shell 命 :</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token punctuation">[</span>-d<span class="token operator">|</span>-e<span class="token operator">|</span>-s <span class="token punctuation">{</span><span class="token operator">&lt;</span>serialNumber<span class="token operator">></span><span class="token punctuation">}</span><span class="token punctuation">]</span> shell
-</pre><p>通过操作 <code>CTRL+D</code> 或 <code>exit</code> 就可以退出 shell 远程连接。</p>
-<p>下面一些就将告诉你更多的关于 shell 命令的知识。</p>
-<h2 class="mume-header" id="%E9%80%9A%E8%BF%87%E8%BF%9C%E7%A8%8B-shell-%E7%AB%AF%E8%BF%90%E8%A1%8C-sqllite3-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93">通过远程 shell 端运行 sqllite3 连接数据库</h2>
+<p>&#x6BD4;&#x5982;&#x8981;&#x67E5;&#x770B;&#x5305;&#x540D;&#x5305;&#x542B;&#x5B57;&#x7B26;&#x4E32; <code>mazhuang</code> &#x7684;&#x5E94;&#x7528;&#x5217;&#x8868;&#xFF0C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm list packages mazhuang
+</pre><p>&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; grep &#x6765;&#x8FC7;&#x6EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm list packages <span class="token operator">|</span> <span class="token function">grep</span> mazhuang
+</pre><h3 class="mume-header" id="%E5%AE%89%E8%A3%85-apk">&#x5B89;&#x88C5; APK</h3>
 
-<p>通过 adb 远程 shell 端，你可以通过 Android 软 sqlite3 命令程序来管理数据库。sqlite3 工具包含了许多使用命令，比如：<code>.dump</code> 显示表的内容，<code>.schema</code> 可以显示出已经存在的表空间的 SQL CREATE 结果集。Sqlite3 还允许你远程执行 sql 命令。</p>
-<p>通过 sqlite3, 按照前几节的方法登陆模拟器的远程 shell 端，然后启动工具就可以使用 sqlite3 命令。当 sqlite3 启动以后，你还可以指定你想查看的数据库的完整路径。模拟器 / 设备实例会在文件夹中保存 SQLite3 数据库。/data/data/&lt;package_name&gt;/databases/.</p>
-<p>示例如下：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">$ adb -s emulator-5554 shell
-<span class="token comment"># sqlite3 /data/data/com.android.email/databases/EmailProvider.db</span>
-SQLite version 3.3.12
-Enter <span class="token string">".help"</span> <span class="token keyword">for</span> instructions
-<span class="token punctuation">..</span><span class="token punctuation">..</span> enter commands, <span class="token keyword">then</span> quit<span class="token punctuation">..</span>.
-sqlite<span class="token operator">></span> .exit
-</pre><p>当你启动 sqlite3 的时候，你就可以通过 shell 端发送 <code>sqlite3</code> 命令了。用 <code>exit</code> 或 <code>CTRL+D</code> 退出 adb 远程 shell 端。</p>
-<h2 class="mume-header" id="%E5%85%B6%E5%AE%83%E7%9A%84-shell-%E5%91%BD%E4%BB%A4">其它的 shell 命令</h2>
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token function">install</span> <span class="token punctuation">[</span>-lrtsdg<span class="token punctuation">]</span> <span class="token operator">&lt;</span>path_to_apk<span class="token operator">&gt;</span>
+</pre><p>&#x53C2;&#x6570;&#xFF1A;</p>
+<p><code>adb install</code> &#x540E;&#x9762;&#x53EF;&#x4EE5;&#x8DDF;&#x4E00;&#x4E9B;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x6765;&#x63A7;&#x5236;&#x5B89;&#x88C5; APK &#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x53EF;&#x7528;&#x53C2;&#x6570;&#x53CA;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-l</code></td>
+<td>&#x5C06;&#x5E94;&#x7528;&#x5B89;&#x88C5;&#x5230;&#x4FDD;&#x62A4;&#x76EE;&#x5F55; <code>/mnt/asec</code></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>&#x5141;&#x8BB8;&#x8986;&#x76D6;&#x5B89;&#x88C5;</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td>&#x5141;&#x8BB8;&#x5B89;&#x88C5; <code>AndroidManifest.xml</code> &#x91CC; application &#x6307;&#x5B9A; <code>android:testOnly=&quot;true&quot;</code> &#x7684;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>&#x5C06;&#x5E94;&#x7528;&#x5B89;&#x88C5;&#x5230; <code>sdcard</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td>&#x5141;&#x8BB8;&#x964D;&#x7EA7;&#x8986;&#x76D6;&#x5B89;&#x88C5;</td>
+</tr>
+<tr>
+<td><code>-g</code></td>
+<td>&#x6388;&#x4E88;&#x6240;&#x6709;&#x8FD0;&#x884C;&#x65F6;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x540E;&#x5982;&#x679C;&#x89C1;&#x5230;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#x8F93;&#x51FA;&#xFF08;&#x72B6;&#x6001;&#x4E3A; <code>Success</code>&#xFF09;&#x4EE3;&#x8868;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token punctuation">[</span>100%<span class="token punctuation">]</span> /data/local/tmp/1.apk
+pkg: /data/local/tmp/1.apk
+Success
+</pre><p>&#x4E0A;&#x9762;&#x662F;&#x5F53;&#x524D;&#x6700;&#x65B0;&#x7248; v1.0.36 &#x7684; adb &#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4F1A;&#x663E;&#x793A; push apk &#x6587;&#x4EF6;&#x5230;&#x624B;&#x673A;&#x7684;&#x8FDB;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x65E7;&#x7248;&#x672C; adb &#x7684;&#x8F93;&#x51FA;&#x5219;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">12040 KB/s <span class="token punctuation">(</span>22205609 bytes <span class="token keyword">in</span> 1.801s<span class="token punctuation">)</span>
+    pkg: /data/local/tmp/SogouInput_android_v8.3_sweb.apk
+Success
+</pre><p>&#x800C;&#x5982;&#x679C;&#x72B6;&#x6001;&#x4E3A; <code>Failure</code> &#x5219;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token punctuation">[</span>100%<span class="token punctuation">]</span> /data/local/tmp/map-20160831.apk
+    pkg: /data/local/tmp/map-20160831.apk
+Failure <span class="token punctuation">[</span>INSTALL_FAILED_ALREADY_EXISTS<span class="token punctuation">]</span>
+</pre><p>&#x5E38;&#x89C1;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#x8F93;&#x51FA;&#x4EE3;&#x7801;&#x3001;&#x542B;&#x4E49;&#x53CA;&#x53EF;&#x80FD;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8F93;&#x51FA;</th>
+<th>&#x542B;&#x4E49;</th>
+<th>&#x89E3;&#x51B3;&#x529E;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INSTALL_FAILED_ALREADY_EXISTS</td>
+<td>&#x5E94;&#x7528;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x6216;&#x5378;&#x8F7D;&#x4E86;&#x4F46;&#x6CA1;&#x5378;&#x8F7D;&#x5E72;&#x51C0;</td>
+<td><code>adb install</code> &#x65F6;&#x4F7F;&#x7528; <code>-r</code> &#x53C2;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x5148; <code>adb uninstall &lt;packagename&gt;</code> &#x518D;&#x5B89;&#x88C5;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_INVALID_APK</td>
+<td>&#x65E0;&#x6548;&#x7684; APK &#x6587;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_INVALID_URI</td>
+<td>&#x65E0;&#x6548;&#x7684; APK &#x6587;&#x4EF6;&#x540D;</td>
+<td>&#x786E;&#x4FDD; APK &#x6587;&#x4EF6;&#x540D;&#x91CC;&#x65E0;&#x4E2D;&#x6587;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_INSUFFICIENT_STORAGE</td>
+<td>&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;</td>
+<td>&#x6E05;&#x7406;&#x7A7A;&#x95F4;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_DUPLICATE_PACKAGE</td>
+<td>&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x540C;&#x540D;&#x7A0B;&#x5E8F;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_NO_SHARED_USER</td>
+<td>&#x8BF7;&#x6C42;&#x7684;&#x5171;&#x4EAB;&#x7528;&#x6237;&#x4E0D;&#x5B58;&#x5728;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_UPDATE_INCOMPATIBLE</td>
+<td>&#x4EE5;&#x524D;&#x5B89;&#x88C5;&#x8FC7;&#x540C;&#x540D;&#x5E94;&#x7528;&#xFF0C;&#x4F46;&#x5378;&#x8F7D;&#x65F6;&#x6570;&#x636E;&#x6CA1;&#x6709;&#x79FB;&#x9664;&#xFF1B;&#x6216;&#x8005;&#x5DF2;&#x5B89;&#x88C5;&#x8BE5;&#x5E94;&#x7528;&#xFF0C;&#x4F46;&#x7B7E;&#x540D;&#x4E0D;&#x4E00;&#x81F4;</td>
+<td>&#x5148; <code>adb uninstall &lt;packagename&gt;</code> &#x518D;&#x5B89;&#x88C5;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_SHARED_USER_INCOMPATIBLE</td>
+<td>&#x8BF7;&#x6C42;&#x7684;&#x5171;&#x4EAB;&#x7528;&#x6237;&#x5B58;&#x5728;&#x4F46;&#x7B7E;&#x540D;&#x4E0D;&#x4E00;&#x81F4;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_MISSING_SHARED_LIBRARY</td>
+<td>&#x5B89;&#x88C5;&#x5305;&#x4F7F;&#x7528;&#x4E86;&#x8BBE;&#x5907;&#x4E0A;&#x4E0D;&#x53EF;&#x7528;&#x7684;&#x5171;&#x4EAB;&#x5E93;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_REPLACE_COULDNT_DELETE</td>
+<td>&#x66FF;&#x6362;&#x65F6;&#x65E0;&#x6CD5;&#x5220;&#x9664;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_DEXOPT</td>
+<td>dex &#x4F18;&#x5316;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x6216;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_OLDER_SDK</td>
+<td>&#x8BBE;&#x5907;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x4F4E;&#x4E8E;&#x5E94;&#x7528;&#x8981;&#x6C42;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_CONFLICTING_PROVIDER</td>
+<td>&#x8BBE;&#x5907;&#x91CC;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E0E;&#x5E94;&#x7528;&#x91CC;&#x540C;&#x540D;&#x7684; content provider</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_NEWER_SDK</td>
+<td>&#x8BBE;&#x5907;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x9AD8;&#x4E8E;&#x5E94;&#x7528;&#x8981;&#x6C42;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_TEST_ONLY</td>
+<td>&#x5E94;&#x7528;&#x662F; test-only &#x7684;&#xFF0C;&#x4F46;&#x5B89;&#x88C5;&#x65F6;&#x6CA1;&#x6709;&#x6307;&#x5B9A; <code>-t</code> &#x53C2;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_CPU_ABI_INCOMPATIBLE</td>
+<td>&#x5305;&#x542B;&#x4E0D;&#x517C;&#x5BB9;&#x8BBE;&#x5907; CPU &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E8C;&#x8FDB;&#x5236;&#x63A5;&#x53E3;&#x7684; native code</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_MISSING_FEATURE</td>
+<td>&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x4E86;&#x8BBE;&#x5907;&#x4E0D;&#x53EF;&#x7528;&#x7684;&#x529F;&#x80FD;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_CONTAINER_ERROR</td>
+<td>1. sdcard &#x8BBF;&#x95EE;&#x5931;&#x8D25;&#xFF1B;<br>2. &#x5E94;&#x7528;&#x7B7E;&#x540D;&#x4E0E; ROM &#x7B7E;&#x540D;&#x4E00;&#x81F4;&#xFF0C;&#x88AB;&#x5F53;&#x4F5C;&#x5185;&#x7F6E;&#x5E94;&#x7528;&#x3002;</td>
+<td>1. &#x786E;&#x8BA4; sdcard &#x53EF;&#x7528;&#xFF0C;&#x6216;&#x8005;&#x5B89;&#x88C5;&#x5230;&#x5185;&#x7F6E;&#x5B58;&#x50A8;&#xFF1B;<br>2. &#x6253;&#x5305;&#x65F6;&#x4E0D;&#x4E0E; ROM &#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7B7E;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_INVALID_INSTALL_LOCATION</td>
+<td>1. &#x4E0D;&#x80FD;&#x5B89;&#x88C5;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF1B;<br>2. &#x5E94;&#x7528;&#x7B7E;&#x540D;&#x4E0E; ROM &#x7B7E;&#x540D;&#x4E00;&#x81F4;&#xFF0C;&#x88AB;&#x5F53;&#x4F5C;&#x5185;&#x7F6E;&#x5E94;&#x7528;&#x3002;</td>
+<td>1. &#x5207;&#x6362;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF0C;&#x6DFB;&#x52A0;&#x6216;&#x5220;&#x9664; <code>-s</code> &#x53C2;&#x6570;&#xFF1B;<br>2. &#x6253;&#x5305;&#x65F6;&#x4E0D;&#x4E0E; ROM &#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7B7E;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_MEDIA_UNAVAILABLE</td>
+<td>&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#x4E0D;&#x53EF;&#x7528;</td>
+<td>&#x4E00;&#x822C;&#x4E3A; sdcard&#xFF0C;&#x786E;&#x8BA4; sdcard &#x53EF;&#x7528;&#x6216;&#x5B89;&#x88C5;&#x5230;&#x5185;&#x7F6E;&#x5B58;&#x50A8;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_VERIFICATION_TIMEOUT</td>
+<td>&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;&#x5305;&#x8D85;&#x65F6;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_VERIFICATION_FAILURE</td>
+<td>&#x9A8C;&#x8BC1;&#x5B89;&#x88C5;&#x5305;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_PACKAGE_CHANGED</td>
+<td>&#x5E94;&#x7528;&#x4E0E;&#x8C03;&#x7528;&#x7A0B;&#x5E8F;&#x671F;&#x671B;&#x7684;&#x4E0D;&#x4E00;&#x81F4;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_UID_CHANGED</td>
+<td>&#x4EE5;&#x524D;&#x5B89;&#x88C5;&#x8FC7;&#x8BE5;&#x5E94;&#x7528;&#xFF0C;&#x4E0E;&#x672C;&#x6B21;&#x5206;&#x914D;&#x7684; UID &#x4E0D;&#x4E00;&#x81F4;</td>
+<td>&#x6E05;&#x9664;&#x4EE5;&#x524D;&#x5B89;&#x88C5;&#x8FC7;&#x7684;&#x6B8B;&#x7559;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_VERSION_DOWNGRADE</td>
+<td>&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;&#x8BE5;&#x5E94;&#x7528;&#x66F4;&#x9AD8;&#x7248;&#x672C;</td>
+<td>&#x4F7F;&#x7528; <code>-d</code> &#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_PERMISSION_MODEL_DOWNGRADE</td>
+<td>&#x5DF2;&#x5B89;&#x88C5; target SDK &#x652F;&#x6301;&#x8FD0;&#x884C;&#x65F6;&#x6743;&#x9650;&#x7684;&#x540C;&#x540D;&#x5E94;&#x7528;&#xFF0C;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x652F;&#x6301;&#x8FD0;&#x884C;&#x65F6;&#x6743;&#x9650;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_NOT_APK</td>
+<td>&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0D;&#x662F;&#x6587;&#x4EF6;&#xFF0C;&#x6216;&#x4E0D;&#x662F;&#x4EE5; <code>.apk</code> &#x7ED3;&#x5C3E;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_BAD_MANIFEST</td>
+<td>&#x65E0;&#x6CD5;&#x89E3;&#x6790;&#x7684; AndroidManifest.xml &#x6587;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_UNEXPECTED_EXCEPTION</td>
+<td>&#x89E3;&#x6790;&#x5668;&#x9047;&#x5230;&#x5F02;&#x5E38;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_NO_CERTIFICATES</td>
+<td>&#x5B89;&#x88C5;&#x5305;&#x6CA1;&#x6709;&#x7B7E;&#x540D;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES</td>
+<td>&#x5DF2;&#x5B89;&#x88C5;&#x8BE5;&#x5E94;&#x7528;&#xFF0C;&#x4E14;&#x7B7E;&#x540D;&#x4E0E; APK &#x6587;&#x4EF6;&#x4E0D;&#x4E00;&#x81F4;</td>
+<td>&#x5148;&#x5378;&#x8F7D;&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x8BE5;&#x5E94;&#x7528;&#xFF0C;&#x518D;&#x5B89;&#x88C5;</td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_CERTIFICATE_ENCODING</td>
+<td>&#x89E3;&#x6790; APK &#x6587;&#x4EF6;&#x65F6;&#x9047;&#x5230; <code>CertificateEncodingException</code></td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_BAD_PACKAGE_NAME</td>
+<td>manifest &#x6587;&#x4EF6;&#x91CC;&#x6CA1;&#x6709;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x4E86;&#x65E0;&#x6548;&#x7684;&#x5305;&#x540D;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_BAD_SHARED_USER_ID</td>
+<td>manifest &#x6587;&#x4EF6;&#x91CC;&#x6307;&#x5B9A;&#x4E86;&#x65E0;&#x6548;&#x7684;&#x5171;&#x4EAB;&#x7528;&#x6237; ID</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_MANIFEST_MALFORMED</td>
+<td>&#x89E3;&#x6790; manifest &#x6587;&#x4EF6;&#x65F6;&#x9047;&#x5230;&#x7ED3;&#x6784;&#x6027;&#x9519;&#x8BEF;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_PARSE_FAILED_MANIFEST_EMPTY</td>
+<td>&#x5728; manifest &#x6587;&#x4EF6;&#x91CC;&#x627E;&#x4E0D;&#x5230;&#x627E;&#x53EF;&#x64CD;&#x4F5C;&#x6807;&#x7B7E;&#xFF08;instrumentation &#x6216; application&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_INTERNAL_ERROR</td>
+<td>&#x56E0;&#x7CFB;&#x7EDF;&#x95EE;&#x9898;&#x5B89;&#x88C5;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_USER_RESTRICTED</td>
+<td>&#x7528;&#x6237;&#x88AB;&#x9650;&#x5236;&#x5B89;&#x88C5;&#x5E94;&#x7528;</td>
+<td>&#x5728;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#x91CC;&#x5C06;&#x300C;USB &#x5B89;&#x88C5;&#x300D;&#x6253;&#x5F00;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x6253;&#x5F00;&#x4E86;&#xFF0C;&#x90A3;&#x5148;&#x5173;&#x95ED;&#x518D;&#x6253;&#x5F00;&#x3002;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_DUPLICATE_PERMISSION</td>
+<td>&#x5E94;&#x7528;&#x5C1D;&#x8BD5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x6743;&#x9650;&#x540D;&#x79F0;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_NO_MATCHING_ABIS</td>
+<td>&#x5E94;&#x7528;&#x5305;&#x542B;&#x8BBE;&#x5907;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E8C;&#x8FDB;&#x5236;&#x63A5;&#x53E3;&#x4E0D;&#x652F;&#x6301;&#x7684; native code</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_CANCELED_BY_USER</td>
+<td>&#x5E94;&#x7528;&#x5B89;&#x88C5;&#x9700;&#x8981;&#x5728;&#x8BBE;&#x5907;&#x4E0A;&#x786E;&#x8BA4;&#xFF0C;&#x4F46;&#x672A;&#x64CD;&#x4F5C;&#x8BBE;&#x5907;&#x6216;&#x70B9;&#x4E86;&#x53D6;&#x6D88;</td>
+<td>&#x5728;&#x8BBE;&#x5907;&#x4E0A;&#x540C;&#x610F;&#x5B89;&#x88C5;</td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_ACWF_INCOMPATIBLE</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0E;&#x8BBE;&#x5907;&#x4E0D;&#x517C;&#x5BB9;</td>
+<td></td>
+</tr>
+<tr>
+<td>INSTALL_FAILED_TEST_ONLY</td>
+<td>APK &#x6587;&#x4EF6;&#x662F;&#x4F7F;&#x7528; Android Studio &#x76F4;&#x63A5; RUN &#x7F16;&#x8BD1;&#x51FA;&#x6765;&#x7684;&#x6587;&#x4EF6;</td>
+<td>&#x901A;&#x8FC7; Gradle &#x7684; assembleDebug &#x6216; assembleRelease &#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x6216;&#x8005; Generate Signed APK</td>
+</tr>
+<tr>
+<td>does not contain AndroidManifest.xml</td>
+<td>&#x65E0;&#x6548;&#x7684; APK &#x6587;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>is not a valid zip file</td>
+<td>&#x65E0;&#x6548;&#x7684; APK &#x6587;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td>&#x8BBE;&#x5907;&#x672A;&#x8FDE;&#x63A5;&#x6210;&#x529F;</td>
+<td>&#x5148;&#x5C06;&#x8BBE;&#x5907;&#x4E0E; adb &#x8FDE;&#x63A5;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>unauthorized</td>
+<td>&#x8BBE;&#x5907;&#x672A;&#x6388;&#x6743;&#x5141;&#x8BB8;&#x8C03;&#x8BD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>error: device not found</td>
+<td>&#x6CA1;&#x6709;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x7684;&#x8BBE;&#x5907;</td>
+<td>&#x5148;&#x5C06;&#x8BBE;&#x5907;&#x4E0E; adb &#x8FDE;&#x63A5;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>protocol failure</td>
+<td>&#x8BBE;&#x5907;&#x5DF2;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</td>
+<td>&#x5148;&#x5C06;&#x8BBE;&#x5907;&#x4E0E; adb &#x8FDE;&#x63A5;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>Unknown option: -s</td>
+<td>Android 2.2 &#x4EE5;&#x4E0B;&#x4E0D;&#x652F;&#x6301;&#x5B89;&#x88C5;&#x5230; sdcard</td>
+<td>&#x4E0D;&#x4F7F;&#x7528; <code>-s</code> &#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>No space left on device</td>
+<td>&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;</td>
+<td>&#x6E05;&#x7406;&#x7A7A;&#x95F4;</td>
+</tr>
+<tr>
+<td>Permission denied ... sdcard ...</td>
+<td>sdcard &#x4E0D;&#x53EF;&#x7528;</td>
+<td></td>
+</tr>
+<tr>
+<td>signatures do not match the previously installed version; ignoring!</td>
+<td>&#x5DF2;&#x5B89;&#x88C5;&#x8BE5;&#x5E94;&#x7528;&#x4E14;&#x7B7E;&#x540D;&#x4E0D;&#x4E00;&#x81F4;</td>
+<td>&#x5148;&#x5378;&#x8F7D;&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x8BE5;&#x5E94;&#x7528;&#xFF0C;&#x518D;&#x5B89;&#x88C5;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://github.com/android/platform_frameworks_base/blob/master/core%2Fjava%2Fandroid%2Fcontent%2Fpm%2FPackageManager.java">PackageManager.java</a></p>
+<p><em><code>adb install</code> &#x5185;&#x90E8;&#x539F;&#x7406;&#x7B80;&#x4ECB;</em></p>
+<p><code>adb install</code> &#x5B9E;&#x9645;&#x662F;&#x5206;&#x4E09;&#x6B65;&#x5B8C;&#x6210;&#xFF1A;</p>
+<ol>
+<li>
+<p>push apk &#x6587;&#x4EF6;&#x5230; /data/local/tmp&#x3002;</p>
+</li>
+<li>
+<p>&#x8C03;&#x7528; pm install &#x5B89;&#x88C5;&#x3002;</p>
+</li>
+<li>
+<p>&#x5220;&#x9664; /data/local/tmp &#x4E0B;&#x7684;&#x5BF9;&#x5E94; apk &#x6587;&#x4EF6;&#x3002;</p>
+</li>
+</ol>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5FC5;&#x8981;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x624B;&#x52A8;&#x5206;&#x6B65;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h3 class="mume-header" id="%E5%8D%B8%E8%BD%BD%E5%BA%94%E7%94%A8">&#x5378;&#x8F7D;&#x5E94;&#x7528;</h3>
 
-<p>下面的表格列出了一些 adbshell 命令，如果需要全部的命令和程序，可以启动模拟器实例并且用 adb -help 命令 .</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb shell <span class="token function">ls</span> /system/bin
-</pre><p>对大部分命令来说，help 都是可用的。</p>
-<TABLE>
-<TBODY>
-  <TR>
-    <TH>Shell Command</TH>
-    <TH>Description</TH>
-    <TH>Comments</TH>
-  </TR>
-  <TR>
-    <TD><CODE>dumpsys</CODE></TD>
-    <TD>清除屏幕中的系统数据 n.</TD>
-    <TD rowSpan="4"> (DDMS) 工具提供了完整的调试</TD>
-  </TR>
-  <TR>
-    <TD><CODE>dumpstate</CODE></TD>
-    <TD>清除一个文件的状态。</TD>
-  </TR>
-  <TR>
-    <TD><CODE>logcat&nbsp;[&lt;option&gt;]...&nbsp;[&lt;filter-spec&gt;]...</CODE></TD>
-    <TD>启动信息日志并且但因输出到屏幕上。</TD>
-  </TR>
-  <TR>
-    <TD><CODE>dmesg</CODE></TD>
-    <TD>输出主要的调试信息到屏幕上。</TD>
-  </TR>
-  <TR>
-    <TD><CODE>pm list packages</CODE></TD>
-    <TD>获取已安装的应用的包名。</TD>
-  </TR>
-  <TR>
-    <TD><CODE>pm path phone.android</CODE></TD>
-    <TD>获取包名对应的 APK 路径。</TD>
-  </TR>
-  <TR>
-    <TD><CODE>start</CODE></TD>
-    <TD>启动或重启一个模拟器 / 设备实例。</TD>
-    <TD>&nbsp;</TD>
-  </TR>
-  <TR>
-    <TD><CODE>stop</CODE></TD>
-    <TD>关闭一个模拟器 / 设备实例。</TD>
-    <TD>&nbsp;</TD>
-  </TR>
-</TBODY>
-</TABLE>
-<h2 class="mume-header" id="%E5%90%AF%E7%94%A8-logcat-%E6%97%A5%E5%BF%97">启用 logcat 日志</h2>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb uninstall <span class="token punctuation">[</span>-k<span class="token punctuation">]</span> <span class="token operator">&lt;</span>packagename<span class="token operator">&gt;</span>
+</pre><p><code>&lt;packagename&gt;</code> &#x8868;&#x793A;&#x5E94;&#x7528;&#x7684;&#x5305;&#x540D;&#xFF0C;<code>-k</code> &#x53C2;&#x6570;&#x53EF;&#x9009;&#xFF0C;&#x8868;&#x793A;&#x5378;&#x8F7D;&#x5E94;&#x7528;&#x4F46;&#x4FDD;&#x7559;&#x6570;&#x636E;&#x548C;&#x7F13;&#x5B58;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb uninstall com.qihoo360.mobilesafe
+</pre><p>&#x8868;&#x793A;&#x5378;&#x8F7D; 360 &#x624B;&#x673A;&#x536B;&#x58EB;&#x3002;</p>
+<h3 class="mume-header" id="%E6%B8%85%E9%99%A4%E5%BA%94%E7%94%A8%E6%95%B0%E6%8D%AE%E4%B8%8E%E7%BC%93%E5%AD%98">&#x6E05;&#x9664;&#x5E94;&#x7528;&#x6570;&#x636E;&#x4E0E;&#x7F13;&#x5B58;</h3>
 
-<p>Android 日志系统提供了记录和查看系统调试信息的功能。日志都是从各种软件和一些系统的缓冲区中记录下来的，缓冲区可以通过 logcat 命令来查看和使用。</p>
-<h3 class="mume-header" id="%E4%BD%BF%E7%94%A8-logcat-%E5%91%BD%E4%BB%A4">使用 logcat 命令</h3>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm <span class="token function">clear</span> <span class="token operator">&lt;</span>packagename<span class="token operator">&gt;</span>
+</pre><p><code>&lt;packagename&gt;</code> &#x8868;&#x793A;&#x5E94;&#x7528;&#x540D;&#x5305;&#xFF0C;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x7684;&#x6548;&#x679C;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x8BBE;&#x7F6E;&#x91CC;&#x7684;&#x5E94;&#x7528;&#x4FE1;&#x606F;&#x754C;&#x9762;&#x70B9;&#x51FB;&#x4E86;&#x300C;&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x300D;&#x548C;&#x300C;&#x6E05;&#x9664;&#x6570;&#x636E;&#x300D;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm <span class="token function">clear</span> com.qihoo360.mobilesafe
+</pre><p>&#x8868;&#x793A;&#x6E05;&#x9664; 360 &#x624B;&#x673A;&#x536B;&#x58EB;&#x7684;&#x6570;&#x636E;&#x548C;&#x7F13;&#x5B58;&#x3002;</p>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%89%8D%E5%8F%B0-activity">&#x67E5;&#x770B;&#x524D;&#x53F0; Activity</h3>
 
-<p>你可以用 logcat 命令来查看系统日志缓冲区的内容：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span><span class="token operator">&lt;</span>option<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">..</span>. <span class="token punctuation">[</span><span class="token operator">&lt;</span>filter-spec<span class="token operator">></span><span class="token punctuation">]</span> <span class="token punctuation">..</span>.
-</pre><p>你也可以在你的电脑或运行在模拟器 / 设备上的远程 adb shell 端来使用 <code>logcat</code> 命令，也可以在你的电脑上查看日志输出。</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">$ adb logcat
-</pre><p>你也这样使用：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># logcat</span>
-</pre><h3 class="mume-header" id="%E8%BF%87%E6%BB%A4%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA">过滤日志输出</h3>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell dumpsys activity activities <span class="token operator">|</span> <span class="token function">grep</span> mFocusedActivity
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">mFocusedActivity: ActivityRecord<span class="token punctuation">{</span>8079d7e u0 com.cyanogenmod.trebuchet/com.android.launcher3.Launcher t42<span class="token punctuation">}</span>
+</pre><p>&#x5176;&#x4E2D;&#x7684; <code>com.cyanogenmod.trebuchet/com.android.launcher3.Launcher</code> &#x5C31;&#x662F;&#x5F53;&#x524D;&#x5904;&#x4E8E;&#x524D;&#x53F0;&#x7684; Activity&#x3002;</p>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84-services">&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684; Services</h3>
 
-<p>每一个输出的 Android 日志信息都有一个标签和它的优先级。</p>
-<p>日志的标签是系统部件原始信息的一个简要的标志。（比如：&quot;View&quot;就是查看系统的标签）.<br>
-优先级有下列几种，是按照从低到高顺利排列的：</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell dumpsys activity services <span class="token punctuation">[</span><span class="token operator">&lt;</span>packagename<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+</pre><p><code>&lt;packagename&gt;</code> &#x53C2;&#x6570;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x6307;&#x5B9A; <code>&lt;packagename&gt;</code> &#x8868;&#x793A;&#x67E5;&#x770B;&#x4E0E;&#x67D0;&#x4E2A;&#x5305;&#x540D;&#x76F8;&#x5173;&#x7684; Services&#xFF0C;&#x4E0D;&#x6307;&#x5B9A;&#x8868;&#x793A;&#x67E5;&#x770B;&#x6240;&#x6709; Services&#x3002;</p>
+<p><code>&lt;packagename&gt;</code> &#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x7ED9;&#x51FA;&#x5B8C;&#x6574;&#x7684;&#x5305;&#x540D;&#xFF0C;&#x6BD4;&#x5982;&#x8FD0;&#x884C; <code>adb shell dumpsys activity services org.mazhuang</code>&#xFF0C;&#x90A3;&#x4E48;&#x5305;&#x540D; <code>org.mazhuang.demo1</code>&#x3001;<code>org.mazhuang.demo2</code> &#x548C; <code>org.mazhuang123</code> &#x7B49;&#x76F8;&#x5173;&#x7684; Services &#x90FD;&#x4F1A;&#x5217;&#x51FA;&#x6765;&#x3002;</p>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF">&#x67E5;&#x770B;&#x5E94;&#x7528;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell dumpsys package <span class="token operator">&lt;</span>packagename<span class="token operator">&gt;</span>
+</pre><p>&#x8F93;&#x51FA;&#x4E2D;&#x5305;&#x542B;&#x5F88;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC; Activity Resolver Table&#x3001;Registered ContentProviders&#x3001;&#x5305;&#x540D;&#x3001;userId&#x3001;&#x5B89;&#x88C5;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#x4EE3;&#x7801;&#x7B49;&#x8DEF;&#x5F84;&#x3001;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x3001;&#x6743;&#x9650;&#x4FE1;&#x606F;&#x548C;&#x6388;&#x4E88;&#x72B6;&#x6001;&#x3001;&#x7B7E;&#x540D;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x7B49;&#x3002;</p>
+<p><code>&lt;packagename&gt;</code> &#x8868;&#x793A;&#x5E94;&#x7528;&#x5305;&#x540D;&#x3002;</p>
+<p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Activity Resolver Table:
+Non-Data Actions:
+  android.intent.action.MAIN:
+    5b4cba8 org.mazhuang.guanggoo/.SplashActivity filter 5ec9dcc
+      Action: <span class="token string">&quot;android.intent.action.MAIN&quot;</span>
+      Category: <span class="token string">&quot;android.intent.category.LAUNCHER&quot;</span>
+      AutoVerify<span class="token operator">=</span>false
+
+Registered ContentProviders:
+org.mazhuang.guanggoo/com.tencent.bugly.beta.utils.BuglyFileProvider:
+Provider<span class="token punctuation">{</span>7a3c394 org.mazhuang.guanggoo/com.tencent.bugly.beta.utils.BuglyFileProvider<span class="token punctuation">}</span>
+
+ContentProvider Authorities:
+<span class="token punctuation">[</span>org.mazhuang.guanggoo.fileProvider<span class="token punctuation">]</span>:
+Provider<span class="token punctuation">{</span>7a3c394 org.mazhuang.guanggoo/com.tencent.bugly.beta.utils.BuglyFileProvider<span class="token punctuation">}</span>
+  applicationInfo<span class="token operator">=</span>ApplicationInfo<span class="token punctuation">{</span>7754242 org.mazhuang.guanggoo<span class="token punctuation">}</span>
+
+Key Set Manager:
+<span class="token punctuation">[</span>org.mazhuang.guanggoo<span class="token punctuation">]</span>
+  Signing KeySets: 501
+
+Packages:
+Package <span class="token punctuation">[</span>org.mazhuang.guanggoo<span class="token punctuation">]</span> <span class="token punctuation">(</span>c1d7f<span class="token punctuation">)</span>:
+userId<span class="token operator">=</span>10394
+pkg<span class="token operator">=</span>Package<span class="token punctuation">{</span>55f714c org.mazhuang.guanggoo<span class="token punctuation">}</span>
+codePath<span class="token operator">=</span>/data/app/org.mazhuang.guanggoo-2
+resourcePath<span class="token operator">=</span>/data/app/org.mazhuang.guanggoo-2
+legacyNativeLibraryDir<span class="token operator">=</span>/data/app/org.mazhuang.guanggoo-2/lib
+primaryCpuAbi<span class="token operator">=</span>null
+secondaryCpuAbi<span class="token operator">=</span>null
+versionCode<span class="token operator">=</span>74 minSdk<span class="token operator">=</span>15 targetSdk<span class="token operator">=</span>25
+versionName<span class="token operator">=</span>1.1.74
+splits<span class="token operator">=</span><span class="token punctuation">[</span>base<span class="token punctuation">]</span>
+apkSigningVersion<span class="token operator">=</span>2
+applicationInfo<span class="token operator">=</span>ApplicationInfo<span class="token punctuation">{</span>7754242 org.mazhuang.guanggoo<span class="token punctuation">}</span>
+flags<span class="token operator">=</span><span class="token punctuation">[</span> HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP <span class="token punctuation">]</span>
+privateFlags<span class="token operator">=</span><span class="token punctuation">[</span> RESIZEABLE_ACTIVITIES <span class="token punctuation">]</span>
+dataDir<span class="token operator">=</span>/data/user/0/org.mazhuang.guanggoo
+supportsScreens<span class="token operator">=</span><span class="token punctuation">[</span>small, medium, large, xlarge, resizeable, anyDensity<span class="token punctuation">]</span>
+timeStamp<span class="token operator">=</span>2017-10-22 23:50:53
+firstInstallTime<span class="token operator">=</span>2017-10-22 23:50:25
+lastUpdateTime<span class="token operator">=</span>2017-10-22 23:50:55
+installerPackageName<span class="token operator">=</span>com.miui.packageinstaller
+signatures<span class="token operator">=</span>PackageSignatures<span class="token punctuation">{</span>af09595 <span class="token punctuation">[</span>53c7caa2<span class="token punctuation">]</span><span class="token punctuation">}</span>
+installPermissionsFixed<span class="token operator">=</span>true installStatus<span class="token operator">=</span>1
+pkgFlags<span class="token operator">=</span><span class="token punctuation">[</span> HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP <span class="token punctuation">]</span>
+requested permissions:
+  android.permission.READ_PHONE_STATE
+  android.permission.INTERNET
+  android.permission.ACCESS_NETWORK_STATE
+  android.permission.ACCESS_WIFI_STATE
+  android.permission.READ_LOGS
+  android.permission.WRITE_EXTERNAL_STORAGE
+  android.permission.READ_EXTERNAL_STORAGE
+<span class="token function">install</span> permissions:
+  android.permission.INTERNET: granted<span class="token operator">=</span>true
+  android.permission.ACCESS_NETWORK_STATE: granted<span class="token operator">=</span>true
+  android.permission.ACCESS_WIFI_STATE: granted<span class="token operator">=</span>true
+User 0: ceDataInode<span class="token operator">=</span>1155675 installed<span class="token operator">=</span>true hidden<span class="token operator">=</span>false suspended<span class="token operator">=</span>false stopped<span class="token operator">=</span>true notLaunched<span class="token operator">=</span>false enabled<span class="token operator">=</span>0
+  gids<span class="token operator">=</span><span class="token punctuation">[</span>3003<span class="token punctuation">]</span>
+  runtime permissions:
+    android.permission.READ_EXTERNAL_STORAGE: granted<span class="token operator">=</span>true
+    android.permission.READ_PHONE_STATE: granted<span class="token operator">=</span>true
+    android.permission.WRITE_EXTERNAL_STORAGE: granted<span class="token operator">=</span>true
+User 999: ceDataInode<span class="token operator">=</span>0 installed<span class="token operator">=</span>false hidden<span class="token operator">=</span>false suspended<span class="token operator">=</span>false stopped<span class="token operator">=</span>true notLaunched<span class="token operator">=</span>true enabled<span class="token operator">=</span>0
+  gids<span class="token operator">=</span><span class="token punctuation">[</span>3003<span class="token punctuation">]</span>
+  runtime permissions:
+
+Dexopt state:
+<span class="token punctuation">[</span>org.mazhuang.guanggoo<span class="token punctuation">]</span>
+Instruction Set: arm64
+  path: /data/app/org.mazhuang.guanggoo-2/base.apk
+  status: /data/app/org.mazhuang.guanggoo-2/oat/arm64/base.odex <span class="token punctuation">[</span>compilation_filter<span class="token operator">=</span>speed-profile, status<span class="token operator">=</span>kOatUpToDa
+  te<span class="token punctuation">]</span>
+</pre><h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84">&#x67E5;&#x770B;&#x5E94;&#x7528;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm path <span class="token operator">&lt;</span>PACKAGE<span class="token operator">&gt;</span>
+</pre><p>&#x8F93;&#x51FA;&#x5E94;&#x7528;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</p>
+<p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell pm path ecarx.weather
+
+package:/data/app/ecarx.weather-1.apk
+</pre><h2 class="mume-header" id="%E4%B8%8E%E5%BA%94%E7%94%A8%E4%BA%A4%E4%BA%92">&#x4E0E;&#x5E94;&#x7528;&#x4EA4;&#x4E92;</h2>
+
+<p>&#x4E3B;&#x8981;&#x662F;&#x4F7F;&#x7528; <code>am &lt;command&gt;</code> &#x547D;&#x4EE4;&#xFF0C;&#x5E38;&#x7528;&#x7684; <code>&lt;command&gt;</code> &#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start [options] &lt;INTENT&gt;</code></td>
+<td>&#x542F;&#x52A8; <code>&lt;INTENT&gt;</code> &#x6307;&#x5B9A;&#x7684; Activity</td>
+</tr>
+<tr>
+<td><code>startservice [options] &lt;INTENT&gt;</code></td>
+<td>&#x542F;&#x52A8; <code>&lt;INTENT&gt;</code> &#x6307;&#x5B9A;&#x7684; Service</td>
+</tr>
+<tr>
+<td><code>broadcast [options] &lt;INTENT&gt;</code></td>
+<td>&#x53D1;&#x9001; <code>&lt;INTENT&gt;</code> &#x6307;&#x5B9A;&#x7684;&#x5E7F;&#x64AD;</td>
+</tr>
+<tr>
+<td><code>force-stop &lt;packagename&gt;</code></td>
+<td>&#x505C;&#x6B62; <code>&lt;packagename&gt;</code> &#x76F8;&#x5173;&#x7684;&#x8FDB;&#x7A0B;</td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt;INTENT&gt;</code> &#x53C2;&#x6570;&#x5F88;&#x7075;&#x6D3B;&#xFF0C;&#x548C;&#x5199; Android &#x7A0B;&#x5E8F;&#x65F6;&#x4EE3;&#x7801;&#x91CC;&#x7684; Intent &#x76F8;&#x5BF9;&#x5E94;&#x3002;</p>
+<p>&#x7528;&#x4E8E;&#x51B3;&#x5B9A; intent &#x5BF9;&#x8C61;&#x7684;&#x9009;&#x9879;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-a &lt;ACTION&gt;</code></td>
+<td>&#x6307;&#x5B9A; action&#xFF0C;&#x6BD4;&#x5982; <code>android.intent.action.VIEW</code></td>
+</tr>
+<tr>
+<td><code>-c &lt;CATEGORY&gt;</code></td>
+<td>&#x6307;&#x5B9A; category&#xFF0C;&#x6BD4;&#x5982; <code>android.intent.category.APP_CONTACTS</code></td>
+</tr>
+<tr>
+<td><code>-n &lt;COMPONENT&gt;</code></td>
+<td>&#x6307;&#x5B9A;&#x5B8C;&#x6574; component &#x540D;&#xFF0C;&#x7528;&#x4E8E;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x54EA;&#x4E2A; Activity&#xFF0C;&#x5982; <code>com.example.app/.ExampleActivity</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt;INTENT&gt;</code> &#x91CC;&#x8FD8;&#x80FD;&#x5E26;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x50CF;&#x5199;&#x4EE3;&#x7801;&#x65F6;&#x7684; Bundle &#x4E00;&#x6837;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--esn &lt;EXTRA_KEY&gt;</code></td>
+<td>null &#x503C;&#xFF08;&#x53EA;&#x6709; key &#x540D;&#xFF09;</td>
+</tr>
+<tr>
+<td><code>-e|--es &lt;EXTRA_KEY&gt; &lt;EXTRA_STRING_VALUE&gt;</code></td>
+<td>string &#x503C;</td>
+</tr>
+<tr>
+<td><code>--ez &lt;EXTRA_KEY&gt; &lt;EXTRA_BOOLEAN_VALUE&gt;</code></td>
+<td>boolean &#x503C;</td>
+</tr>
+<tr>
+<td><code>--ei &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt;</code></td>
+<td>integer &#x503C;</td>
+</tr>
+<tr>
+<td><code>--el &lt;EXTRA_KEY&gt; &lt;EXTRA_LONG_VALUE&gt;</code></td>
+<td>long &#x503C;</td>
+</tr>
+<tr>
+<td><code>--ef &lt;EXTRA_KEY&gt; &lt;EXTRA_FLOAT_VALUE&gt;</code></td>
+<td>float &#x503C;</td>
+</tr>
+<tr>
+<td><code>--eu &lt;EXTRA_KEY&gt; &lt;EXTRA_URI_VALUE&gt;</code></td>
+<td>URI</td>
+</tr>
+<tr>
+<td><code>--ecn &lt;EXTRA_KEY&gt; &lt;EXTRA_COMPONENT_NAME_VALUE&gt;</code></td>
+<td>component name</td>
+</tr>
+<tr>
+<td><code>--eia &lt;EXTRA_KEY&gt; &lt;EXTRA_INT_VALUE&gt;[,&lt;EXTRA_INT_VALUE...]</code></td>
+<td>integer &#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td><code>--ela &lt;EXTRA_KEY&gt; &lt;EXTRA_LONG_VALUE&gt;[,&lt;EXTRA_LONG_VALUE...]</code></td>
+<td>long &#x6570;&#x7EC4;</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E5%90%AF%E5%8A%A8%E5%BA%94%E7%94%A8-%E8%B0%83%E8%B5%B7-activity">&#x542F;&#x52A8;&#x5E94;&#x7528; / &#x8C03;&#x8D77; Activity</h3>
+
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am start <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">&gt;</span>
+</pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am start -n com.tencent.mm/.ui.LauncherUI
+</pre><p>&#x8868;&#x793A;&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x4E3B;&#x754C;&#x9762;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am start -n org.mazhuang.boottimemeasure/.MainActivity --es <span class="token string">&quot;toast&quot;</span> <span class="token string">&quot;hello, world&quot;</span>
+</pre><p>&#x8868;&#x793A;&#x8C03;&#x8D77; <code>org.mazhuang.boottimemeasure/.MainActivity</code> &#x5E76;&#x4F20;&#x7ED9;&#x5B83; string &#x6570;&#x636E;&#x952E;&#x503C;&#x5BF9; <code>toast - hello, world</code>&#x3002;</p>
+<h3 class="mume-header" id="%E8%B0%83%E8%B5%B7-service">&#x8C03;&#x8D77; Service</h3>
+
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am startservice <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">&gt;</span>
+</pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am startservice -n com.tencent.mm/.plugin.accountsync.model.AccountAuthenticatorService
+</pre><p>&#x8868;&#x793A;&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x7684;&#x67D0; Service&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x7528;&#x4F8B;&#x662F;&#x5982;&#x679C;&#x8BBE;&#x5907;&#x4E0A;&#x539F;&#x672C;&#x5E94;&#x8BE5;&#x663E;&#x793A;&#x865A;&#x62DF;&#x6309;&#x952E;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x663E;&#x793A;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#x8FD9;&#x4E2A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am startservice -n com.android.systemui/.SystemUIService
+</pre><h3 class="mume-header" id="%E5%81%9C%E6%AD%A2-service">&#x505C;&#x6B62; Service</h3>
+
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am stopservice <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">&gt;</span>
+</pre><h3 class="mume-header" id="%E5%8F%91%E9%80%81%E5%B9%BF%E6%92%AD">&#x53D1;&#x9001;&#x5E7F;&#x64AD;</h3>
+
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am broadcast <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>INTENT<span class="token operator">&gt;</span>
+</pre><p>&#x53EF;&#x4EE5;&#x5411;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x5E7F;&#x64AD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x5411;&#x6307;&#x5B9A;&#x7EC4;&#x4EF6;&#x5E7F;&#x64AD;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5411;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x5E7F;&#x64AD; <code>BOOT_COMPLETED</code>&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am broadcast -a android.intent.action.BOOT_COMPLETED
+</pre><p>&#x53C8;&#x4F8B;&#x5982;&#xFF0C;&#x53EA;&#x5411; <code>org.mazhuang.boottimemeasure/.BootCompletedReceiver</code> &#x5E7F;&#x64AD; <code>BOOT_COMPLETED</code>&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -n org.mazhuang.boottimemeasure/.BootCompletedReceiver
+</pre><p>&#x8FD9;&#x7C7B;&#x7528;&#x6CD5;&#x5728;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x5F88;&#x5B9E;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x67D0;&#x4E2A;&#x5E7F;&#x64AD;&#x7684;&#x573A;&#x666F;&#x5F88;&#x96BE;&#x5236;&#x9020;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x53D1;&#x9001;&#x5E7F;&#x64AD;&#x3002;</p>
+<p>&#x65E2;&#x80FD;&#x53D1;&#x9001;&#x7CFB;&#x7EDF;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x5E7F;&#x64AD;&#xFF0C;&#x4E5F;&#x80FD;&#x53D1;&#x9001;&#x81EA;&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x3002;&#x5982;&#x4E0B;&#x662F;&#x90E8;&#x5206;&#x7CFB;&#x7EDF;&#x9884;&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x53CA;&#x6B63;&#x5E38;&#x89E6;&#x53D1;&#x65F6;&#x673A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>action</th>
+<th>&#x89E6;&#x53D1;&#x65F6;&#x673A;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>android.net.conn.CONNECTIVITY_CHANGE</td>
+<td>&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x53D1;&#x751F;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td>android.intent.action.SCREEN_ON</td>
+<td>&#x5C4F;&#x5E55;&#x70B9;&#x4EAE;</td>
+</tr>
+<tr>
+<td>android.intent.action.SCREEN_OFF</td>
+<td>&#x5C4F;&#x5E55;&#x7184;&#x706D;</td>
+</tr>
+<tr>
+<td>android.intent.action.BATTERY_LOW</td>
+<td>&#x7535;&#x91CF;&#x4F4E;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x7535;&#x91CF;&#x4F4E;&#x63D0;&#x793A;&#x6846;</td>
+</tr>
+<tr>
+<td>android.intent.action.BATTERY_OKAY</td>
+<td>&#x7535;&#x91CF;&#x6062;&#x590D;&#x4E86;</td>
+</tr>
+<tr>
+<td>android.intent.action.BOOT_COMPLETED</td>
+<td>&#x8BBE;&#x5907;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;</td>
+</tr>
+<tr>
+<td>android.intent.action.DEVICE_STORAGE_LOW</td>
+<td>&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x8FC7;&#x4F4E;</td>
+</tr>
+<tr>
+<td>android.intent.action.DEVICE_STORAGE_OK</td>
+<td>&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x6062;&#x590D;</td>
+</tr>
+<tr>
+<td>android.intent.action.PACKAGE_ADDED</td>
+<td>&#x5B89;&#x88C5;&#x4E86;&#x65B0;&#x7684;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td>android.net.wifi.STATE_CHANGE</td>
+<td>WiFi &#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td>android.net.wifi.WIFI_STATE_CHANGED</td>
+<td>WiFi &#x72B6;&#x6001;&#x53D8;&#x4E3A;&#x542F;&#x7528; / &#x5173;&#x95ED; / &#x6B63;&#x5728;&#x542F;&#x52A8; / &#x6B63;&#x5728;&#x5173;&#x95ED; / &#x672A;&#x77E5;</td>
+</tr>
+<tr>
+<td>android.intent.action.BATTERY_CHANGED</td>
+<td>&#x7535;&#x6C60;&#x7535;&#x91CF;&#x53D1;&#x751F;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td>android.intent.action.INPUT_METHOD_CHANGED</td>
+<td>&#x7CFB;&#x7EDF;&#x8F93;&#x5165;&#x6CD5;&#x53D1;&#x751F;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td>android.intent.action.ACTION_POWER_CONNECTED</td>
+<td>&#x5916;&#x90E8;&#x7535;&#x6E90;&#x8FDE;&#x63A5;</td>
+</tr>
+<tr>
+<td>android.intent.action.ACTION_POWER_DISCONNECTED</td>
+<td>&#x5916;&#x90E8;&#x7535;&#x6E90;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</td>
+</tr>
+<tr>
+<td>android.intent.action.DREAMING_STARTED</td>
+<td>&#x7CFB;&#x7EDF;&#x5F00;&#x59CB;&#x4F11;&#x7720;</td>
+</tr>
+<tr>
+<td>android.intent.action.DREAMING_STOPPED</td>
+<td>&#x7CFB;&#x7EDF;&#x505C;&#x6B62;&#x4F11;&#x7720;</td>
+</tr>
+<tr>
+<td>android.intent.action.WALLPAPER_CHANGED</td>
+<td>&#x58C1;&#x7EB8;&#x53D1;&#x751F;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td>android.intent.action.HEADSET_PLUG</td>
+<td>&#x63D2;&#x5165;&#x8033;&#x673A;</td>
+</tr>
+<tr>
+<td>android.intent.action.MEDIA_UNMOUNTED</td>
+<td>&#x5378;&#x8F7D;&#x5916;&#x90E8;&#x4ECB;&#x8D28;</td>
+</tr>
+<tr>
+<td>android.intent.action.MEDIA_MOUNTED</td>
+<td>&#x6302;&#x8F7D;&#x5916;&#x90E8;&#x4ECB;&#x8D28;</td>
+</tr>
+<tr>
+<td>android.os.action.POWER_SAVE_MODE_CHANGED</td>
+<td>&#x7701;&#x7535;&#x6A21;&#x5F0F;&#x5F00;&#x542F;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#xFF08;&#x4EE5;&#x4E0A;&#x5E7F;&#x64AD;&#x5747;&#x53EF;&#x4F7F;&#x7528; adb &#x89E6;&#x53D1;&#xFF09;</p>
+</blockquote>
+<h3 class="mume-header" id="%E5%BC%BA%E5%88%B6%E5%81%9C%E6%AD%A2%E5%BA%94%E7%94%A8">&#x5F3A;&#x5236;&#x505C;&#x6B62;&#x5E94;&#x7528;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am force-stop <span class="token operator">&lt;</span>packagename<span class="token operator">&gt;</span>
+</pre><p>&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am force-stop com.qihoo360.mobilesafe
+</pre><p>&#x8868;&#x793A;&#x505C;&#x6B62; 360 &#x5B89;&#x5168;&#x536B;&#x58EB;&#x7684;&#x4E00;&#x5207;&#x8FDB;&#x7A0B;&#x4E0E;&#x670D;&#x52A1;&#x3002;</p>
+<h3 class="mume-header" id="%E6%94%B6%E7%B4%A7%E5%86%85%E5%AD%98">&#x6536;&#x7D27;&#x5185;&#x5B58;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am send-trim-memory  <span class="token operator">&lt;</span>pid<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>level<span class="token operator">&gt;</span>
+</pre><p>pid: &#x8FDB;&#x7A0B; ID<br>
+level:<br>
+HIDDEN&#x3001;RUNNING_MODERATE&#x3001;BACKGROUND&#x3001;<br>
+RUNNING_LOW&#x3001;MODERATE&#x3001;RUNNING_CRITICAL&#x3001;COMPLETE</p>
+<p>&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell am send-trim-memory 12345 RUNNING_LOW
+</pre><p>&#x8868;&#x793A;&#x5411; pid=12345 &#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x53D1;&#x51FA; level=RUNNING_LOW &#x7684;&#x6536;&#x7D27;&#x5185;&#x5B58;&#x547D;&#x4EE4;&#x3002;</p>
+<h2 class="mume-header" id="%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">&#x6587;&#x4EF6;&#x7BA1;&#x7406;</h2>
+
+<h3 class="mume-header" id="%E5%A4%8D%E5%88%B6%E8%AE%BE%E5%A4%87%E9%87%8C%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%B0%E7%94%B5%E8%84%91">&#x590D;&#x5236;&#x8BBE;&#x5907;&#x91CC;&#x7684;&#x6587;&#x4EF6;&#x5230;&#x7535;&#x8111;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb pull <span class="token operator">&lt;</span>&#x8BBE;&#x5907;&#x91CC;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;<span class="token operator">&gt;</span> <span class="token punctuation">[</span>&#x7535;&#x8111;&#x4E0A;&#x7684;&#x76EE;&#x5F55;<span class="token punctuation">]</span>
+</pre><p>&#x5176;&#x4E2D; <code>&#x7535;&#x8111;&#x4E0A;&#x7684;&#x76EE;&#x5F55;</code> &#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x9ED8;&#x8BA4;&#x590D;&#x5236;&#x5230;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb pull /sdcard/sr.mp4 ~/tmp/
+</pre><p>*&#x5C0F;&#x6280;&#x5DE7;&#xFF1A;*&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x53EF;&#x80FD;&#x9700;&#x8981; root &#x6743;&#x9650;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x8BBE;&#x5907;&#x5DF2;&#x7ECF; root &#x8FC7;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x4F7F;&#x7528; <code>adb shell</code> &#x548C; <code>su</code> &#x547D;&#x4EE4;&#x5728; adb shell &#x91CC;&#x83B7;&#x53D6; root &#x6743;&#x9650;&#x540E;&#xFF0C;&#x5148; <code>cp /path/on/device /sdcard/filename</code> &#x5C06;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230; sdcard&#xFF0C;&#x7136;&#x540E; <code>adb pull /sdcard/filename /path/on/pc</code>&#x3002;</p>
+<h3 class="mume-header" id="%E5%A4%8D%E5%88%B6%E7%94%B5%E8%84%91%E9%87%8C%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%B0%E8%AE%BE%E5%A4%87">&#x590D;&#x5236;&#x7535;&#x8111;&#x91CC;&#x7684;&#x6587;&#x4EF6;&#x5230;&#x8BBE;&#x5907;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb push <span class="token operator">&lt;</span>&#x7535;&#x8111;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>&#x8BBE;&#x5907;&#x91CC;&#x7684;&#x76EE;&#x5F55;<span class="token operator">&gt;</span>
+</pre><p>&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb push ~/sr.mp4 /sdcard/
+</pre><p>*&#x5C0F;&#x6280;&#x5DE7;&#xFF1A;*&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x666E;&#x901A;&#x6743;&#x9650;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5199;&#x5165;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x8BBE;&#x5907;&#x5DF2;&#x7ECF; root &#x8FC7;&#xFF0C;&#x53EF;&#x4EE5;&#x5148; <code>adb push /path/on/pc /sdcard/filename</code>&#xFF0C;&#x7136;&#x540E; <code>adb shell</code> &#x548C; <code>su</code> &#x5728; adb shell &#x91CC;&#x83B7;&#x53D6; root &#x6743;&#x9650;&#x540E;&#xFF0C;<code>cp /sdcard/filename /path/on/device</code>&#x3002;</p>
+<h2 class="mume-header" id="%E6%A8%A1%E6%8B%9F%E6%8C%89%E9%94%AE-%E8%BE%93%E5%85%A5">&#x6A21;&#x62DF;&#x6309;&#x952E; / &#x8F93;&#x5165;</h2>
+
+<p>&#x5728; <code>adb shell</code> &#x91CC;&#x6709;&#x4E2A;&#x5F88;&#x5B9E;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x53EB; <code>input</code>&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x6709;&#x8DA3;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p><code>input</code> &#x547D;&#x4EE4;&#x7684;&#x5B8C;&#x6574; help &#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Usage: input <span class="token punctuation">[</span><span class="token operator">&lt;</span>source<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>command<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>arg<span class="token operator">&gt;</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+The sources are:
+  mouse
+  keyboard
+  joystick
+  touchnavigation
+  touchpad
+  trackball
+  stylus
+  dpad
+  gesture
+  touchscreen
+  gamepad
+
+The commands and default sources are:
+  text <span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> <span class="token punctuation">(</span>Default: touchscreen<span class="token punctuation">)</span>
+  keyevent <span class="token punctuation">[</span>--longpress<span class="token punctuation">]</span> <span class="token operator">&lt;</span>key code number or name<span class="token operator">&gt;</span> <span class="token punctuation">..</span>. <span class="token punctuation">(</span>Default: keyboard<span class="token punctuation">)</span>
+  tap <span class="token operator">&lt;</span>x<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>y<span class="token operator">&gt;</span> <span class="token punctuation">(</span>Default: touchscreen<span class="token punctuation">)</span>
+  swipe <span class="token operator">&lt;</span>x1<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>y1<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>x2<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>y2<span class="token operator">&gt;</span> <span class="token punctuation">[</span>duration<span class="token punctuation">(</span>ms<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>Default: touchscreen<span class="token punctuation">)</span>
+  press <span class="token punctuation">(</span>Default: trackball<span class="token punctuation">)</span>
+  roll <span class="token operator">&lt;</span>dx<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>dy<span class="token operator">&gt;</span> <span class="token punctuation">(</span>Default: trackball<span class="token punctuation">)</span>
+</pre><p>&#x6BD4;&#x5982;&#x4F7F;&#x7528; <code>adb shell input keyevent &lt;keycode&gt;</code> &#x547D;&#x4EE4;&#xFF0C;&#x4E0D;&#x540C;&#x7684; keycode &#x80FD;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5B8C;&#x6574;&#x7684; keycode &#x5217;&#x8868;&#x8BE6;&#x89C1; <a href="https://developer.android.com/reference/android/view/KeyEvent.html">KeyEvent</a>&#xFF0C;&#x6458;&#x5F15;&#x90E8;&#x5206;&#x6211;&#x89C9;&#x5F97;&#x6709;&#x610F;&#x601D;&#x7684;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>keycode</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>HOME &#x952E;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x8FD4;&#x56DE;&#x952E;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&#x6253;&#x5F00;&#x62E8;&#x53F7;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&#x6302;&#x65AD;&#x7535;&#x8BDD;</td>
+</tr>
+<tr>
+<td>24</td>
+<td>&#x589E;&#x52A0;&#x97F3;&#x91CF;</td>
+</tr>
+<tr>
+<td>25</td>
+<td>&#x964D;&#x4F4E;&#x97F3;&#x91CF;</td>
+</tr>
+<tr>
+<td>26</td>
+<td>&#x7535;&#x6E90;&#x952E;</td>
+</tr>
+<tr>
+<td>27</td>
+<td>&#x62CD;&#x7167;&#xFF08;&#x9700;&#x8981;&#x5728;&#x76F8;&#x673A;&#x5E94;&#x7528;&#x91CC;&#xFF09;</td>
+</tr>
+<tr>
+<td>64</td>
+<td>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;</td>
+</tr>
+<tr>
+<td>82</td>
+<td>&#x83DC;&#x5355;&#x952E;</td>
+</tr>
+<tr>
+<td>85</td>
+<td>&#x64AD;&#x653E; / &#x6682;&#x505C;</td>
+</tr>
+<tr>
+<td>86</td>
+<td>&#x505C;&#x6B62;&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td>87</td>
+<td>&#x64AD;&#x653E;&#x4E0B;&#x4E00;&#x9996;</td>
+</tr>
+<tr>
+<td>88</td>
+<td>&#x64AD;&#x653E;&#x4E0A;&#x4E00;&#x9996;</td>
+</tr>
+<tr>
+<td>122</td>
+<td>&#x79FB;&#x52A8;&#x5149;&#x6807;&#x5230;&#x884C;&#x9996;&#x6216;&#x5217;&#x8868;&#x9876;&#x90E8;</td>
+</tr>
+<tr>
+<td>123</td>
+<td>&#x79FB;&#x52A8;&#x5149;&#x6807;&#x5230;&#x884C;&#x672B;&#x6216;&#x5217;&#x8868;&#x5E95;&#x90E8;</td>
+</tr>
+<tr>
+<td>126</td>
+<td>&#x6062;&#x590D;&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td>127</td>
+<td>&#x6682;&#x505C;&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td>164</td>
+<td>&#x9759;&#x97F3;</td>
+</tr>
+<tr>
+<td>176</td>
+<td>&#x6253;&#x5F00;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td>187</td>
+<td>&#x5207;&#x6362;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td>207</td>
+<td>&#x6253;&#x5F00;&#x8054;&#x7CFB;&#x4EBA;</td>
+</tr>
+<tr>
+<td>208</td>
+<td>&#x6253;&#x5F00;&#x65E5;&#x5386;</td>
+</tr>
+<tr>
+<td>209</td>
+<td>&#x6253;&#x5F00;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td>210</td>
+<td>&#x6253;&#x5F00;&#x8BA1;&#x7B97;&#x5668;</td>
+</tr>
+<tr>
+<td>220</td>
+<td>&#x964D;&#x4F4E;&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;</td>
+</tr>
+<tr>
+<td>221</td>
+<td>&#x63D0;&#x9AD8;&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;</td>
+</tr>
+<tr>
+<td>223</td>
+<td>&#x7CFB;&#x7EDF;&#x4F11;&#x7720;</td>
+</tr>
+<tr>
+<td>224</td>
+<td>&#x70B9;&#x4EAE;&#x5C4F;&#x5E55;</td>
+</tr>
+<tr>
+<td>231</td>
+<td>&#x6253;&#x5F00;&#x8BED;&#x97F3;&#x52A9;&#x624B;</td>
+</tr>
+<tr>
+<td>276</td>
+<td>&#x5982;&#x679C;&#x6CA1;&#x6709; wakelock &#x5219;&#x8BA9;&#x7CFB;&#x7EDF;&#x4F11;&#x7720;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0B;&#x9762;&#x662F; <code>input</code> &#x547D;&#x4EE4;&#x7684;&#x4E00;&#x4E9B;&#x7528;&#x6CD5;&#x4E3E;&#x4F8B;&#x3002;</p>
+<h3 class="mume-header" id="%E7%94%B5%E6%BA%90%E9%94%AE">&#x7535;&#x6E90;&#x952E;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 26
+</pre><p>&#x6267;&#x884C;&#x6548;&#x679C;&#x76F8;&#x5F53;&#x4E8E;&#x6309;&#x7535;&#x6E90;&#x952E;&#x3002;</p>
+<h3 class="mume-header" id="%E8%8F%9C%E5%8D%95%E9%94%AE">&#x83DC;&#x5355;&#x952E;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 82
+</pre><h3 class="mume-header" id="home-%E9%94%AE">HOME &#x952E;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 3
+</pre><h3 class="mume-header" id="%E8%BF%94%E5%9B%9E%E9%94%AE">&#x8FD4;&#x56DE;&#x952E;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 4
+</pre><h3 class="mume-header" id="%E9%9F%B3%E9%87%8F%E6%8E%A7%E5%88%B6">&#x97F3;&#x91CF;&#x63A7;&#x5236;</h3>
+
+<p>&#x589E;&#x52A0;&#x97F3;&#x91CF;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 24
+</pre><p>&#x964D;&#x4F4E;&#x97F3;&#x91CF;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 25
+</pre><p>&#x9759;&#x97F3;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 164
+</pre><h3 class="mume-header" id="%E5%AA%92%E4%BD%93%E6%8E%A7%E5%88%B6">&#x5A92;&#x4F53;&#x63A7;&#x5236;</h3>
+
+<p>&#x64AD;&#x653E; / &#x6682;&#x505C;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 85
+</pre><p>&#x505C;&#x6B62;&#x64AD;&#x653E;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 86
+</pre><p>&#x64AD;&#x653E;&#x4E0B;&#x4E00;&#x9996;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 87
+</pre><p>&#x64AD;&#x653E;&#x4E0A;&#x4E00;&#x9996;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 88
+</pre><p>&#x6062;&#x590D;&#x64AD;&#x653E;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 126
+</pre><p>&#x6682;&#x505C;&#x64AD;&#x653E;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 127
+</pre><h3 class="mume-header" id="%E7%82%B9%E4%BA%AE-%E7%86%84%E7%81%AD%E5%B1%8F%E5%B9%95">&#x70B9;&#x4EAE; / &#x7184;&#x706D;&#x5C4F;&#x5E55;</h3>
+
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0A;&#x6587;&#x8BB2;&#x8FF0;&#x8FC7;&#x7684;&#x6A21;&#x62DF;&#x7535;&#x6E90;&#x952E;&#x6765;&#x5207;&#x6362;&#x70B9;&#x4EAE;&#x548C;&#x7184;&#x706D;&#x5C4F;&#x5E55;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x660E;&#x786E;&#x5730;&#x60F3;&#x8981;&#x70B9;&#x4EAE;&#x6216;&#x8005;&#x7184;&#x706D;&#x5C4F;&#x5E55;&#xFF0C;&#x90A3;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x70B9;&#x4EAE;&#x5C4F;&#x5E55;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 224
+</pre><p>&#x7184;&#x706D;&#x5C4F;&#x5E55;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input keyevent 223
+</pre><h3 class="mume-header" id="%E6%BB%91%E5%8A%A8%E8%A7%A3%E9%94%81">&#x6ED1;&#x52A8;&#x89E3;&#x9501;</h3>
+
+<p>&#x5982;&#x679C;&#x9501;&#x5C4F;&#x6CA1;&#x6709;&#x5BC6;&#x7801;&#xFF0C;&#x662F;&#x901A;&#x8FC7;&#x6ED1;&#x52A8;&#x624B;&#x52BF;&#x89E3;&#x9501;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>input swipe</code> &#x6765;&#x89E3;&#x9501;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF08;&#x53C2;&#x6570;&#x4EE5;&#x673A;&#x578B; Nexus 5&#xFF0C;&#x5411;&#x4E0A;&#x6ED1;&#x52A8;&#x624B;&#x52BF;&#x89E3;&#x9501;&#x4E3E;&#x4F8B;&#xFF09;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input swipe 300 1000 300 500
+</pre><p>&#x53C2;&#x6570; <code>300 1000 300 500</code> &#x5206;&#x522B;&#x8868;&#x793A;<code>&#x8D77;&#x59CB;&#x70B9; x &#x5750;&#x6807; &#x8D77;&#x59CB;&#x70B9; y &#x5750;&#x6807; &#x7ED3;&#x675F;&#x70B9; x &#x5750;&#x6807; &#x7ED3;&#x675F;&#x70B9; y &#x5750;&#x6807;</code>&#x3002;</p>
+<h3 class="mume-header" id="%E8%BE%93%E5%85%A5%E6%96%87%E6%9C%AC">&#x8F93;&#x5165;&#x6587;&#x672C;</h3>
+
+<p>&#x5728;&#x7126;&#x70B9;&#x5904;&#x4E8E;&#x67D0;&#x6587;&#x672C;&#x6846;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>input</code> &#x547D;&#x4EE4;&#x6765;&#x8F93;&#x5165;&#x6587;&#x672C;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell input text hello
+</pre><p>&#x73B0;&#x5728; <code>hello</code> &#x51FA;&#x73B0;&#x5728;&#x6587;&#x672C;&#x6846;&#x4E86;&#x3002;</p>
+<h2 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97">&#x67E5;&#x770B;&#x65E5;&#x5FD7;</h2>
+
+<p>Android &#x7CFB;&#x7EDF;&#x7684;&#x65E5;&#x5FD7;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5E95;&#x5C42;&#x7684; Linux &#x5185;&#x6838;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x5230; /proc/kmsg&#xFF0C;Android &#x7684;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x5230; /dev/log&#x3002;</p>
+<h3 class="mume-header" id="android-%E6%97%A5%E5%BF%97">Android &#x65E5;&#x5FD7;</h3>
+
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span><span class="token operator">&lt;</span>option<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">..</span>. <span class="token punctuation">[</span><span class="token operator">&lt;</span>filter-spec<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">..</span>.
+</pre><p>&#x5E38;&#x7528;&#x7528;&#x6CD5;&#x5217;&#x4E3E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h4 class="mume-header" id="%E6%8C%89%E7%BA%A7%E5%88%AB%E8%BF%87%E6%BB%A4%E6%97%A5%E5%BF%97">&#x6309;&#x7EA7;&#x522B;&#x8FC7;&#x6EE4;&#x65E5;&#x5FD7;</h4>
+
+<p>Android &#x7684;&#x65E5;&#x5FD7;&#x5206;&#x4E3A;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x4F18;&#x5148;&#x7EA7;&#xFF08;priority&#xFF09;&#xFF1A;</p>
 <ul>
-<li>V — Verbose （最低优先级）</li>
-<li>D — Debug</li>
-<li>I — Info</li>
-<li>W — Warning</li>
-<li>E — Error</li>
-<li>F — Fatal</li>
-<li>S — Silent （最高优先级，没有任何东西被打印出来）</li>
+<li>V &#x2014;&#x2014; Verbose&#xFF08;&#x6700;&#x4F4E;&#xFF0C;&#x8F93;&#x51FA;&#x5F97;&#x6700;&#x591A;&#xFF09;</li>
+<li>D &#x2014;&#x2014; Debug</li>
+<li>I &#x2014;&#x2014; Info</li>
+<li>W &#x2014;&#x2014; Warning</li>
+<li>E &#x2014;&#x2014; Error</li>
+<li>F &#x2014;&#x2014; Fatal</li>
+<li>S &#x2014;&#x2014; Silent&#xFF08;&#x6700;&#x9AD8;&#xFF0C;&#x5565;&#x4E5F;&#x4E0D;&#x8F93;&#x51FA;&#xFF09;</li>
 </ul>
-<p>在运行 logcat 的时候在前两列的信息中你就可以看到 logcat 的标签列表和优先级别，它是这样标出的：<code>&lt;priority&gt;/&lt;tag&gt;</code>.</p>
-<p>下面是一个 logcat 输出的例子，它的优先级就似乎 I, 标签就是 ActivityManage:</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">I/ActivityManager<span class="token punctuation">(</span>  585<span class="token punctuation">)</span>: Starting activity: Intent <span class="token punctuation">{</span> action<span class="token operator">=</span>android.intent.action<span class="token punctuation">..</span>.<span class="token punctuation">}</span>
-</pre><p>为了让日志输出能体现管理的级别，你还可以用过滤器来控制日志输出，过滤器可以帮助你描述系统的标签等级。</p>
-<p>过滤器语句按照下面的格式描 <code>tag:priority ...</code> , tag 表示是标签，priority 是表示标签的报告的最低等级。 从上面的 tag 的中可以得到日志的优先级。 你可以在过滤器中多次写 tag:priority 。</p>
-<p>这些说明都只到空白结束。下面有一个列子，例子表示支持所有的日志信息，除了那些标签为&quot;ActivityManager&quot;和优先级为&quot;Info&quot;以上的和标签为&quot; MyApp&quot;和优先级为&quot; Debug&quot;以上的。 小等级，优先权报告为 tag.</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat ActivityManager:I MyApp:D *:S
-</pre><p>上面表达式的最后的元素 <code>*:S</code>，是设置所有的标签为&quot;silent&quot;，所有日志只显示有&quot;View&quot; 与 &quot;MyApp&quot;的，用 <code>*:S</code> 的另一个用处是 能够确保日志输出的时候是按照过滤器的说明限制的，也让过滤器也作为一项输出到日志中。</p>
-<p>下面的过滤语句指显示优先级为 warning 或更高的日志信息：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat *:W
-</pre><p>如果你电脑上运行 logcat ，相比在远程 adbshell 端，你还可以为环境变量 <code>ANDROID_LOG_TAGS:</code> 输入一个参数来设置默认的过滤</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">export</span> ANDROID_LOG_TAGS<span class="token operator">=</span><span class="token string">"ActivityManager:I MyApp:D *:S"</span>
-</pre><p>需要注意的是 <code>ANDROID_LOG_TAGS</code> 过滤器如果通过远程 shell 运行 <code>logcat</code> 或用 <code>adb shell logcat</code> 来运行模拟器 / 设备不能输出日志。</p>
-<h3 class="mume-header" id="%E6%8E%A7%E5%88%B6%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F">控制日志输出格式</h3>
+<p>&#x6309;&#x67D0;&#x7EA7;&#x522B;&#x8FC7;&#x6EE4;&#x65E5;&#x5FD7;&#x5219;&#x4F1A;&#x5C06;&#x8BE5;&#x7EA7;&#x522B;&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb logcat *:W
+</pre><p>&#x4F1A;&#x5C06; Warning&#x3001;Error&#x3001;Fatal &#x548C; Silent &#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x3002;</p>
+<p>&#xFF08;<strong>&#x6CE8;&#xFF1A;</strong> &#x5728; macOS &#x4E0B;&#x9700;&#x8981;&#x7ED9; <code>*:W</code> &#x8FD9;&#x6837;&#x4EE5; <code>*</code> &#x4F5C;&#x4E3A; tag &#x7684;&#x53C2;&#x6570;&#x52A0;&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x5982; <code>adb logcat &quot;*:W&quot;</code>&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x62A5;&#x9519; <code>no matches found: *:W</code>&#x3002;&#xFF09;</p>
+<h4 class="mume-header" id="%E6%8C%89-tag-%E5%92%8C%E7%BA%A7%E5%88%AB%E8%BF%87%E6%BB%A4%E6%97%A5%E5%BF%97">&#x6309; tag &#x548C;&#x7EA7;&#x522B;&#x8FC7;&#x6EE4;&#x65E5;&#x5FD7;</h4>
 
-<p>日志信息包括了许多元数据域包括标签和优先级。可以修改日志的输出格式，所以可以显示出特定的元数据域。可以通过 -v 选项得到格式化输出日志的相关信息。</p>
+<p><code>&lt;filter-spec&gt;</code> &#x53EF;&#x4EE5;&#x7531;&#x591A;&#x4E2A; <code>&lt;tag&gt;[:priority]</code> &#x7EC4;&#x6210;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb logcat ActivityManager:I MyApp:D *:S
+</pre><p>&#x8868;&#x793A;&#x8F93;&#x51FA; tag <code>ActivityManager</code> &#x7684; Info &#x4EE5;&#x4E0A;&#x7EA7;&#x522B;&#x65E5;&#x5FD7;&#xFF0C;&#x8F93;&#x51FA; tag <code>MyApp</code> &#x7684; Debug &#x4EE5;&#x4E0A;&#x7EA7;&#x522B;&#x65E5;&#x5FD7;&#xFF0C;&#x53CA;&#x5176;&#x5B83; tag &#x7684; Silent &#x7EA7;&#x522B;&#x65E5;&#x5FD7;&#xFF08;&#x5373;&#x5C4F;&#x853D;&#x5176;&#x5B83; tag &#x65E5;&#x5FD7;&#xFF09;&#x3002;</p>
+<h4 class="mume-header" id="%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F">&#x65E5;&#x5FD7;&#x683C;&#x5F0F;</h4>
+
+<p>&#x53EF;&#x4EE5;&#x7528; <code>adb logcat -v &lt;format&gt;</code> &#x9009;&#x9879;&#x6307;&#x5B9A;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x65E5;&#x5FD7;&#x652F;&#x6301;&#x6309;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD; <code>&lt;format&gt;</code>&#xFF1A;</p>
 <ul>
-<li>brief — 显示原始进程的 priority/tag 和 PID（默认格式）.</li>
-<li>process — 只显示 PID.</li>
-<li>tag — 只显示 priority/tag.</li>
-<li>thread — 显示进程：只显示 thread 、 priority/tag.</li>
-<li>raw — 显示原始的日志消息，没有其他的元数据字段。</li>
-<li>time — 显示原始进程的日期、调用时间、优先级 / 标记和 PID.</li>
-<li>long — 使用空白行显示所有元数据字段和单独的消息。</li>
+<li>
+<p>brief</p>
+<p>&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#x3002;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>priority<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>tag<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>pid<span class="token operator">&gt;</span><span class="token punctuation">)</span>: <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">D/HeadsetStateMachine<span class="token punctuation">(</span> 1785<span class="token punctuation">)</span>: Disconnected process message: 10, size: 0
+</pre></li>
+<li>
+<p>process</p>
+<p>&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>priority<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>pid<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">D<span class="token punctuation">(</span> 1785<span class="token punctuation">)</span> Disconnected process message: 10, size: 0  <span class="token punctuation">(</span>HeadsetStateMachine<span class="token punctuation">)</span>
+</pre></li>
+<li>
+<p>tag</p>
+<p>&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>priority<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>tag<span class="token operator">&gt;</span>: <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">D/HeadsetStateMachine: Disconnected process message: 10, size: 0
+</pre></li>
+<li>
+<p>raw</p>
+<p>&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Disconnected process message: 10, size: 0
+</pre></li>
+<li>
+<p>time</p>
+<p>&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>datetime<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>priority<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>tag<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>pid<span class="token operator">&gt;</span><span class="token punctuation">)</span>: <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">08-28 22:39:39.974 D/HeadsetStateMachine<span class="token punctuation">(</span> 1785<span class="token punctuation">)</span>: Disconnected process message: 10, size: 0
+</pre></li>
+<li>
+<p>threadtime</p>
+<p>&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>datetime<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>pid<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>tid<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>priority<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>tag<span class="token operator">&gt;</span>: <span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">08-28 22:39:39.974  1785  1832 D HeadsetStateMachine: Disconnected process message: 10, size: 0
+</pre></li>
+<li>
+<p>long</p>
+<p>&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token punctuation">[</span> <span class="token operator">&lt;</span>datetime<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>pid<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>tid<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>priority<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>tag<span class="token operator">&gt;</span> <span class="token punctuation">]</span>
+<span class="token operator">&lt;</span>message<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token punctuation">[</span> 08-28 22:39:39.974  1785: 1832 D/HeadsetStateMachine <span class="token punctuation">]</span>
+Disconnected process message: 10, size: 0
+</pre></li>
 </ul>
-<p>当启动了 logcat，你可以通过 -v 选项来指定输出格式：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span>-v <span class="token operator">&lt;</span>format<span class="token operator">></span><span class="token punctuation">]</span>
-</pre><p>下面是用 thread 来产生的日志格式：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat -v thread
-</pre><p>需要注意的是你只能 -v 选项来规定输出格式 option.</p>
-<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%8F%AF%E7%94%A8%E6%97%A5%E5%BF%97%E7%BC%93%E5%86%B2%E5%8C%BA">查看可用日志缓冲区</h3>
+<p>&#x6307;&#x5B9A;&#x683C;&#x5F0F;&#x53EF;&#x4E0E;&#x4E0A;&#x9762;&#x7684;&#x8FC7;&#x6EE4;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb logcat -v long ActivityManager:I *:S
+</pre><h4 class="mume-header" id="%E6%B8%85%E7%A9%BA%E6%97%A5%E5%BF%97">&#x6E05;&#x7A7A;&#x65E5;&#x5FD7;</h4>
 
-<p>Android 日志系统有循环缓冲区，并不是所有的日志系统都有默认循环缓冲区。为了得到日志信息，你需要通过 -b 选项来启动 logcat。如果要使用循环缓冲区，你需要查看剩余的循环缓冲期：</p>
-<ul>
-<li>radio — 查看缓冲区的相关的信息。</li>
-<li>events — 查看和事件相关的的缓冲区。</li>
-<li>main — 查看主要的日志缓冲区</li>
-</ul>
-<p>-b 选项使用方法：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token punctuation">[</span>adb<span class="token punctuation">]</span> logcat <span class="token punctuation">[</span>-b <span class="token operator">&lt;</span>buffer<span class="token operator">></span><span class="token punctuation">]</span>
-</pre><p>下面的例子表示怎么查看日志缓冲区包含 radio 和 telephony 信息：</p>
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb logcat -b radio
-</pre><h3 class="mume-header" id="logcat-%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8">Logcat 命令列表</h3>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb logcat -c
+</pre><h3 class="mume-header" id="%E5%86%85%E6%A0%B8%E6%97%A5%E5%BF%97">&#x5185;&#x6838;&#x65E5;&#x5FD7;</h3>
 
-<TABLE>
-    <TBODY>
-      <TR>
-        <TH>Option</TH>
-        <TH>Description</TH>
-      </TR>
-      <TR>
-        <TD><CODE>-b&nbsp;&lt;buffer&gt;</CODE></TD>
-        <TD> 加载一个可使用的日志缓冲区供查看，比如<CODE>event</CODE>和<CODE>radio</CODE>.
-          默认值是<CODE>main</CODE>。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-c</CODE></TD>
-        <TD>清除屏幕上的日志。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-d</CODE></TD>
-        <TD>输出日志到屏幕上。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-f&nbsp;&lt;filename&gt;</CODE></TD>
-        <TD>指定输出日志信息的<CODE>&lt;filename&gt;</CODE>，默认是<CODE>stdout</CODE>.</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-g</CODE></TD>
-        <TD>输出指定的日志缓冲区，输出后退出。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-n&nbsp;&lt;count&gt;</CODE></TD>
-        <TD>设置日志的最大数目<CODE>&lt;count&gt;</CODE>.，默认值是 4，需要和 <CODE>-r</CODE>选项一起使用。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-r&nbsp;&lt;kbytes&gt;</CODE></TD>
-        <TD> 每<CODE>&lt;kbytes&gt;</CODE> 时输出日志，默认值为 16，需要和<CODE>-f</CODE> 选项一起使用。</TD>
-      </TR>
-      <TR>
-        <TD><CODE>-s</CODE></TD>
-        <TD>设置默认的过滤级别为 silent. </TD>
-      </TR>
-      <TR>
-        <TD><CODE>-v&nbsp;&lt;format&gt;</CODE></TD>
-        <TD>设置日志输入格式，默认的是<CODE>brief</CODE>格式。</TD>
-      </TR>
-    </TBODY>
-</TABLE>
-<h2 class="mume-header" id="%E5%81%9C%E6%AD%A2-adb-%E6%9C%8D%E5%8A%A1">停止 adb 服务</h2>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">dmesg</span>
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&lt;</span>6<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.684016<span class="token punctuation">]</span> PM: noirq resume of devices complete after 0.982 msecs
+<span class="token operator">&lt;</span>6<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.685525<span class="token punctuation">]</span> PM: early resume of devices complete after 0.838 msecs
+<span class="token operator">&lt;</span>6<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.753642<span class="token punctuation">]</span> PM: resume of devices complete after 68.106 msecs
+<span class="token operator">&lt;</span>4<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.755954<span class="token punctuation">]</span> Restarting tasks <span class="token punctuation">..</span>. done.
+<span class="token operator">&lt;</span>6<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.771229<span class="token punctuation">]</span> PM: <span class="token function">suspend</span> <span class="token keyword">exit</span> 2016-08-28 13:31:32.679217193 UTC
+<span class="token operator">&lt;</span>6<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.872373<span class="token punctuation">]</span> PM: <span class="token function">suspend</span> entry 2016-08-28 13:31:32.780363596 UTC
+<span class="token operator">&lt;</span>6<span class="token operator">&gt;</span><span class="token punctuation">[</span>14201.872498<span class="token punctuation">]</span> PM: Syncing filesystems <span class="token punctuation">..</span>. done.
+</pre><p>&#x4E2D;&#x62EC;&#x53F7;&#x91CC;&#x7684; <code>[14201.684016]</code> &#x4EE3;&#x8868;&#x5185;&#x6838;&#x5F00;&#x59CB;&#x542F;&#x52A8;&#x540E;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x5185;&#x6838;&#x65E5;&#x5FD7;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#xFF0C;&#x6BD4;&#x5982;&#x8861;&#x91CF;&#x5185;&#x6838;&#x542F;&#x52A8;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;&#x540E;&#x7684;&#x5185;&#x6838;&#x65E5;&#x5FD7;&#x91CC;&#x627E;&#x5230; <code>Freeing init memory</code> &#x90A3;&#x4E00;&#x884C;&#x524D;&#x9762;&#x7684;&#x65F6;&#x95F4;&#x5C31;&#x662F;&#x3002;</p>
+<h2 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF">&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x4FE1;&#x606F;</h2>
 
-<p>在某些情况下，你可能需要终止 Android 调试系统的运行，然后再重新启动它。 例如，如果 Android 调试系统不响应命令，你可以先终止服务器然后再重启，这样就可能解决这个问题。</p>
-<p>用 <code>kill-server</code> 可以终止 adb server。你可以用 adb 发出的任何命令来重新启动服务器。</p>
-<h2 class="mume-header" id="%E9%87%8D%E5%90%AF%E8%AE%BE%E5%A4%87">重启设备</h2>
+<h3 class="mume-header" id="%E5%9E%8B%E5%8F%B7">&#x578B;&#x53F7;</h3>
 
-<pre data-role="codeBlock" data-info="bash" class="language-bash">adb <span class="token function">reboot</span>
-</pre>
-      </div>
-      
-      
-    </body>
-    
-    
-    
-    
-    
-    
-    
-  </html>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell getprop ro.product.model
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Nexus 5
+</pre><h3 class="mume-header" id="%E7%94%B5%E6%B1%A0%E7%8A%B6%E5%86%B5">&#x7535;&#x6C60;&#x72B6;&#x51B5;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell dumpsys battery
+</pre><p>&#x8F93;&#x5165;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Current Battery Service state:
+AC powered: <span class="token boolean">false</span>
+USB powered: <span class="token boolean">true</span>
+Wireless powered: <span class="token boolean">false</span>
+status: 2
+health: 2
+present: <span class="token boolean">true</span>
+level: 44
+scale: 100
+voltage: 3872
+temperature: 280
+technology: Li-poly
+</pre><p>&#x5176;&#x4E2D; <code>scale</code> &#x4EE3;&#x8868;&#x6700;&#x5927;&#x7535;&#x91CF;&#xFF0C;<code>level</code> &#x4EE3;&#x8868;&#x5F53;&#x524D;&#x7535;&#x91CF;&#x3002;&#x4E0A;&#x9762;&#x7684;&#x8F93;&#x51FA;&#x8868;&#x793A;&#x8FD8;&#x5269;&#x4E0B; 44% &#x7684;&#x7535;&#x91CF;&#x3002;</p>
+<h3 class="mume-header" id="%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87">&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm size
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Physical size: 1080x1920
+</pre><p>&#x8BE5;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#x4E3A; 1080px * 1920px&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4FEE;&#x6539;&#x8FC7;&#xFF0C;&#x90A3;&#x8F93;&#x51FA;&#x53EF;&#x80FD;&#x662F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Physical size: 1080x1920
+Override size: 480x1024
+</pre><p>&#x8868;&#x660E;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#x539F;&#x672C;&#x662F; <code>1080px * 1920px</code>&#xFF0C;&#x5F53;&#x524D;&#x88AB;&#x4FEE;&#x6539;&#x4E3A; <code>480px * 1024px</code>&#x3002;</p>
+<h3 class="mume-header" id="%E8%BE%93%E5%87%BA%E5%B1%8F%E5%B9%95%E5%AF%86%E5%BA%A6">&#x8F93;&#x51FA;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm density
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Physical density: 420
+</pre><p>&#x8BE5;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;&#x4E3A; 420dpi&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4FEE;&#x6539;&#x8FC7;&#xFF0C;&#x90A3;&#x8F93;&#x51FA;&#x53EF;&#x80FD;&#x662F;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Physical density: 480
+Override density: 160
+</pre><p>&#x8868;&#x660E;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;&#x539F;&#x6765;&#x662F; 480dpi&#xFF0C;&#x5F53;&#x524D;&#x88AB;&#x4FEE;&#x6539;&#x4E3A; 160dpi&#x3002;</p>
+<h3 class="mume-header" id="%E6%98%BE%E7%A4%BA%E5%B1%8F%E5%8F%82%E6%95%B0">&#x663E;&#x793A;&#x5C4F;&#x53C2;&#x6570;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell dumpsys window displays
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">WINDOW MANAGER DISPLAY CONTENTS <span class="token punctuation">(</span>dumpsys window displays<span class="token punctuation">)</span>
+Display: mDisplayId<span class="token operator">=</span>0
+init<span class="token operator">=</span>1080x1920 420dpi cur<span class="token operator">=</span>1080x1920 app<span class="token operator">=</span>1080x1794 rng<span class="token operator">=</span>1080x1017-1810x1731
+deferred<span class="token operator">=</span>false layoutNeeded<span class="token operator">=</span>false
+</pre><p>&#x5176;&#x4E2D; <code>mDisplayId</code> &#x4E3A; &#x663E;&#x793A;&#x5C4F;&#x7F16;&#x53F7;&#xFF0C;<code>init</code> &#x662F;&#x521D;&#x59CB;&#x5206;&#x8FA8;&#x7387;&#x548C;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;&#xFF0C;<code>app</code> &#x7684;&#x9AD8;&#x5EA6;&#x6BD4; <code>init</code> &#x91CC;&#x7684;&#x8981;&#x5C0F;&#xFF0C;&#x8868;&#x793A;&#x5C4F;&#x5E55;&#x5E95;&#x90E8;&#x6709;&#x865A;&#x62DF;&#x6309;&#x952E;&#xFF0C;&#x9AD8;&#x5EA6;&#x4E3A; 1920 - 1794 = 126px &#x5408; 42dp&#x3002;</p>
+<h3 class="mume-header" id="android_id">android_id</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings get secure android_id
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">51b6be48bac8c569
+</pre><h3 class="mume-header" id="imei">IMEI</h3>
+
+<p>&#x5728; Android 4.4 &#x53CA;&#x4EE5;&#x4E0B;&#x7248;&#x672C;&#x53EF;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x83B7;&#x53D6; IMEI&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell dumpsys iphonesubinfo
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Phone Subscriber Info:
+Phone Type <span class="token operator">=</span> GSM
+Device ID <span class="token operator">=</span> 860955027785041
+</pre><p>&#x5176;&#x4E2D;&#x7684; <code>Device ID</code> &#x5C31;&#x662F; IMEI&#x3002;</p>
+<p>&#x800C;&#x5728; Android 5.0 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x91CC;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x4E3A;&#x7A7A;&#xFF0C;&#x5F97;&#x901A;&#x8FC7;&#x5176;&#x5B83;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x4E86;&#xFF08;&#x9700;&#x8981; root &#x6743;&#x9650;&#xFF09;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell
+<span class="token function">su</span>
+<span class="token function">service</span> call iphonesubinfo 1
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Result: Parcel<span class="token punctuation">(</span>
+0x00000000: 00000000 0000000f 00360038 00390030 <span class="token string">&apos;........8.6.0.9.&apos;</span>
+0x00000010: 00350035 00320030 00370037 00350038 <span class="token string">&apos;5.5.0.2.7.7.8.5.&apos;</span>
+0x00000020: 00340030 00000031                   <span class="token string">&apos;0.4.1...        &apos;</span><span class="token punctuation">)</span>
+</pre><p>&#x628A;&#x91CC;&#x9762;&#x7684;&#x6709;&#x6548;&#x5185;&#x5BB9;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x5C31;&#x662F; IMEI &#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x91CC;&#x7684;&#x662F; <code>860955027785041</code>&#x3002;</p>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="http://stackoverflow.com/questions/27002663/adb-shell-dumpsys-iphonesubinfo-not-working-since-android-5-0-lollipop">adb shell dumpsys iphonesubinfo not working since Android 5.0 Lollipop</a></p>
+<h3 class="mume-header" id="android-%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC">Android &#x7CFB;&#x7EDF;&#x7248;&#x672C;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell getprop ro.build.version.release
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">5.0.2
+</pre><h3 class="mume-header" id="ip-%E5%9C%B0%E5%9D%80">IP &#x5730;&#x5740;</h3>
+
+<p>&#x6BCF;&#x6B21;&#x60F3;&#x77E5;&#x9053;&#x8BBE;&#x5907;&#x7684; IP &#x5730;&#x5740;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x5F97;&#x300C;&#x8BBE;&#x7F6E;&#x300D;-&#x300C;&#x5173;&#x4E8E;&#x624B;&#x673A;&#x300D;-&#x300C;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x300D;-&#x300C;IP &#x5730;&#x5740;&#x300D;&#x5F88;&#x70E6;&#x5BF9;&#x4E0D;&#x5BF9;&#xFF1F;&#x901A;&#x8FC7; adb &#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x67E5;&#x770B;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">ifconfig</span> <span class="token operator">|</span> <span class="token function">grep</span> Mask
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">inet addr:10.130.245.230  Mask:255.255.255.252
+inet addr:127.0.0.1  Mask:255.0.0.0
+</pre><p>&#x90A3;&#x4E48; <code>10.130.245.230</code> &#x5C31;&#x662F;&#x8BBE;&#x5907; IP &#x5730;&#x5740;&#x3002;</p>
+<p>&#x5728;&#x6709;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x8F93;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x5907;&#x8FDE;&#x7740; WiFi&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5C40;&#x57DF;&#x7F51; IP&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">ifconfig</span> wlan0
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">wlan0: <span class="token function">ip</span> 10.129.160.99 mask 255.255.240.0 flags <span class="token punctuation">[</span>up broadcast running multicast<span class="token punctuation">]</span>
+</pre><p>&#x6216;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">wlan0     Link encap:UNSPEC
+      inet addr:10.129.168.57  Bcast:10.129.175.255  Mask:255.255.240.0
+      inet6 addr: fe80::66cc:2eff:fe68:b6b6/64 Scope: Link
+      UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+      RX packets:496520 errors:0 dropped:0 overruns:0 frame:0
+      TX packets:68215 errors:0 dropped:0 overruns:0 carrier:0
+      collisions:0 txqueuelen:3000
+      RX bytes:116266821 TX bytes:8311736
+</pre><p>&#x5982;&#x679C;&#x4EE5;&#x4E0A;&#x547D;&#x4EE4;&#x4ECD;&#x7136;&#x4E0D;&#x80FD;&#x5F97;&#x5230;&#x671F;&#x671B;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x90A3;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF08;&#x90E8;&#x5206;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x91CC;&#x53EF;&#x7528;&#xFF09;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell netcfg
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">wlan0    UP                               10.129.160.99/20  0x00001043 f8:a9:d0:17:42:4d
+lo       UP                                   127.0.0.1/8   0x00000049 00:00:00:00:00:00
+p2p0     UP                                     0.0.0.0/0   0x00001003 fa:a9:d0:17:42:4d
+sit0     DOWN                                   0.0.0.0/0   0x00000080 00:00:00:00:00:00
+rmnet0   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet1   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet3   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet2   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet4   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet6   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet5   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rmnet7   DOWN                                   0.0.0.0/0   0x00000000 00:00:00:00:00:00
+rev_rmnet3 DOWN                                   0.0.0.0/0   0x00001002 4e:b7:e4:2e:17:58
+rev_rmnet2 DOWN                                   0.0.0.0/0   0x00001002 4e:f0:c8:bf:7a:cf
+rev_rmnet4 DOWN                                   0.0.0.0/0   0x00001002 a6:c0:3b:6b:c4:1f
+rev_rmnet6 DOWN                                   0.0.0.0/0   0x00001002 66:bb:5d:64:2e:e9
+rev_rmnet5 DOWN                                   0.0.0.0/0   0x00001002 0e:1b:eb:b9:23:a0
+rev_rmnet7 DOWN                                   0.0.0.0/0   0x00001002 7a:d9:f6:81:40:5a
+rev_rmnet8 DOWN                                   0.0.0.0/0   0x00001002 4e:e2:a9:bb:d0:1b
+rev_rmnet0 DOWN                                   0.0.0.0/0   0x00001002 fe:65:d0:ca:82:a9
+rev_rmnet1 DOWN                                   0.0.0.0/0   0x00001002 da:d8:e8:4f:2e:fe
+</pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x540D;&#x79F0;&#x3001;&#x542F;&#x7528;&#x72B6;&#x6001;&#x3001;IP &#x5730;&#x5740;&#x548C; Mac &#x5730;&#x5740;&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 class="mume-header" id="mac-%E5%9C%B0%E5%9D%80">Mac &#x5730;&#x5740;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">cat</span> /sys/class/net/wlan0/address
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">f8:a9:d0:17:42:4d
+</pre><p>&#x8FD9;&#x67E5;&#x770B;&#x7684;&#x662F;&#x5C40;&#x57DF;&#x7F51; Mac &#x5730;&#x5740;&#xFF0C;&#x79FB;&#x52A8;&#x7F51;&#x7EDC;&#x6216;&#x5176;&#x5B83;&#x8FDE;&#x63A5;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x524D;&#x9762;&#x7684;&#x5C0F;&#x8282;&#x300C;IP &#x5730;&#x5740;&#x300D;&#x91CC;&#x63D0;&#x5230;&#x7684; <code>adb shell netcfg</code> &#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x3002;</p>
+<h3 class="mume-header" id="cpu-%E4%BF%A1%E6%81%AF">CPU &#x4FE1;&#x606F;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">cat</span> /proc/cpuinfo
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Processor       <span class="token keyword">:</span> ARMv7 Processor <span class="token function">rev</span> 0 <span class="token punctuation">(</span>v7l<span class="token punctuation">)</span>
+processor       <span class="token keyword">:</span> 0
+BogoMIPS        <span class="token keyword">:</span> 38.40
+
+processor       <span class="token keyword">:</span> 1
+BogoMIPS        <span class="token keyword">:</span> 38.40
+
+processor       <span class="token keyword">:</span> 2
+BogoMIPS        <span class="token keyword">:</span> 38.40
+
+processor       <span class="token keyword">:</span> 3
+BogoMIPS        <span class="token keyword">:</span> 38.40
+
+Features        <span class="token keyword">:</span> swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt
+CPU implementer <span class="token keyword">:</span> 0x51
+CPU architecture: 7
+CPU variant     <span class="token keyword">:</span> 0x2
+CPU part        <span class="token keyword">:</span> 0x06f
+CPU revision    <span class="token keyword">:</span> 0
+
+Hardware        <span class="token keyword">:</span> Qualcomm MSM 8974 HAMMERHEAD <span class="token punctuation">(</span>Flattened Device Tree<span class="token punctuation">)</span>
+Revision        <span class="token keyword">:</span> 000b
+Serial          <span class="token keyword">:</span> 0000000000000000
+</pre><p>&#x8FD9;&#x662F; Nexus 5 &#x7684; CPU &#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x4EEC;&#x4ECE;&#x8F93;&#x51FA;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4F7F;&#x7528;&#x7684;&#x786C;&#x4EF6;&#x662F; <code>Qualcomm MSM 8974</code>&#xFF0C;processor &#x7684;&#x7F16;&#x53F7;&#x662F; 0 &#x5230; 3&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x662F;&#x56DB;&#x6838;&#x7684;&#xFF0C;&#x91C7;&#x7528;&#x7684;&#x67B6;&#x6784;&#x662F; <code>ARMv7 Processor rev 0 (v71)</code>&#x3002;</p>
+<h3 class="mume-header" id="%E5%86%85%E5%AD%98%E4%BF%A1%E6%81%AF">&#x5185;&#x5B58;&#x4FE1;&#x606F;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">cat</span> /proc/meminfo
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">MemTotal:        1027424 kB
+MemFree:          486564 kB
+Buffers:           15224 kB
+Cached:            72464 kB
+SwapCached:        24152 kB
+Active:           110572 kB
+Inactive:         259060 kB
+Active<span class="token punctuation">(</span>anon<span class="token punctuation">)</span>:      79176 kB
+Inactive<span class="token punctuation">(</span>anon<span class="token punctuation">)</span>:   207736 kB
+Active<span class="token punctuation">(</span>file<span class="token punctuation">)</span>:      31396 kB
+Inactive<span class="token punctuation">(</span>file<span class="token punctuation">)</span>:    51324 kB
+Unevictable:        3948 kB
+Mlocked:               0 kB
+HighTotal:        409600 kB
+HighFree:         132612 kB
+LowTotal:         617824 kB
+LowFree:          353952 kB
+SwapTotal:        262140 kB
+SwapFree:         207572 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        265324 kB
+Mapped:            47072 kB
+Shmem:              1020 kB
+Slab:              57372 kB
+SReclaimable:       7692 kB
+SUnreclaim:        49680 kB
+KernelStack:        4512 kB
+PageTables:         5912 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      775852 kB
+Committed_AS:   13520632 kB
+VmallocTotal:     385024 kB
+VmallocUsed:       61004 kB
+VmallocChunk:     209668 kB
+</pre><p>&#x5176;&#x4E2D;&#xFF0C;<code>MemTotal</code> &#x5C31;&#x662F;&#x8BBE;&#x5907;&#x7684;&#x603B;&#x5185;&#x5B58;&#xFF0C;<code>MemFree</code> &#x662F;&#x5F53;&#x524D;&#x7A7A;&#x95F2;&#x5185;&#x5B58;&#x3002;</p>
+<h3 class="mume-header" id="%E6%9B%B4%E5%A4%9A%E7%A1%AC%E4%BB%B6%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7">&#x66F4;&#x591A;&#x786C;&#x4EF6;&#x4E0E;&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;</h3>
+
+<p>&#x8BBE;&#x5907;&#x7684;&#x66F4;&#x591A;&#x786C;&#x4EF6;&#x4E0E;&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">cat</span> /system/build.prop
+</pre><p>&#x8FD9;&#x4F1A;&#x8F93;&#x51FA;&#x5F88;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x524D;&#x9762;&#x51E0;&#x4E2A;&#x5C0F;&#x8282;&#x63D0;&#x5230;&#x7684;&#x300C;&#x578B;&#x53F7;&#x300D;&#x548C;&#x300C;Android &#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x300D;&#x7B49;&#x3002;</p>
+<p>&#x8F93;&#x51FA;&#x91CC;&#x8FD8;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x4EEC;&#x4E5F;&#x53EF;&#x901A;&#x8FC7; <code>adb shell getprop &#x300A;&#x5C5E;&#x6027;&#x540D;&#x300B;</code> &#x547D;&#x4EE4;&#x5355;&#x72EC;&#x67E5;&#x770B;&#xFF0C;&#x5217;&#x4E3E;&#x4E00;&#x90E8;&#x5206;&#x5C5E;&#x6027;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ro.build.version.sdk</td>
+<td>SDK &#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td>ro.build.version.release</td>
+<td>Android &#x7CFB;&#x7EDF;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td>ro.build.version.security_patch</td>
+<td>Android &#x5B89;&#x5168;&#x8865;&#x4E01;&#x7A0B;&#x5E8F;&#x7EA7;&#x522B;</td>
+</tr>
+<tr>
+<td>ro.product.model</td>
+<td>&#x578B;&#x53F7;</td>
+</tr>
+<tr>
+<td>ro.product.brand</td>
+<td>&#x54C1;&#x724C;</td>
+</tr>
+<tr>
+<td><a href="http://ro.product.name">ro.product.name</a></td>
+<td>&#x8BBE;&#x5907;&#x540D;</td>
+</tr>
+<tr>
+<td>ro.product.board</td>
+<td>&#x5904;&#x7406;&#x5668;&#x578B;&#x53F7;</td>
+</tr>
+<tr>
+<td>ro.product.cpu.abilist</td>
+<td>CPU &#x652F;&#x6301;&#x7684; abi &#x5217;&#x8868; [<em>&#x8282;&#x6CE8;&#x4E00;</em>]</td>
+</tr>
+<tr>
+<td>persist.sys.isUsbOtgEnabled</td>
+<td>&#x662F;&#x5426;&#x652F;&#x6301; OTG</td>
+</tr>
+<tr>
+<td>dalvik.vm.heapsize</td>
+<td>&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5185;&#x5B58;&#x4E0A;&#x9650;</td>
+</tr>
+<tr>
+<td>ro.sf.lcd_density</td>
+<td>&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x8282;&#x6CE8;&#x4E00;&#xFF1A;</p>
+</blockquote>
+<p>&#x4E00;&#x4E9B;&#x5C0F;&#x5382;&#x5B9A;&#x5236;&#x7684; ROM &#x53EF;&#x80FD;&#x4FEE;&#x6539;&#x8FC7; CPU &#x652F;&#x6301;&#x7684; abi &#x5217;&#x8868;&#x7684;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x7528; <code>ro.product.cpu.abilist</code> &#x5C5E;&#x6027;&#x540D;&#x67E5;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BD5;&#x8BD5;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">cat</span> /system/build.prop <span class="token operator">|</span> <span class="token function">grep</span> ro.product.cpu.abi
+</pre><p>&#x793A;&#x4F8B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">ro.product.cpu.abi<span class="token operator">=</span>armeabi-v7a
+ro.product.cpu.abi2<span class="token operator">=</span>armeabi
+</pre><h2 class="mume-header" id="%E4%BF%AE%E6%94%B9%E8%AE%BE%E7%BD%AE">&#x4FEE;&#x6539;&#x8BBE;&#x7F6E;</h2>
+
+<p><strong>&#x6CE8;&#xFF1A;</strong> &#x4FEE;&#x6539;&#x8BBE;&#x7F6E;&#x4E4B;&#x540E;&#xFF0C;&#x8FD0;&#x884C;&#x6062;&#x590D;&#x547D;&#x4EE4;&#x6709;&#x53EF;&#x80FD;&#x663E;&#x793A;&#x4ECD;&#x7136;&#x4E0D;&#x592A;&#x6B63;&#x5E38;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD0;&#x884C; <code>adb reboot</code> &#x91CD;&#x542F;&#x8BBE;&#x5907;&#xFF0C;&#x6216;&#x624B;&#x52A8;&#x91CD;&#x542F;&#x3002;</p>
+<p>&#x4FEE;&#x6539;&#x8BBE;&#x7F6E;&#x7684;&#x539F;&#x7406;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7; settings &#x547D;&#x4EE4;&#x4FEE;&#x6539; /data/data/com.android.providers.settings/databases/settings.db &#x91CC;&#x5B58;&#x653E;&#x7684;&#x8BBE;&#x7F6E;&#x503C;&#x3002;</p>
+<h3 class="mume-header" id="%E5%88%86%E8%BE%A8%E7%8E%87">&#x5206;&#x8FA8;&#x7387;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm size 480x1024
+</pre><p>&#x8868;&#x793A;&#x5C06;&#x5206;&#x8FA8;&#x7387;&#x4FEE;&#x6539;&#x4E3A; 480px * 1024px&#x3002;</p>
+<p>&#x6062;&#x590D;&#x539F;&#x5206;&#x8FA8;&#x7387;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm size reset
+</pre><h3 class="mume-header" id="%E4%BF%AE%E6%94%B9%E5%B1%8F%E5%B9%95%E5%AF%86%E5%BA%A6">&#x4FEE;&#x6539;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm density 160
+</pre><p>&#x8868;&#x793A;&#x5C06;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;&#x4FEE;&#x6539;&#x4E3A; 160dpi&#x3002;</p>
+<p>&#x6062;&#x590D;&#x539F;&#x5C4F;&#x5E55;&#x5BC6;&#x5EA6;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm density reset
+</pre><h3 class="mume-header" id="%E6%98%BE%E7%A4%BA%E5%8C%BA%E5%9F%9F">&#x663E;&#x793A;&#x533A;&#x57DF;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm overscan 0,0,0,200
+</pre><p>&#x56DB;&#x4E2A;&#x6570;&#x5B57;&#x5206;&#x522B;&#x8868;&#x793A;&#x8DDD;&#x79BB;&#x5DE6;&#x3001;&#x4E0A;&#x3001;&#x53F3;&#x3001;&#x4E0B;&#x8FB9;&#x7F18;&#x7684;&#x7559;&#x767D;&#x50CF;&#x7D20;&#xFF0C;&#x4EE5;&#x4E0A;&#x547D;&#x4EE4;&#x8868;&#x793A;&#x5C06;&#x5C4F;&#x5E55;&#x5E95;&#x90E8; 200px &#x7559;&#x767D;&#x3002;</p>
+<p>&#x6062;&#x590D;&#x539F;&#x663E;&#x793A;&#x533A;&#x57DF;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell wm overscan reset
+</pre><h3 class="mume-header" id="%E5%85%B3%E9%97%AD-usb-%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F">&#x5173;&#x95ED; USB &#x8C03;&#x8BD5;&#x6A21;&#x5F0F;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings put global adb_enabled 0
+</pre><p>&#x6062;&#x590D;&#xFF1A;</p>
+<p>&#x7528;&#x547D;&#x4EE4;&#x6062;&#x590D;&#x4E0D;&#x4E86;&#x4E86;&#xFF0C;&#x6BD5;&#x7ADF;&#x5173;&#x95ED;&#x4E86; USB &#x8C03;&#x8BD5; adb &#x5C31;&#x8FDE;&#x63A5;&#x4E0D;&#x4E0A; Android &#x8BBE;&#x5907;&#x4E86;&#x3002;</p>
+<p>&#x53BB;&#x8BBE;&#x5907;&#x4E0A;&#x624B;&#x52A8;&#x6062;&#x590D;&#x5427;&#xFF1A;&#x300C;&#x8BBE;&#x7F6E;&#x300D;-&#x300C;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x9879;&#x300D;-&#x300C;Android &#x8C03;&#x8BD5;&#x300D;&#x3002;</p>
+<h3 class="mume-header" id="%E5%85%81%E8%AE%B8-%E7%A6%81%E6%AD%A2%E8%AE%BF%E9%97%AE%E9%9D%9E-sdk-api">&#x5141;&#x8BB8; / &#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x975E; SDK API</h3>
+
+<p>&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x975E; SDK API&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings put global hidden_api_policy_pre_p_apps 1
+adb shell settings put global hidden_api_policy_p_apps 1
+</pre><p>&#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x975E; SDK API&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings delete global hidden_api_policy_pre_p_apps
+adb shell settings delete global hidden_api_policy_p_apps
+</pre><p>&#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x5907;&#x83B7;&#x5F97; Root &#x6743;&#x9650;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x6700;&#x540E;&#x7684;&#x6570;&#x5B57;&#x7684;&#x542B;&#x4E49;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&#x7981;&#x6B62;&#x68C0;&#x6D4B;&#x975E; SDK &#x63A5;&#x53E3;&#x7684;&#x8C03;&#x7528;&#x3002;&#x8BE5;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x529F;&#x80FD;&#x88AB;&#x7981;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x4EE4; strict mode API&#xFF0C;&#x5373; detectNonSdkApiUsage() &#x65E0;&#x6548;&#x3002;&#x4E0D;&#x63A8;&#x8350;&#x3002;</td>
+</tr>
+<tr>
+<td>1</td>
+<td>&#x4EC5;&#x8B66;&#x544A;&#x2014;&#x2014;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x975E; SDK &#x63A5;&#x53E3;&#xFF0C;&#x4F46;&#x4FDD;&#x7559;&#x65E5;&#x5FD7;&#x4E2D;&#x7684;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x7EE7;&#x7EED;&#x4F7F;&#x7528; strick mode API&#x3002;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x7981;&#x6B62;&#x8C03;&#x7528;&#x6DF1;&#x7070;&#x540D;&#x5355;&#x548C;&#x9ED1;&#x540D;&#x5355;&#x4E2D;&#x7684;&#x63A5;&#x53E3;&#x3002;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x7981;&#x6B62;&#x8C03;&#x7528;&#x9ED1;&#x540D;&#x5355;&#x4E2D;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x8C03;&#x7528;&#x6DF1;&#x7070;&#x540D;&#x5355;&#x4E2D;&#x7684;&#x63A5;&#x53E3;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E7%8A%B6%E6%80%81%E6%A0%8F%E5%92%8C%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F">&#x72B6;&#x6001;&#x680F;&#x548C;&#x5BFC;&#x822A;&#x680F;&#x7684;&#x663E;&#x793A;&#x9690;&#x85CF;</h3>
+
+<p>&#x672C;&#x8282;&#x6240;&#x8BF4;&#x7684;&#x76F8;&#x5173;&#x8BBE;&#x7F6E;&#x5BF9;&#x5E94; Cyanogenmod &#x91CC;&#x7684;&#x300C;&#x6269;&#x5C55;&#x684C;&#x9762;&#x300D;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings put global policy_control <span class="token operator">&lt;</span>key-values<span class="token operator">&gt;</span>
+</pre><p><code>&lt;key-values&gt;</code> &#x53EF;&#x7531;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#x952E;&#x53CA;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x7EC4;&#x6210;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A; <code>&lt;key1&gt;=&lt;value1&gt;:&lt;key2&gt;=&lt;value2&gt;</code>&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>immersive.full</td>
+<td>&#x540C;&#x65F6;&#x9690;&#x85CF;</td>
+</tr>
+<tr>
+<td>immersive.status</td>
+<td>&#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;</td>
+</tr>
+<tr>
+<td>immersive.navigation</td>
+<td>&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x680F;</td>
+</tr>
+<tr>
+<td>immersive.preconfirms</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD9;&#x4E9B;&#x952E;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x53EF;&#x5219;&#x5982;&#x4E0B;&#x503C;&#x7528;&#x9017;&#x53F7;&#x7EC4;&#x5408;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apps</code></td>
+<td>&#x6240;&#x6709;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>&#x6240;&#x6709;&#x754C;&#x9762;</td>
+</tr>
+<tr>
+<td><code>packagename</code></td>
+<td>&#x6307;&#x5B9A;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td><code>-packagename</code></td>
+<td>&#x6392;&#x9664;&#x6307;&#x5B9A;&#x5E94;&#x7528;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings put global policy_control immersive.full<span class="token operator">=</span>*
+</pre><p>&#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x5728;&#x6240;&#x6709;&#x754C;&#x9762;&#x4E0B;&#x90FD;&#x540C;&#x65F6;&#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;&#x548C;&#x5BFC;&#x822A;&#x680F;&#x3002;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell settings put global policy_control immersive.status<span class="token operator">=</span>com.package1,com.package2:immersive.navigation<span class="token operator">=</span>apps,-com.package3
+</pre><p>&#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x5728;&#x5305;&#x540D;&#x4E3A; <code>com.package1</code> &#x548C; <code>com.package2</code> &#x7684;&#x5E94;&#x7528;&#x91CC;&#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x5728;&#x9664;&#x4E86;&#x5305;&#x540D;&#x4E3A; <code>com.package3</code> &#x7684;&#x6240;&#x6709;&#x5E94;&#x7528;&#x91CC;&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x680F;&#x3002;</p>
+<h2 class="mume-header" id="%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD">&#x5B9E;&#x7528;&#x529F;&#x80FD;</h2>
+
+<h3 class="mume-header" id="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE">&#x5C4F;&#x5E55;&#x622A;&#x56FE;</h3>
+
+<p>&#x622A;&#x56FE;&#x4FDD;&#x5B58;&#x5230;&#x7535;&#x8111;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb exec-out screencap -p <span class="token operator">&gt;</span> sc.png
+</pre><p>&#x5982;&#x679C; adb &#x7248;&#x672C;&#x8F83;&#x8001;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528; <code>exec-out</code> &#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5EFA;&#x8BAE;&#x66F4;&#x65B0; adb &#x7248;&#x672C;&#x3002;&#x65E0;&#x6CD5;&#x66F4;&#x65B0;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x9EBB;&#x70E6;&#x70B9;&#x7684;&#x529E;&#x6CD5;&#xFF1A;</p>
+<p>&#x5148;&#x622A;&#x56FE;&#x4FDD;&#x5B58;&#x5230;&#x8BBE;&#x5907;&#x91CC;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell screencap -p /sdcard/sc.png
+</pre><p>&#x7136;&#x540E;&#x5C06; png &#x6587;&#x4EF6;&#x5BFC;&#x51FA;&#x5230;&#x7535;&#x8111;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb pull /sdcard/sc.png
+</pre><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>adb shell screencap -h</code> &#x67E5;&#x770B; <code>screencap</code> &#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E24;&#x4E2A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x53C2;&#x6570;&#x53CA;&#x542B;&#x4E49;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p</td>
+<td>&#x6307;&#x5B9A;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x4E3A; png &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>-d display-id</td>
+<td>&#x6307;&#x5B9A;&#x622A;&#x56FE;&#x7684;&#x663E;&#x793A;&#x5C4F;&#x7F16;&#x53F7;&#xFF08;&#x6709;&#x591A;&#x663E;&#x793A;&#x5C4F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5B9E;&#x6D4B;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x540D;&#x4EE5; <code>.png</code> &#x7ED3;&#x5C3E;&#x65F6;&#x53EF;&#x4EE5;&#x7701;&#x7565; -p &#x53C2;&#x6570;&#xFF1B;&#x5426;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528; -p &#x53C2;&#x6570;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x622A;&#x56FE;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x5230; stdout&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x4E00;&#x884C;&#x547D;&#x4EE4;&#x622A;&#x56FE;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x7535;&#x8111;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<blockquote>
+<p>Linux &#x548C; Windows</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell screencap -p <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">&quot;s/\r$//&quot;</span> <span class="token operator">&gt;</span> sc.png
+</pre><blockquote>
+<p>Mac OS X</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell screencap -p <span class="token operator">|</span> gsed <span class="token string">&quot;s/\r$//&quot;</span> <span class="token operator">&gt;</span> sc.png
+</pre><p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x7528;&#x5230; gnu sed &#x547D;&#x4EE4;&#xFF0C;&#x5728; Linux &#x4E0B;&#x76F4;&#x63A5;&#x5C31;&#x6709;&#xFF0C;&#x5728; Windows &#x4E0B; Git &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684; bin &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x4E5F;&#x6709;&#x3002;&#x5982;&#x679C;&#x786E;&#x5B9E;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D; <a href="http://gnuwin32.sourceforge.net/packages/sed.htm">sed for Windows</a> &#x5E76;&#x5C06; sed.exe &#x6240;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x6DFB;&#x52A0;&#x5230; PATH &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x91CC;&#x3002;</p>
+<p>&#x800C;&#x5728; Mac &#x4E0B;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684; sed &#x547D;&#x4EE4;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">sed: RE error: illegal byte sequence
+</pre><p>&#x9700;&#x8981;&#x5B89;&#x88C5; gnu-sed&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528; gsed &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">brew <span class="token function">install</span> gnu-sed
+</pre><h3 class="mume-header" id="%E5%BD%95%E5%88%B6%E5%B1%8F%E5%B9%95">&#x5F55;&#x5236;&#x5C4F;&#x5E55;</h3>
+
+<p>&#x5F55;&#x5236;&#x5C4F;&#x5E55;&#x4EE5; mp4 &#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#x5230; /sdcard&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell screenrecord /sdcard/filename.mp4
+</pre><p>&#x9700;&#x8981;&#x505C;&#x6B62;&#x65F6;&#x6309; <kbd>Ctrl-C</kbd>&#xFF0C;&#x9ED8;&#x8BA4;&#x5F55;&#x5236;&#x65F6;&#x95F4;&#x548C;&#x6700;&#x957F;&#x5F55;&#x5236;&#x65F6;&#x95F4;&#x90FD;&#x662F; 180 &#x79D2;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5BFC;&#x51FA;&#x5230;&#x7535;&#x8111;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb pull /sdcard/filename.mp4
+</pre><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>adb shell screenrecord --help</code> &#x67E5;&#x770B; <code>screenrecord</code> &#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5E38;&#x89C1;&#x53C2;&#x6570;&#x53CA;&#x542B;&#x4E49;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--size WIDTHxHEIGHT</td>
+<td>&#x89C6;&#x9891;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x6BD4;&#x5982; <code>1280x720</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x5C4F;&#x5E55;&#x5206;&#x8FA8;&#x7387;&#x3002;</td>
+</tr>
+<tr>
+<td>--bit-rate RATE</td>
+<td>&#x89C6;&#x9891;&#x7684;&#x6BD4;&#x7279;&#x7387;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; 4Mbps&#x3002;</td>
+</tr>
+<tr>
+<td>--time-limit TIME</td>
+<td>&#x5F55;&#x5236;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;&#x3002;</td>
+</tr>
+<tr>
+<td>--verbose</td>
+<td>&#x8F93;&#x51FA;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E9%87%8D%E6%96%B0%E6%8C%82%E8%BD%BD-system-%E5%88%86%E5%8C%BA%E4%B8%BA%E5%8F%AF%E5%86%99">&#x91CD;&#x65B0;&#x6302;&#x8F7D; system &#x5206;&#x533A;&#x4E3A;&#x53EF;&#x5199;</h3>
+
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x9700;&#x8981; root &#x6743;&#x9650;</p>
+</blockquote>
+<p>/system &#x5206;&#x533A;&#x9ED8;&#x8BA4;&#x6302;&#x8F7D;&#x4E3A;&#x53EA;&#x8BFB;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x64CD;&#x4F5C;&#x6BD4;&#x5982;&#x7ED9; Android &#x7CFB;&#x7EDF;&#x6DFB;&#x52A0;&#x547D;&#x4EE4;&#x3001;&#x5220;&#x9664;&#x81EA;&#x5E26;&#x5E94;&#x7528;&#x7B49;&#x9700;&#x8981;&#x5BF9; /system &#x8FDB;&#x884C;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6302;&#x8F7D;&#x5B83;&#x4E3A;&#x53EF;&#x8BFB;&#x5199;&#x3002;</p>
+<p>&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>
+<p>&#x8FDB;&#x5165; shell &#x5E76;&#x5207;&#x6362;&#x5230; root &#x7528;&#x6237;&#x6743;&#x9650;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell
+<span class="token function">su</span>
+</pre></li>
+<li>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5206;&#x533A;&#x6302;&#x8F7D;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token function">mount</span>
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">rootfs / rootfs ro,relatime 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode<span class="token operator">=</span>755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode<span class="token operator">=</span>600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+none /var tmpfs rw,seclabel,relatime,mode<span class="token operator">=</span>770,gid<span class="token operator">=</span>1000 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+none /sys/fs/cgroup tmpfs rw,seclabel,relatime,mode<span class="token operator">=</span>750,gid<span class="token operator">=</span>1000 0 0
+none /sys/fs/cgroup/memory cgroup rw,relatime,memory 0 0
+tmpfs /mnt/asec tmpfs rw,seclabel,relatime,mode<span class="token operator">=</span>755,gid<span class="token operator">=</span>1000 0 0
+tmpfs /mnt/obb tmpfs rw,seclabel,relatime,mode<span class="token operator">=</span>755,gid<span class="token operator">=</span>1000 0 0
+none /dev/memcg cgroup rw,relatime,memory 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+none /sys/fs/cgroup tmpfs rw,seclabel,relatime,mode<span class="token operator">=</span>750,gid<span class="token operator">=</span>1000 0 0
+none /sys/fs/cgroup/memory cgroup rw,relatime,memory 0 0
+none /sys/fs/cgroup/freezer cgroup rw,relatime,freezer 0 0
+/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,seclabel,relatime,data<span class="token operator">=</span>ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/userdata /data ext4 rw,seclabel,nosuid,nodev,relatime,noauto_da_alloc,data<span class="token operator">=</span>ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,relatime,data<span class="token operator">=</span>ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/persist /persist ext4 rw,seclabel,nosuid,nodev,relatime,data<span class="token operator">=</span>ordered 0 0
+/dev/block/platform/msm_sdcc.1/by-name/modem /firmware vfat ro,context<span class="token operator">=</span>u:object_r:firmware_file:s0,relatime,uid<span class="token operator">=</span>1000,gid<span class="token operator">=</span>1000,fmask<span class="token operator">=</span>0337,dmask<span class="token operator">=</span>0227,codepage<span class="token operator">=</span>cp437,iocharset<span class="token operator">=</span>iso8859-1,shortname<span class="token operator">=</span>lower,errors<span class="token operator">=</span>remount-ro 0 0
+/dev/fuse /mnt/shell/emulated fuse rw,nosuid,nodev,relatime,user_id<span class="token operator">=</span>1023,group_id<span class="token operator">=</span>1023,default_permissions,allow_other 0 0
+/dev/fuse /mnt/shell/emulated/0 fuse rw,nosuid,nodev,relatime,user_id<span class="token operator">=</span>1023,group_id<span class="token operator">=</span>1023,default_permissions,allow_other 0 0
+</pre><p>&#x627E;&#x5230;&#x5176;&#x4E2D;&#x6211;&#x4EEC;&#x5173;&#x6CE8;&#x7684;&#x5E26; /system &#x7684;&#x90A3;&#x4E00;&#x884C;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,seclabel,relatime,data<span class="token operator">=</span>ordered 0 0
+</pre></li>
+<li>
+<p>&#x91CD;&#x65B0;&#x6302;&#x8F7D;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token function">mount</span> -o remount,rw -t yaffs2 /dev/block/platform/msm_sdcc.1/by-name/system /system
+</pre><p>&#x8FD9;&#x91CC;&#x7684; <code>/dev/block/platform/msm_sdcc.1/by-name/system</code> &#x5C31;&#x662F;&#x6211;&#x4EEC;&#x4ECE;&#x4E0A;&#x4E00;&#x6B65;&#x7684;&#x8F93;&#x51FA;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
+</li>
+</ol>
+<p>&#x5982;&#x679C;&#x8F93;&#x51FA;&#x6CA1;&#x6709;&#x63D0;&#x793A;&#x9519;&#x8BEF;&#x7684;&#x8BDD;&#xFF0C;&#x64CD;&#x4F5C;&#x5C31;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9; /system &#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x6240;&#x6B32;&#x4E3A;&#x4E86;&#x3002;</p>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%9A%84-wifi-%E5%AF%86%E7%A0%81">&#x67E5;&#x770B;&#x8FDE;&#x63A5;&#x8FC7;&#x7684; WiFi &#x5BC6;&#x7801;</h3>
+
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x9700;&#x8981; root &#x6743;&#x9650;&#x3002;</p>
+</blockquote>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell
+<span class="token function">su</span>
+<span class="token function">cat</span> /data/misc/wifi/*.conf
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">network<span class="token operator">=</span><span class="token punctuation">{</span>
+ssid<span class="token operator">=</span><span class="token string">&quot;TP-LINK_9DFC&quot;</span>
+scan_ssid<span class="token operator">=</span>1
+psk<span class="token operator">=</span><span class="token string">&quot;123456789&quot;</span>
+key_mgmt<span class="token operator">=</span>WPA-PSK
+group<span class="token operator">=</span>CCMP TKIP
+auth_alg<span class="token operator">=</span>OPEN
+sim_num<span class="token operator">=</span>1
+priority<span class="token operator">=</span>13893
+<span class="token punctuation">}</span>
+
+network<span class="token operator">=</span><span class="token punctuation">{</span>
+ssid<span class="token operator">=</span><span class="token string">&quot;TP-LINK_F11E&quot;</span>
+psk<span class="token operator">=</span><span class="token string">&quot;987654321&quot;</span>
+key_mgmt<span class="token operator">=</span>WPA-PSK
+sim_num<span class="token operator">=</span>1
+priority<span class="token operator">=</span>17293
+<span class="token punctuation">}</span>
+</pre><p><code>ssid</code> &#x5373;&#x4E3A;&#x6211;&#x4EEC;&#x5728; WLAN &#x8BBE;&#x7F6E;&#x91CC;&#x770B;&#x5230;&#x7684;&#x540D;&#x79F0;&#xFF0C;<code>psk</code> &#x4E3A;&#x5BC6;&#x7801;&#xFF0C;<code>key_mgmt</code> &#x4E3A;&#x5B89;&#x5168;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;&#x3002;</p>
+<h3 class="mume-header" id="%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4">&#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</h3>
+
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x9700;&#x8981; root &#x6743;&#x9650;&#x3002;</p>
+</blockquote>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell
+<span class="token function">su</span>
+<span class="token function">date</span> -s 20160823.131500
+</pre><p>&#x8868;&#x793A;&#x5C06;&#x7CFB;&#x7EDF;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x66F4;&#x6539;&#x4E3A; 2016 &#x5E74; 08 &#x6708; 23 &#x65E5; 13 &#x70B9; 15 &#x5206; 00 &#x79D2;&#x3002;</p>
+<h3 class="mume-header" id="%E9%87%8D%E5%90%AF%E6%89%8B%E6%9C%BA">&#x91CD;&#x542F;&#x624B;&#x673A;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token function">reboot</span>
+</pre><h3 class="mume-header" id="%E6%A3%80%E6%B5%8B%E8%AE%BE%E5%A4%87%E6%98%AF%E5%90%A6%E5%B7%B2-root">&#x68C0;&#x6D4B;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x5DF2; root</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell
+<span class="token function">su</span>
+</pre><p>&#x6B64;&#x65F6;&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;&#x662F; <code>$</code> &#x5219;&#x8868;&#x793A;&#x6CA1;&#x6709; root &#x6743;&#x9650;&#xFF0C;&#x662F; <code>#</code> &#x5219;&#x8868;&#x793A;&#x5DF2; root&#x3002;</p>
+<h3 class="mume-header" id="%E4%BD%BF%E7%94%A8-monkey-%E8%BF%9B%E8%A1%8C%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95">&#x4F7F;&#x7528; Monkey &#x8FDB;&#x884C;&#x538B;&#x529B;&#x6D4B;&#x8BD5;</h3>
+
+<p>Monkey &#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4F2A;&#x968F;&#x673A;&#x7528;&#x6237;&#x4E8B;&#x4EF6;&#x6765;&#x6A21;&#x62DF;&#x5355;&#x51FB;&#x3001;&#x89E6;&#x6478;&#x3001;&#x624B;&#x52BF;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x6B63;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x968F;&#x673A;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x7528;&#x6CD5;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell monkey -p <span class="token operator">&lt;</span>packagename<span class="token operator">&gt;</span> -v 500
+</pre><p>&#x8868;&#x793A;&#x5411; <code>&lt;packagename&gt;</code> &#x6307;&#x5B9A;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001; 500 &#x4E2A;&#x4F2A;&#x968F;&#x673A;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p>Monkey &#x7684;&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;&#x53C2;&#x8003; <a href="https://developer.android.com/studio/test/monkey.html">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x3002;</p>
+<h3 class="mume-header" id="%E5%BC%80%E5%90%AF-%E5%85%B3%E9%97%AD-wifi">&#x5F00;&#x542F; / &#x5173;&#x95ED; WiFi</h3>
+
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x9700;&#x8981; root &#x6743;&#x9650;&#x3002;</p>
+</blockquote>
+<p>&#x6709;&#x65F6;&#x9700;&#x8981;&#x63A7;&#x5236;&#x8BBE;&#x5907;&#x7684; WiFi &#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x5F00;&#x542F; WiFi&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+adb shell svc wifi <span class="token function">enable</span>
+</pre><p>&#x5173;&#x95ED; WiFi&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+adb shell svc wifi disable
+</pre><p>&#x82E5;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x8F93;&#x51FA;&#x4E3A;&#x7A7A;&#xFF1B;&#x82E5;&#x672A;&#x53D6;&#x5F97; root &#x6743;&#x9650;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x8F93;&#x51FA; <code>Killed</code>&#x3002;</p>
+<h2 class="mume-header" id="%E5%88%B7%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">&#x5237;&#x673A;&#x76F8;&#x5173;&#x547D;&#x4EE4;</h2>
+
+<h3 class="mume-header" id="%E9%87%8D%E5%90%AF%E5%88%B0-recovery-%E6%A8%A1%E5%BC%8F">&#x91CD;&#x542F;&#x5230; Recovery &#x6A21;&#x5F0F;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token function">reboot</span> recovery
+</pre><h3 class="mume-header" id="%E4%BB%8E-recovery-%E9%87%8D%E5%90%AF%E5%88%B0-android">&#x4ECE; Recovery &#x91CD;&#x542F;&#x5230; Android</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token function">reboot</span>
+</pre><h3 class="mume-header" id="%E9%87%8D%E5%90%AF%E5%88%B0-fastboot-%E6%A8%A1%E5%BC%8F">&#x91CD;&#x542F;&#x5230; Fastboot &#x6A21;&#x5F0F;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token function">reboot</span> bootloader
+</pre><h3 class="mume-header" id="%E9%80%9A%E8%BF%87-sideload-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F">&#x901A;&#x8FC7; sideload &#x66F4;&#x65B0;&#x7CFB;&#x7EDF;</h3>
+
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0B;&#x8F7D;&#x4E86; Android &#x8BBE;&#x5907;&#x5BF9;&#x5E94;&#x7684;&#x7CFB;&#x7EDF;&#x66F4;&#x65B0;&#x5305;&#x5230;&#x7535;&#x8111;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; adb &#x6765;&#x5B8C;&#x6210;&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x4EE5; Recovery &#x6A21;&#x5F0F;&#x4E0B;&#x66F4;&#x65B0;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<ol>
+<li>
+<p>&#x91CD;&#x542F;&#x5230; Recovery &#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb <span class="token function">reboot</span> recovery
+</pre></li>
+<li>
+<p>&#x5728;&#x8BBE;&#x5907;&#x7684; Recovery &#x754C;&#x9762;&#x4E0A;&#x64CD;&#x4F5C;&#x8FDB;&#x5165; <code>Apply update</code>-<code>Apply from ADB</code>&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;&#x4E0D;&#x540C;&#x7684; Recovery &#x83DC;&#x5355;&#x53EF;&#x80FD;&#x4E0E;&#x6B64;&#x6709;&#x5DEE;&#x5F02;&#xFF0C;&#x6709;&#x7684;&#x662F;&#x4E00;&#x7EA7;&#x83DC;&#x5355;&#x5C31;&#x6709; <code>Apply update from ADB</code>&#x3002;</p>
+</li>
+<li>
+<p>&#x901A;&#x8FC7; adb &#x4E0A;&#x4F20;&#x548C;&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb sideload <span class="token operator">&lt;</span>path-to-update.zip<span class="token operator">&gt;</span>
+</pre></li>
+</ol>
+<h2 class="mume-header" id="%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4">&#x5B89;&#x5168;&#x76F8;&#x5173;&#x547D;&#x4EE4;</h2>
+
+<h3 class="mume-header" id="%E5%90%AF%E7%94%A8-%E7%A6%81%E7%94%A8-selinux">&#x542F;&#x7528; / &#x7981;&#x7528; SELinux</h3>
+
+<p>&#x542F;&#x7528; SELinux</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+adb shell setenforce 1
+</pre><p>&#x7981;&#x7528; SELinux</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+adb shell setenforce 0
+</pre><h3 class="mume-header" id="%E5%90%AF%E7%94%A8-%E7%A6%81%E7%94%A8-dm_verity">&#x542F;&#x7528; / &#x7981;&#x7528; dm_verity</h3>
+
+<p>&#x542F;&#x7528; dm_verity</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+adb enable-verity
+</pre><p>&#x7981;&#x7528; dm_verity</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb root
+adb disable-verity
+</pre><h2 class="mume-header" id="%E6%9B%B4%E5%A4%9A-adb-shell-%E5%91%BD%E4%BB%A4">&#x66F4;&#x591A; adb shell &#x547D;&#x4EE4;</h2>
+
+<p>Android &#x7CFB;&#x7EDF;&#x662F;&#x57FA;&#x4E8E; Linux &#x5185;&#x6838;&#x7684;&#xFF0C;&#x6240;&#x4EE5; Linux &#x91CC;&#x7684;&#x5F88;&#x591A;&#x547D;&#x4EE4;&#x5728; Android &#x91CC;&#x4E5F;&#x6709;&#x76F8;&#x540C;&#x6216;&#x7C7B;&#x4F3C;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5728; <code>adb shell</code> &#x91CC;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x3002;&#x672C;&#x6587;&#x6863;&#x524D;&#x9762;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x7528;&#x5230;&#x4E86; <code>adb shell</code> &#x547D;&#x4EE4;&#x3002;</p>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B">&#x67E5;&#x770B;&#x8FDB;&#x7A0B;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">ps</span>
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">USER     PID   PPID  VSIZE  RSS     WCHAN    PC        NAME
+root      1     0     8904   788   ffffffff 00000000 S /init
+root      2     0     0      0     ffffffff 00000000 S kthreadd
+<span class="token punctuation">..</span>.
+u0_a71    7779  5926  1538748 48896 ffffffff 00000000 S com.sohu.inputmethod.sogou:classic
+u0_a58    7963  5926  1561916 59568 ffffffff 00000000 S org.mazhuang.boottimemeasure
+<span class="token punctuation">..</span>.
+shell     8750  217   10640  740   00000000 b6f28340 R <span class="token function">ps</span>
+</pre><p>&#x5404;&#x5217;&#x542B;&#x4E49;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5217;&#x540D;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>&#x6240;&#x5C5E;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>PID</td>
+<td>&#x8FDB;&#x7A0B; ID</td>
+</tr>
+<tr>
+<td>PPID</td>
+<td>&#x7236;&#x8FDB;&#x7A0B; ID</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>&#x8FDB;&#x7A0B;&#x540D;</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E5%AE%9E%E6%97%B6%E8%B5%84%E6%BA%90%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5">&#x67E5;&#x770B;&#x5B9E;&#x65F6;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5;</h3>
+
+<p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">adb shell <span class="token function">top</span>
+</pre><p>&#x8F93;&#x51FA;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">User 0%, System 6%, IOW 0%, IRQ 0%
+User 3 + Nice 0 + Sys 21 + Idle 280 + IOW 0 + IRQ 0 + SIRQ 3 <span class="token operator">=</span> 307
+
+PID PR CPU% S  <span class="token comment">#THR     VSS     RSS PCY UID      Name</span>
+8763  0   3% R     1  10640K   1064K  <span class="token function">fg</span> shell    <span class="token function">top</span>
+131  0   3% S     1      0K      0K  <span class="token function">fg</span> root     dhd_dpc
+6144  0   0% S   115 1682004K 115916K  <span class="token function">fg</span> system   system_server
+132  0   0% S     1      0K      0K  <span class="token function">fg</span> root     dhd_rxf
+1731  0   0% S     6  20288K    788K  <span class="token function">fg</span> root     /system/bin/mpdecision
+217  0   0% S     6  18008K    356K  <span class="token function">fg</span> shell    /sbin/adbd
+<span class="token punctuation">..</span>.
+7779  2   0% S    19 1538748K  48896K  <span class="token function">bg</span> u0_a71   com.sohu.inputmethod.sogou:classic
+7963  0   0% S    18 1561916K  59568K  <span class="token function">fg</span> u0_a58   org.mazhuang.boottimemeasure
+<span class="token punctuation">..</span>.
+</pre><p>&#x5404;&#x5217;&#x542B;&#x4E49;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5217;&#x540D;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PID</td>
+<td>&#x8FDB;&#x7A0B; ID</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>&#x4F18;&#x5148;&#x7EA7;</td>
+</tr>
+<tr>
+<td>CPU%</td>
+<td>&#x5F53;&#x524D;&#x77AC;&#x95F4;&#x5360;&#x7528; CPU &#x767E;&#x5206;&#x6BD4;</td>
+</tr>
+<tr>
+<td>S</td>
+<td>&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#xFF08;R= &#x8FD0;&#x884C;&#xFF0C;S= &#x7761;&#x7720;&#xFF0C;T= &#x8DDF;&#x8E2A; / &#x505C;&#x6B62;&#xFF0C;Z= &#x50F5;&#x5C38;&#x8FDB;&#x7A0B;&#xFF09;</td>
+</tr>
+<tr>
+<td>#THR</td>
+<td>&#x7EBF;&#x7A0B;&#x6570;</td>
+</tr>
+<tr>
+<td>VSS</td>
+<td>Virtual Set Size &#x865A;&#x62DF;&#x8017;&#x7528;&#x5185;&#x5B58;&#xFF08;&#x5305;&#x542B;&#x5171;&#x4EAB;&#x5E93;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#xFF09;</td>
+</tr>
+<tr>
+<td>RSS</td>
+<td>Resident Set Size &#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7269;&#x7406;&#x5185;&#x5B58;&#xFF08;&#x5305;&#x542B;&#x5171;&#x4EAB;&#x5E93;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#xFF09;</td>
+</tr>
+<tr>
+<td>PCY</td>
+<td>&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;SP_BACKGROUND/SPFOREGROUND</td>
+</tr>
+<tr>
+<td>UID</td>
+<td>&#x8FDB;&#x7A0B;&#x6240;&#x6709;&#x8005;&#x7684;&#x7528;&#x6237; ID</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>&#x8FDB;&#x7A0B;&#x540D;</td>
+</tr>
+</tbody>
+</table>
+<p><code>top</code> &#x547D;&#x4EE4;&#x8FD8;&#x652F;&#x6301;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash">Usage: <span class="token function">top</span> <span class="token punctuation">[</span> -m max_procs <span class="token punctuation">]</span> <span class="token punctuation">[</span> -n iterations <span class="token punctuation">]</span> <span class="token punctuation">[</span> -d delay <span class="token punctuation">]</span> <span class="token punctuation">[</span> -s sort_column <span class="token punctuation">]</span> <span class="token punctuation">[</span> -t <span class="token punctuation">]</span> <span class="token punctuation">[</span> -h <span class="token punctuation">]</span>
+-m num  &#x6700;&#x591A;&#x663E;&#x793A;&#x591A;&#x5C11;&#x4E2A;&#x8FDB;&#x7A0B;
+-n num  &#x5237;&#x65B0;&#x591A;&#x5C11;&#x6B21;&#x540E;&#x9000;&#x51FA;
+-d num  &#x5237;&#x65B0;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x5355;&#x4F4D;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C; 5&#xFF09;
+-s col  &#x6309;&#x67D0;&#x5217;&#x6392;&#x5E8F;&#xFF08;&#x53EF;&#x7528; col &#x503C;&#xFF1A;cpu, vss, rss, thr&#xFF09;
+-t      &#x663E;&#x793A;&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;
+-h      &#x663E;&#x793A;&#x5E2E;&#x52A9;&#x6587;&#x6863;
+</pre><h3 class="mume-header" id="%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B-uid">&#x67E5;&#x770B;&#x8FDB;&#x7A0B; UID</h3>
+
+<p>&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6848;&#xFF1A;</p>
+<ol>
+<li>
+<p><code>adb shell dumpsys package &lt;packagename&gt; | grep userId=</code></p>
+<p>&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&gt;</span> adb shell dumpsys package org.mazhuang.guanggoo <span class="token operator">|</span> <span class="token function">grep</span> userId<span class="token operator">=</span>
+userId<span class="token operator">=</span>10394
+</pre></li>
+<li>
+<p>&#x901A;&#x8FC7; ps &#x547D;&#x4EE4;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x8FDB;&#x7A0B;&#x7684; pid &#x4E4B;&#x540E; <code>adb shell cat /proc/&lt;pid&gt;/status | grep Uid</code></p>
+<p>&#x5982;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token operator">&gt;</span> adb shell
+gemini:/ $ <span class="token function">ps</span> <span class="token operator">|</span> <span class="token function">grep</span> org.mazhuang.guanggoo
+u0_a394   28635 770   1795812 78736 SyS_epoll_ 0000000000 S org.mazhuang.guanggoo
+gemini:/ $ <span class="token function">cat</span> /proc/28635/status <span class="token operator">|</span> <span class="token function">grep</span> Uid
+Uid:    10394   10394   10394   10394
+gemini:/ $
+</pre></li>
+</ol>
+<h3 class="mume-header" id="%E5%85%B6%E5%AE%83">&#x5176;&#x5B83;</h3>
+
+<p>&#x5982;&#x4E0B;&#x662F;&#x5176;&#x5B83;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x7684;&#x7B80;&#x5355;&#x63CF;&#x8FF0;&#xFF0C;&#x524D;&#x6587;&#x5DF2;&#x7ECF;&#x4E13;&#x95E8;&#x8BB2;&#x8FC7;&#x7684;&#x547D;&#x4EE4;&#x4E0D;&#x518D;&#x989D;&#x5916;&#x8BF4;&#x660E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x529F;&#x80FD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cat</code></td>
+<td>&#x663E;&#x793A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>&#x5207;&#x6362;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>chmod</code></td>
+<td>&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x53D6;&#x6A21;&#x5F0F; / &#x8BBF;&#x95EE;&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td><code>df</code></td>
+<td>&#x67E5;&#x770B;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</td>
+</tr>
+<tr>
+<td><code>grep</code></td>
+<td>&#x8FC7;&#x6EE4;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td><code>kill</code></td>
+<td>&#x6740;&#x6B7B;&#x6307;&#x5B9A; PID &#x7684;&#x8FDB;&#x7A0B;</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>&#x5217;&#x4E3E;&#x76EE;&#x5F55;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><code>mount</code></td>
+<td>&#x6302;&#x8F7D;&#x76EE;&#x5F55;&#x7684;&#x67E5;&#x770B;&#x548C;&#x7BA1;&#x7406;</td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>&#x79FB;&#x52A8;&#x6216;&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><code>ps</code></td>
+<td>&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>&#x5220;&#x9664;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x7684;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5;</td>
+</tr>
+</tbody>
+</table>
+  </div>
+</body></html>
